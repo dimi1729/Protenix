@@ -175,15 +175,53 @@ For details on memory usage and runtime during training and inference, refer to 
 If you use Protenix in your research, please cite the following:
 
 ```
-@article{chen2025protenix,
+@article{bytedance2025protenix,
   title={Protenix - Advancing Structure Prediction Through a Comprehensive AlphaFold3 Reproduction},
-  author={Chen, Xinshi and Zhang, Yuxuan and Lu, Chan and Ma, Wenzhi and Guan, Jiaqi and Gong, Chengyue and Yang, Jincai and Zhang, Hanyu and Zhang, Ke and Wu, Shenghao and Zhou, Kuangqi and Yang, Yanping and Liu, Zhenyu and Wang, Lan and Shi, Bo and Shi, Shaochen and Xiao, Wenzhi},
+  author={ByteDance AML AI4Science Team and Chen, Xinshi and Zhang, Yuxuan and Lu, Chan and Ma, Wenzhi and Guan, Jiaqi and Gong, Chengyue and Yang, Jincai and Zhang, Hanyu and Zhang, Ke and Wu, Shenghao and Zhou, Kuangqi and Yang, Yanping and Liu, Zhenyu and Wang, Lan and Shi, Bo and Shi, Shaochen and Xiao, Wenzhi},
   year={2025},
-  doi = {10.1101/2025.01.08.631967},
-  journal = {bioRxiv}
+  journal={bioRxiv},
+  publisher={Cold Spring Harbor Laboratory},
+  doi={10.1101/2025.01.08.631967},
+  URL={https://www.biorxiv.org/content/early/2025/01/11/2025.01.08.631967},
+  elocation-id={2025.01.08.631967},
+  eprint={https://www.biorxiv.org/content/early/2025/01/11/2025.01.08.631967.full.pdf},
 }
 ```
 
+### 📚 Citing Related Work
+Protenix is built upon and inspired by several influential projects. If you use Protenix in your research, we also encourage citing the following foundational works where appropriate:
+```
+@article{abramson2024accurate,
+  title={Accurate structure prediction of biomolecular interactions with AlphaFold 3},
+  author={Abramson, Josh and Adler, Jonas and Dunger, Jack and Evans, Richard and Green, Tim and Pritzel, Alexander and Ronneberger, Olaf and Willmore, Lindsay and Ballard, Andrew J and Bambrick, Joshua and others},
+  journal={Nature},
+  volume={630},
+  number={8016},
+  pages={493--500},
+  year={2024},
+  publisher={Nature Publishing Group UK London}
+}
+@article{ahdritz2024openfold,
+  title={OpenFold: Retraining AlphaFold2 yields new insights into its learning mechanisms and capacity for generalization},
+  author={Ahdritz, Gustaf and Bouatta, Nazim and Floristean, Christina and Kadyan, Sachin and Xia, Qinghui and Gerecke, William and O’Donnell, Timothy J and Berenberg, Daniel and Fisk, Ian and Zanichelli, Niccol{\`o} and others},
+  journal={Nature Methods},
+  volume={21},
+  number={8},
+  pages={1514--1524},
+  year={2024},
+  publisher={Nature Publishing Group US New York}
+}
+@article{mirdita2022colabfold,
+  title={ColabFold: making protein folding accessible to all},
+  author={Mirdita, Milot and Sch{\"u}tze, Konstantin and Moriwaki, Yoshitaka and Heo, Lim and Ovchinnikov, Sergey and Steinegger, Martin},
+  journal={Nature methods},
+  volume={19},
+  number={6},
+  pages={679--682},
+  year={2022},
+  publisher={Nature Publishing Group US New York}
+}
+```
 
 ## Contributing to Protenix
 
