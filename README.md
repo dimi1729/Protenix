@@ -1,6 +1,13 @@
 # Protenix: Protein + X
 
 
+> 📣📣📣 **We're hiring!** \
+> Positions in **_Beijing, China_** and **_Seattle, US_** ! \
+> Interested in machine learning, computational chemistry/biology, structural biology, or drug discovery?  \
+> 👉 [**Join us »**](#join-us)
+
+
+
 <div align="center" style="margin: 20px 0;">
   <span style="margin: 0 10px;">⚡ <a href="https://protenix-server.com">Protenix Web Server</a></span>
   &bull; <span style="margin: 0 10px;">📄 <a href="https://www.biorxiv.org/content/10.1101/2025.01.08.631967v1">Technical Report</a></span>
@@ -269,3 +276,27 @@ The Protenix project including both code and model parameters is released under 
 
 We welcome inquiries and collaboration opportunities for advanced applications of our model, such as developing new features, fine-tuning for specific use cases, and more. Please feel free to contact us at ai4s-bio@bytedance.com.
 
+## Join Us
+
+We're expanding the **Protenix team** at ByteDance Seed-AI for Science! \
+We’re looking for talented individuals in **machine learning** and **computational biology/chemistry**. Opportunities are available in both **Beijing** and **Seattle**, across internships, new grad roles, and experienced full-time positions. \
+*“Computational Biology/Chemistry” covers structural biology, computational biology, computational chemistry, drug discovery, and more.*
+
+
+### 📍 Beijing, China
+| Type       | Expertise                          | Apply Link |
+|------------|------------------------------------|------------|
+| Full-Time  | Computational Biology / Chemistry       | [Experienced & New Grad](https://jobs.bytedance.com/society/position/detail/7505998274429421842) |
+| Full-Time  | Machine Learning                   | [Experienced & New Grad](https://jobs.bytedance.com/society/position/detail/7505999453133015314) |
+| Internship | Computational Biology / Chemistry       | [Internship](https://jobs.bytedance.com/campus/position/7509005072577546504/detail) |
+| Internship | Machine Learning                   | [Internship](https://jobs.bytedance.com/campus/position/7509005074018961672/detail) |
+
+
+### 📍 Seattle, US
+
+| Type       | Expertise                          | Apply Link |
+|------------|------------------------------------|------------|
+| Full-Time  | Computational Biology / Chemistry       | [Experienced](https://jobs.bytedance.com/en/position/7270666468370614585/detail), [New Grad](https://jobs.bytedance.com/en/position/7515465250054211847/detail) |
+| Full-Time  | Machine Learning                   | [Experienced](https://jobs.bytedance.com/en/position/7270665658072926521/detail), [New Grad](https://jobs.bytedance.com/en/position/7515908698011601159/detail) |
+| Internship | Computational Biology / Chemistry       | Internship (opening ~August) |
+| Internship | Machine Learning                   | Internship (opening ~August) |
