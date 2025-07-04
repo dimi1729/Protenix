@@ -36,7 +36,11 @@ from protenix.utils.torch_utils import autocasting_disable_decorator
 
 from .modules.confidence import ConfidenceHead
 from .modules.diffusion import DiffusionModule
-from .modules.embedders import InputFeatureEmbedder, RelativePositionEncoding
+from .modules.embedders import (
+    ConstraintEmbedder,
+    InputFeatureEmbedder,
+    RelativePositionEncoding,
+)
 from .modules.head import DistogramHead
 from .modules.pairformer import MSAModule, PairformerStack, TemplateEmbedder
 from .modules.primitives import LinearNoBias
@@ -78,6 +82,9 @@ class Protenix(nn.Module):
         self.msa_module = MSAModule(
             **configs.model.msa_module,
             msa_configs=configs.data.get("msa", {}),
+        )
+        self.constraint_embedder = ConstraintEmbedder(
+            **configs.model.constraint_embedder
         )
         self.pairformer_stack = PairformerStack(**configs.model.pairformer)
         self.diffusion_module = DiffusionModule(**configs.model.diffusion_module)
@@ -150,6 +157,16 @@ class Protenix(nn.Module):
         s_inputs = self.input_embedder(
             input_feature_dict, inplace_safe=False, chunk_size=chunk_size
         )  # [..., N_token, 449]
+        s_constraint, z_constraint = None, None
+
+        if "constraint_feature" in input_feature_dict:
+            s_constraint, z_constraint = self.constraint_embedder(
+                input_feature_dict["constraint_feature"]
+            )
+
+        if s_constraint is not None:
+            s_inputs = s_inputs + s_constraint
+
         s_init = self.linear_no_bias_sinit(s_inputs)  #  [..., N_token, c_s]
         z_init = (
             self.linear_no_bias_zinit1(s_init)[..., None, :]
@@ -160,11 +177,15 @@ class Protenix(nn.Module):
             z_init += self.linear_no_bias_token_bond(
                 input_feature_dict["token_bonds"].unsqueeze(dim=-1)
             )
+            if z_constraint is not None:
+                z_init += z_constraint
         else:
             z_init = z_init + self.relative_position_encoding(input_feature_dict)
             z_init = z_init + self.linear_no_bias_token_bond(
                 input_feature_dict["token_bonds"].unsqueeze(dim=-1)
             )
+            if z_constraint is not None:
+                z_init = z_init + z_constraint
         # Line 6
         z = torch.zeros_like(z_init)
         s = torch.zeros_like(s_init)
