@@ -1,3 +1,4 @@
+import copy
 import hashlib
 from typing import Any
 
@@ -7,7 +8,6 @@ import torch
 import torch.nn.functional as F
 from biotite.structure import AtomArray
 from scipy.spatial.distance import cdist
-import copy
 
 from protenix.data.constants import ELEMS, STD_RESIDUES
 from protenix.data.tokenizer import Token, TokenArray
@@ -77,6 +77,102 @@ class ConstraintFeatureGenerator:
         if hash(tuple(binder[:2])) == hash(tuple(pocket_pos[:2])):
             raise ValueError("Pockets can not be the same chain with the binder")
         return pocket_pos
+
+    @staticmethod
+    def _log_constraint_feature(atom_array, token_array, constraint_feature):
+
+        atom_feature = constraint_feature["contact_atom"]
+        if atom_feature.sum() > 0:
+            ## logging contact feature
+            token_idx_1, token_idx_2 = torch.nonzero(
+                torch.triu(atom_feature[..., 1]), as_tuple=True
+            )
+
+            atom1_index = token_array[token_idx_1].get_annotation("centre_atom_index")
+            atom2_index = token_array[token_idx_2].get_annotation("centre_atom_index")
+
+            res_name_1 = atom_array.res_name[atom1_index]
+            res_name_2 = atom_array.res_name[atom2_index]
+
+            atom_name_1 = atom_array.atom_name[atom1_index]
+            atom_name_2 = atom_array.atom_name[atom2_index]
+
+            chain_id_1 = atom_array.chain_id[atom1_index]
+            chain_id_2 = atom_array.chain_id[atom2_index]
+
+            max_distance = atom_feature[token_idx_1, token_idx_2, 1]
+            min_distance = atom_feature[token_idx_1, token_idx_2, 0]
+
+            contact_info = {
+                "chain_id": np.stack([chain_id_1, chain_id_2]).T.tolist(),
+                "res_name": np.stack([res_name_1, res_name_2]).T.tolist(),
+                "atom_name": np.stack([atom_name_1, atom_name_2]).T.tolist(),
+                "max_distance": max_distance.tolist(),
+                "min_distance": min_distance.tolist(),
+            }
+            logger.info(f"loaded atom contact info:{contact_info}")
+
+        token_feature = constraint_feature["contact"]
+        if token_feature.sum() > 0:
+            ## logging contact feature
+            token_idx_1, token_idx_2 = torch.nonzero(
+                torch.triu(token_feature[..., 1]), as_tuple=True
+            )
+
+            atom1_index = token_array[token_idx_1].get_annotation("centre_atom_index")
+            atom2_index = token_array[token_idx_2].get_annotation("centre_atom_index")
+
+            res_name_1 = atom_array.res_name[atom1_index]
+            res_name_2 = atom_array.res_name[atom2_index]
+
+            atom_name_1 = atom_array.atom_name[atom1_index]
+            atom_name_2 = atom_array.atom_name[atom2_index]
+
+            chain_id_1 = atom_array.chain_id[atom1_index]
+            chain_id_2 = atom_array.chain_id[atom2_index]
+
+            max_distance = token_feature[token_idx_1, token_idx_2, 1]
+            min_distance = token_feature[token_idx_1, token_idx_2, 0]
+
+            contact_info = {
+                "chain_id": np.stack([chain_id_1, chain_id_2]).T.tolist(),
+                "res_name": np.stack([res_name_1, res_name_2]).T.tolist(),
+                "atom_name": np.stack([atom_name_1, atom_name_2]).T.tolist(),
+                "max_distance": max_distance.tolist(),
+                "min_distance": min_distance.tolist(),
+            }
+            logger.info(f"loaded contact info:{contact_info}")
+
+        pocket_feature = constraint_feature["pocket"]
+        if pocket_feature.sum() > 0:
+            ## logging contact feature
+            binder_idx, pocket_idx = torch.nonzero(
+                pocket_feature[..., 0], as_tuple=True
+            )
+            atom1_index = token_array[binder_idx].get_annotation("centre_atom_index")
+            atom2_index = token_array[pocket_idx].get_annotation("centre_atom_index")
+
+            res_name_1 = atom_array.res_name[atom1_index]
+            res_name_2 = atom_array.res_name[atom2_index]
+
+            atom_name_1 = atom_array.atom_name[atom1_index]
+            atom_name_2 = atom_array.atom_name[atom2_index]
+
+            chain_id_1 = atom_array.chain_id[atom1_index]
+            chain_id_2 = atom_array.chain_id[atom2_index]
+
+            distance = pocket_feature[binder_idx, pocket_idx, 0]
+
+            pocket_info = {
+                "binder_chain_id": np.unique(chain_id_1).tolist(),
+                "binder_res_name": np.unique(res_name_1).tolist(),
+                "binder_atom_name": np.unique(atom_name_1).tolist(),
+                "pocket_chain_id": np.unique(chain_id_2).tolist(),
+                "pocket_res_name": np.unique(res_name_2).tolist(),
+                "pocket_atom_name": np.unique(atom_name_2).tolist(),
+                "distance": distance.unique().item(),
+            }
+            logger.info(f"loaded pocket info:{pocket_info}")
 
     @staticmethod
     def generate_from_json(
@@ -184,7 +280,7 @@ class ConstraintFeatureGenerator:
                 logger.info(f"Contact {i} not found for the input")
                 continue
             token_contact_specifics.append(
-                (token_list_1, token_list_2, 0, pair["max_distance"])
+                (token_list_1, token_list_2, pair["max_distance"], 0)
             )  # default min_distance=0
 
         contact_featurizer = ContactFeaturizer(
@@ -251,8 +347,26 @@ class ConstraintFeatureGenerator:
             feature_type="continuous",
         )
 
+        ## build substructure features
+        substructure_specifics = {
+            "token_indices": [],
+            "token_coords": [],
+        }
+        if substructure := constraint_param.get("structure", {}):
+            # TODO parse substructure specifics
+            pass
+        substructure_featurizer = SubStructureFeaturizer(
+            token_array=token_array, atom_array=atom_array
+        )
+        feature_dict["substructure"] = substructure_featurizer.generate_spec_constraint(
+            substructure_specifics, feature_type="one_hot"
+        )
+
         logger.info(
             f"Loaded constraint feature: #atom contact:{len(atom_contact_specifics)} #contact:{len(token_contact_specifics)} #pocket:{len(pocket_specifics)}"
+        )
+        ConstraintFeatureGenerator._log_constraint_feature(
+            atom_array, token_array, feature_dict
         )
 
         return feature_dict, token_array, atom_array
@@ -2277,15 +2391,20 @@ class SubStructureFeaturizer(ConstraintFeaturizer):
                 token_coords: List[List[float]]
             feature_type: 'ont hot' by default
         """
-        token_indices = torch.tensor(substructure_specifics["token_indices"])
-        coords = torch.tensor(substructure_specifics["token_coords"])
-
-        distance_feature_mat = torch.zeros((self.asymid.shape[0], self.asymid.shape[0]))
-
-        distance_mat = torch.cdist(coords, coords)
-        distance_feature_mat[token_indices[:, None], token_indices[None, :]] = (
-            distance_mat
+        distance_feature_mat = torch.full(
+            (self.asymid.shape[0], self.asymid.shape[0]),
+            fill_value=-1 if feature_type == "one_hot" else self.pad_value,
+            dtype=torch.long if feature_type == "one_hot" else torch.float32,
         )
+
+        if len(substructure_specifics["token_indices"]) > 0:
+            token_indices = torch.tensor(substructure_specifics["token_indices"])
+            coords = torch.tensor(substructure_specifics["token_coords"])
+
+            distance_mat = torch.cdist(coords, coords)
+            distance_feature_mat[token_indices[:, None], token_indices[None, :]] = (
+                distance_mat
+            )
 
         distance_feature_mat = self.encode(
             distance_feature_mat, feature_type, num_classes=len(self.distance_bins) - 1
