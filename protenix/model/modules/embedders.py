@@ -378,7 +378,7 @@ class ConstraintEmbedder(nn.Module):
                 out_features=c_constraint_z,
             )
 
-        # contact embedder
+        # token contact embedder
         if self.contact_embedder_config.get("enable", False):
             self.contact_z_embedder = LinearNoBias(
                 in_features=contact_embedder["c_z_input"], out_features=c_constraint_z
@@ -421,7 +421,7 @@ class ConstraintEmbedder(nn.Module):
             torch.Tensor: token embedding
                 [..., N_token, c_s]
         """
-        s_constraint, z_constraint = None, None
+        z_constraint = None
 
         if self.pocket_embedder_config.get("enable", False):
             z_constraint = self.pocket_z_embedder(constraint_feature_dict["pocket"])
@@ -452,4 +452,4 @@ class ConstraintEmbedder(nn.Module):
                 if z_constraint is None
                 else z_constraint + z_substructure
             )
-        return s_constraint, z_constraint
+        return z_constraint

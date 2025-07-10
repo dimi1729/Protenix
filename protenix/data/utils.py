@@ -26,16 +26,22 @@ import torch
 from biotite.structure import AtomArray
 from biotite.structure.io import pdbx
 from biotite.structure.io.pdb import PDBFile
-from configs.configs_data import data_configs
 
+from configs.configs_data import data_configs
 from protenix.data.constants import DNA_STD_RESIDUES, PRO_STD_RESIDUES, RNA_STD_RESIDUES
 
 
 def get_antibody_clusters():
-    ## TODO find some beautiful way to read changable path
     PDB_CLUSTER_FILE = data_configs["pdb_cluster_file"]
-    with open(PDB_CLUSTER_FILE, "r") as f:
-        lines = f.readlines()
+    try:
+        with open(PDB_CLUSTER_FILE, "r") as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        raise FileNotFoundError(
+            f"The file {PDB_CLUSTER_FILE} does not exist. \n"
+            + f"Downloading it from https://af3-dev.tos-cn-beijing.volces.com/release_data/clusters-by-entity-40.txt"
+        )
+
     cluster_list = [line.strip().split() for line in lines]
     antibody_top2_clusters = set(
         [i.lower() for i in cluster_list[0]] + [i.lower() for i in cluster_list[1]]
@@ -51,7 +57,7 @@ def get_atom_mask_by_name(
     copy_id: int = None,
 ) -> np.ndarray:
     """
-    Get the atom mask of with specific identifiers.
+    Get the atom mask of atoms with specific identifiers.
 
     Args:
         atom_array (AtomArray): Biotite Atom array.
@@ -822,18 +828,6 @@ def pdb_to_cif(input_fname: str, output_fname: str, entry_id: str = None):
     )
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--pdb_file", type=str, required=True, help="The pdb file to parse"
-    )
-    parser.add_argument(
-        "--cif_file", type=str, required=True, help="The cif file path to generate"
-    )
-    args = parser.parse_args()
-    pdb_to_cif(args.pdb_file, args.cif_file)
-
-
 def get_atom_level_token_mask(token_array, atom_array) -> np.ndarray:
     """
     Create a boolean mask indicating whether each atom in the atom array
@@ -852,3 +846,15 @@ def get_atom_level_token_mask(token_array, atom_array) -> np.ndarray:
             atom_level_mask[token.atom_indices[0]] = True
 
     return atom_level_mask
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--pdb_file", type=str, required=True, help="The pdb file to parse"
+    )
+    parser.add_argument(
+        "--cif_file", type=str, required=True, help="The cif file path to generate"
+    )
+    args = parser.parse_args()
+    pdb_to_cif(args.pdb_file, args.cif_file)

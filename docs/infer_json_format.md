@@ -233,7 +233,25 @@ The `contact` field consists of a list of dictionaries, each describing one cont
         "atom2": ["2", 1, 1, "C5"],
         "max_distance": 6,
         "min_distance": 0
-    },
+    }, // token-contact
+    {
+        "atom1": ["1", 1, 169, "CA"],
+        "residue2": ["2", 1, 1],
+        "max_distance": 6,
+        "min_distance": 0
+    }, // token-contact
+    {
+        "residue1": ["1", 1, 169],
+        "residue2": ["2", 1, 1 ],
+        "max_distance": 6,
+        "min_distance": 0
+    }, // token-contact
+    {
+        "atom1": ["1", 1, 169, "CA"],
+        "atom2": ["2", 1, 1, "C5"],
+        "max_distance": 6,
+        "min_distance": 3
+    }, // atom-contact
     ...
 ]
 ```
@@ -248,7 +266,7 @@ Each contact dictionary includes the following keys:
 * `max_distance` (float):
   The **expected maximum distance** (in Ångströms) between the specified residues or atoms.
 * `min_distance` (float):
-  The **expected minimum distance** (in Ångströms) between the specified residues or atoms.
+  The **expected minimum distance** (in Ångströms) between the specified residues or atoms. For token-contact, you do not need to specify this field. It is 0 by default.
 
 #### pocket constraint
 

@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import copy
 import random
 import time
 from typing import Any, Optional
@@ -157,15 +156,12 @@ class Protenix(nn.Module):
         s_inputs = self.input_embedder(
             input_feature_dict, inplace_safe=False, chunk_size=chunk_size
         )  # [..., N_token, 449]
-        s_constraint, z_constraint = None, None
+        z_constraint = None
 
         if "constraint_feature" in input_feature_dict:
-            s_constraint, z_constraint = self.constraint_embedder(
+            z_constraint = self.constraint_embedder(
                 input_feature_dict["constraint_feature"]
             )
-
-        if s_constraint is not None:
-            s_inputs = s_inputs + s_constraint
 
         s_init = self.linear_no_bias_sinit(s_inputs)  #  [..., N_token, c_s]
         z_init = (

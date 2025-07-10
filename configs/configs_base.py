@@ -30,7 +30,9 @@ basic_configs = {
     "checkpoint_interval": -1,
     "eval_first": False,  # run evaluate() before training steps
     "iters_to_accumulate": 1,
-    "finetune_params_with_substring": [""],
+    "finetune_params_with_substring": [
+        ""
+    ],  # params with substring will be finetuned with different learning rate: finetune_optim_configs["lr"]
     "eval_only": False,
     "load_checkpoint_path": "",
     "load_ema_checkpoint_path": "",
@@ -49,6 +51,7 @@ basic_configs = {
     "ema_decay": -1.0,
     "eval_ema_only": False,  # whether wandb only tracking ema checkpoint metrics
     "ema_mutable_param_keywords": [""],
+    "model_name": "protenix_base_default_v0.5.0",  # train model name
 }
 data_configs = {
     # Data
@@ -86,12 +89,14 @@ optim_configs = {
         "lr": GlobalConfigValue("lr"),
     },
 }
+# Fine-tuned optimizer settings.
+# For models supporting structural constraints and ESM embeddings.
 finetune_optim_configs = {
     # Optim
     "lr": 0.0018,
-    "lr_scheduler": "af3",
-    "warmup_steps": 10,
-    "max_steps": 100000,
+    "lr_scheduler": "cosine_annealing",
+    "warmup_steps": 1000,
+    "max_steps": 20000,
     "min_lr_ratio": 0.1,
     "decay_every_n_steps": 50000,
 }
@@ -192,11 +197,12 @@ model_configs = {
             "blocks_per_ckpt": GlobalConfigValue("blocks_per_ckpt"),
             "msa_chunk_size": ValueMaybeNone(2048),
         },
+        # Optional constraint embedder, only used when constraint is enabled.
         "constraint_embedder": {
             "pocket_embedder": {
                 "enable": False,
                 "c_s_input": 3,
-                "c_z_input": 3,
+                "c_z_input": 1,
             },
             "contact_embedder": {
                 "enable": False,
@@ -205,9 +211,9 @@ model_configs = {
             "substructure_embedder": {
                 "enable": False,
                 "n_classes": 4,
-                "architecture": "mlp",
-                "hidden_dim": 256,
-                "n_layers": 3,
+                "architecture": "transformer",
+                "hidden_dim": 128,
+                "n_layers": 1,
             },
             "contact_atom_embedder": {
                 "enable": False,

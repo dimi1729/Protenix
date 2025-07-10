@@ -1,3 +1,17 @@
+# Copyright 2024 ByteDance and/or its affiliates.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import copy
 import hashlib
 from typing import Any
@@ -31,7 +45,7 @@ class ConstraintFeatureGenerator:
         self.constraint = constraint_config
         self.ab_top2_clusters = ab_top2_clusters
 
-    ### function set for inference
+    # function set for inference
     @staticmethod
     def _canonicalize_contact_format(
         sequences: list[dict[str, Any]], pair: dict[str, Any]
@@ -72,18 +86,20 @@ class ConstraintFeatureGenerator:
         return _pair
 
     @staticmethod
-    def _canonicalize_pocket_res_format(binder, pocket_pos):
+    def _canonicalize_pocket_res_format(binder: list, pocket_pos: list) -> list:
         assert len(pocket_pos) == 3
         if hash(tuple(binder[:2])) == hash(tuple(pocket_pos[:2])):
             raise ValueError("Pockets can not be the same chain with the binder")
         return pocket_pos
 
     @staticmethod
-    def _log_constraint_feature(atom_array, token_array, constraint_feature):
+    def _log_constraint_feature(
+        atom_array: AtomArray, token_array: TokenArray, constraint_feature: dict
+    ):
 
         atom_feature = constraint_feature["contact_atom"]
         if atom_feature.sum() > 0:
-            ## logging contact feature
+            # logging contact feature
             token_idx_1, token_idx_2 = torch.nonzero(
                 torch.triu(atom_feature[..., 1]), as_tuple=True
             )
@@ -114,7 +130,7 @@ class ConstraintFeatureGenerator:
 
         token_feature = constraint_feature["contact"]
         if token_feature.sum() > 0:
-            ## logging contact feature
+            # logging contact feature
             token_idx_1, token_idx_2 = torch.nonzero(
                 torch.triu(token_feature[..., 1]), as_tuple=True
             )
@@ -145,7 +161,7 @@ class ConstraintFeatureGenerator:
 
         pocket_feature = constraint_feature["pocket"]
         if pocket_feature.sum() > 0:
-            ## logging contact feature
+            # logging contact feature
             binder_idx, pocket_idx = torch.nonzero(
                 pocket_feature[..., 0], as_tuple=True
             )
@@ -183,7 +199,7 @@ class ConstraintFeatureGenerator:
     ) -> tuple[dict[str, Any], TokenArray, AtomArray]:
         feature_dict = {}
 
-        ## build atom-level contact features
+        # build atom-level contact features
         contact_inputs = [
             ConstraintFeatureGenerator._canonicalize_contact_format(sequences, pair)
             for pair in constraint_param.get("contact", [])
@@ -250,7 +266,7 @@ class ConstraintFeatureGenerator:
             )
         )
 
-        ## build token-level contact
+        # build token-level contact
         atom_to_token_idx_dict = {}
         for idx, token in enumerate(token_array.tokens):
             for atom_idx in token.atom_indices:
@@ -290,7 +306,7 @@ class ConstraintFeatureGenerator:
             token_contact_specifics, feature_type="continuous"
         )
 
-        ## build pocket features
+        # build pocket features
         pocket_specifics = []
         if pocket := constraint_param.get("pocket", {}):
             distance = pocket["max_distance"]
@@ -347,7 +363,7 @@ class ConstraintFeatureGenerator:
             feature_type="continuous",
         )
 
-        ## build substructure features
+        # build substructure features
         substructure_specifics = {
             "token_indices": [],
             "token_coords": [],
@@ -371,7 +387,7 @@ class ConstraintFeatureGenerator:
 
         return feature_dict, token_array, atom_array
 
-    ### function set for training
+    # function set for training
     def generate(
         self,
         atom_array: AtomArray,
@@ -421,7 +437,7 @@ class ConstraintFeatureGenerator:
             )
         )
 
-        ## Expand token according to atom-contact pairs
+        # Expand token according to atom-contact pairs
         if len(contact_pairs) > 0:
             logger.info("Expanding tokens for contact atom constraint feature")
             token_array, atom_array, contact_pairs, token_map, full_atom_array = (
@@ -557,7 +573,8 @@ class ConstraintFeatureGenerator:
             return token_array, atom_array, contact_pairs, {}, full_atom_array
 
         new_tokens = []
-        token_map = {}  # Maps old token idx to list of new token indices
+        # Maps old token idx to list of new token indices
+        token_map = {}
         curr_token_idx = 0
 
         for old_token_idx, token in enumerate(token_array):
@@ -742,7 +759,7 @@ class ConstraintFeatureGenerator:
         if max_entity_mol_id is None or len(featured_tokens) == 0:
             return atom_array, full_atom_array
 
-        ## Get atom indices for all constrained tokens
+        # Get atom indices for all constrained tokens
         constrained_atom_indices = set()
         centre_atom_indices = token_array.get_annotation("centre_atom_index")
 
@@ -854,12 +871,12 @@ class ConstraintFeatureGenerator:
         if use_random_pocket:
             binder_asym_id = None
             if self.constraint["pocket"].get("spec_binder_chain", False):
-                ## find ligand binder
+                # find ligand binder
                 if sample_indice.mol_1_type == "ligand":
                     binder_chain_id = str(sample_indice.chain_1_id)
                 elif sample_indice.mol_2_type == "ligand":
                     binder_chain_id = str(sample_indice.chain_2_id)
-                ## find antibody binder
+                # find antibody binder
                 elif (
                     f"{sample_indice.pdb_id.lower()}_{sample_indice.entity_1_id}"
                     in self.ab_top2_clusters
@@ -873,7 +890,6 @@ class ConstraintFeatureGenerator:
                 else:
                     binder_chain_id = -1
                     logger.info(f"No binder found!")
-                    # raise ValueError(f"Cannot find binder from this data point.")
                 binder_asym_id = atom_array.asym_id_int[
                     atom_array.chain_id == binder_chain_id
                 ]
@@ -921,7 +937,7 @@ class ConstraintFeatureGenerator:
         )
         selected_pairs = []
         if use_random_contact:
-            ## collecte all interfaces in cropped_tokens
+            # collecte all interfaces in cropped_tokens
             interface_asym_pairs = []
             if self.constraint["contact"].get("group", "complex") == "interface":
 
@@ -995,7 +1011,7 @@ class ConstraintFeatureGenerator:
         ).get("prob", 0)
         selected_pairs = []
         if use_random_contact_atom:
-            ## collecte all interfaces in cropped_tokens
+            # collecte all interfaces in cropped_tokens
             interface_asym_pairs = []
             if self.constraint["contact_atom"].get("group", "complex") == "interface":
 
@@ -1177,7 +1193,7 @@ class ConstraintFeatureGenerator:
         ]
         contact_distance = constraint_feature["contact"][token_idx_1, token_idx_2, 1]
 
-        ## logging contact atom feature
+        # logging contact atom feature
         atom_idx_1, atom_idx_2 = torch.nonzero(
             torch.triu(constraint_feature["contact_atom"][..., 1]), as_tuple=True
         )
@@ -1194,7 +1210,7 @@ class ConstraintFeatureGenerator:
         ]
         num_contact_atom = contact_atom_max_distance.shape[0]
 
-        ## logging pocket feature
+        # logging pocket feature
         binder_idx, pocket_idx = torch.nonzero(
             constraint_feature["pocket"].squeeze(-1), as_tuple=True
         )
@@ -1205,7 +1221,7 @@ class ConstraintFeatureGenerator:
         else:
             pocket_distance = -1
 
-        ## logging substructure feature
+        # logging substructure feature
         sub_structure_info = substructure_featurizer.analyze_features(
             constraint_feature["substructure"]
         )
@@ -1320,7 +1336,7 @@ class ConstraintFeaturizer(object):
         self._get_base_info()
 
     @staticmethod
-    def one_hot_encoder(feature, num_classes):
+    def one_hot_encoder(feature: torch.Tensor, num_classes: int):
         # Create mask for padding values (-1)
         pad_mask = feature == -1
 
@@ -1335,24 +1351,11 @@ class ConstraintFeaturizer(object):
 
         return one_hot
 
-    @staticmethod
-    def multi_hot_encoder():
-        pass
-
-    @staticmethod
-    def kernel_encoder(feature_type):
-        pass
-
-    # TODO: to be continue
-    def encode(self, feature, feature_type, **kwargs):
+    def encode(self, feature: torch.Tensor, feature_type: str, **kwargs):
         if feature_type == "one_hot":
             return ConstraintFeaturizer.one_hot_encoder(
                 feature, num_classes=kwargs.get("num_classes", -1)
             )
-        elif feature_type == "multi_hot":
-            return ConstraintFeaturizer.multi_hot_encoder()
-        elif feature_type in ["rbf"]:  # TODO: add more
-            return ConstraintFeaturizer.kernel_encoder(feature_type)
         elif feature_type == "continuous":
             return feature
         else:
@@ -1366,11 +1369,11 @@ class ConstraintFeaturizer(object):
         self.is_protein = torch.tensor(centre_atoms.is_protein, dtype=torch.bool)
         self.entity_type_dict = {"P": self.is_protein, "L": self.is_ligand}
 
-    def _get_generation_basics(self, distance_type="center_atom"):
+    def _get_generation_basics(self, distance_type: str = "center_atom"):
         token_centre_atom_indices = self.token_array.get_annotation("centre_atom_index")
         centre_atoms = self.atom_array[token_centre_atom_indices]
 
-        ## is_resolved mask
+        # is_resolved mask
         self.token_resolved_mask = torch.tensor(
             centre_atoms.is_resolved, dtype=torch.bool
         )
@@ -1378,14 +1381,14 @@ class ConstraintFeaturizer(object):
             self.token_resolved_mask[:, None] * self.token_resolved_mask[None, :]
         )
 
-        ## distance matrix
+        # distance matrix
         if distance_type == "center_atom":
-            ### center atom distance
+            # center atom distance
             self.token_distance = torch.tensor(
                 cdist(centre_atoms.coord, centre_atoms.coord), dtype=torch.float64
             )
         elif distance_type == "any_atom":
-            ### any atom distance
+            # any atom distance
             all_atom_resolved_mask = (
                 self.atom_array.is_resolved[:, None]
                 * self.atom_array.is_resolved[None, :]
@@ -1451,7 +1454,7 @@ class ContactFeaturizer(ConstraintFeaturizer):
 
             valid_chain_mask = self.asymid[:, None] == self.asymid[None, :]
 
-            ## skip closest squence pairs
+            # skip closest squence pairs
             n_neighbor = 20  # TODO: tune this parameter
             valid_chain_mask_right = torch.triu(valid_chain_mask, diagonal=n_neighbor)
             valid_chain_mask_left = torch.tril(valid_chain_mask, diagonal=-n_neighbor)
@@ -1504,7 +1507,6 @@ class ContactFeaturizer(ConstraintFeaturizer):
             N_asym = torch.unique(self.asymid).shape[0]
             k = (N_asym * N_asym - N_asym) // 2
         if size < 1 and size > 0:
-            # TODO: to be determined!
             samples = torch.zeros(k).geometric_(size).int().tolist()
             return samples
         elif size >= 1 and isinstance(size, int):
@@ -1629,7 +1631,6 @@ class ContactFeaturizer(ConstraintFeaturizer):
 
         for contact_type, max_d_range in max_distance_range.items():
             # generate max_distance_mask for different contact type
-            # TODO: use different distance threshold for different pairs
             max_distance_threshold = torch.zeros(1).uniform_(*max_d_range).item()
 
             # get all valid contact pairs
@@ -1954,7 +1955,7 @@ class ContactAtomFeaturizer(ContactFeaturizer):
         self.entity_type_dict = {"P": self.is_protein, "L": self.is_ligand}
 
     def _get_generation_basics(self, distance_type="atom"):
-        ## is_resolved mask
+        # is_resolved mask
         self.token_resolved_mask = torch.tensor(
             self.atom_array.is_resolved, dtype=torch.bool
         )
@@ -1962,7 +1963,7 @@ class ContactAtomFeaturizer(ContactFeaturizer):
             self.token_resolved_mask[:, None] * self.token_resolved_mask[None, :]
         )
 
-        ## distance matrix
+        # distance matrix
         self.token_distance = torch.tensor(
             cdist(self.atom_array.coord, self.atom_array.coord), dtype=torch.float64
         )
@@ -2277,7 +2278,7 @@ class SubStructureFeaturizer(ConstraintFeaturizer):
             - spec_asym_id: Specific chain to select from
         """
         constrained_tokens = set()
-        if size == 0 or spec_asym_id == -1:  # TODO: check spec_asym_id == -1 cases
+        if size == 0 or spec_asym_id == -1:
             distance_feature = torch.full(
                 (self.asymid.shape[0], self.asymid.shape[0]),
                 fill_value=-1 if feature_type == "one_hot" else self.pad_value,

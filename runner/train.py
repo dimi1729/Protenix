@@ -22,11 +22,13 @@ from contextlib import nullcontext
 import torch
 import torch.distributed as dist
 import wandb
+from ml_collections.config_dict import ConfigDict
 from torch.nn.parallel import DistributedDataParallel as DDP
 from tqdm import tqdm
 
 from configs.configs_base import configs as configs_base
 from configs.configs_data import data_configs
+from configs.configs_model_type import model_configs
 from protenix.config import parse_configs, parse_sys_args
 from protenix.config.config import save_config
 from protenix.data.dataloader import get_dataloaders
@@ -173,6 +175,11 @@ class AF3Trainer(object):
         else:
             self.model = self.raw_model
 
+        def count_parameters(model):
+            total_params = sum(p.numel() for p in model.parameters())
+            return total_params / 1000.0 / 1000.0
+
+        self.print(f"Model Parameters: {count_parameters(self.model)}")
         if self.configs.get("ema_decay", -1) > 0:
             assert self.configs.ema_decay < 1
             self.ema_wrapper = EMAWrapper(
@@ -269,17 +276,13 @@ class AF3Trainer(object):
                 if not skip_load_scheduler:
                     self.print(f"Loading scheduler state")
                     self.lr_scheduler.load_state_dict(checkpoint["scheduler"])
-                else:
-                    if load_step_for_scheduler:
-                        assert (
-                            not skip_load_step
-                        ), "if load_step_for_scheduler is True, you must load step first"
-                        # reinitialize LR scheduler using the updated optimizer and step
-                        self.init_scheduler(last_epoch=self.step - 1)
-                    else:
-                        # LR scheduler is initialized from scratch
-                        # That is, even if self.step is loaded, LR scheduler will not start from this step
-                        pass
+                elif load_step_for_scheduler:
+                    assert (
+                        not skip_load_step
+                    ), "if load_step_for_scheduler is True, you must load step first"
+                    # reinitialize LR scheduler using the updated optimizer and step
+                    self.init_scheduler(last_epoch=self.step - 1)
+
             self.print(f"Finish loading checkpoint, current step: {self.step}")
 
         # Load EMA model parameters
@@ -592,6 +595,10 @@ def main():
         configs,
         parse_sys_args(),
     )
+    model_name = configs.model_name
+    model_specfics_configs = ConfigDict(model_configs[model_name])
+    # update model specific configs
+    configs.update(model_specfics_configs)
 
     print(configs.run_name)
     print(configs)

@@ -105,7 +105,6 @@ def get_optimizer(
 
         optimizer = torch.optim.Adam(
             param_groups,
-            model.parameters(),
             lr=configs.adam.lr,
             weight_decay=configs.adam.weight_decay,
             betas=(configs.adam.beta1, configs.adam.beta2),

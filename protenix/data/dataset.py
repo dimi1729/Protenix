@@ -105,11 +105,13 @@ class BaseSingleDataset(Dataset):
         )  # Limit number of indices rows, mainly for test
         # Configs for constraint
         self.constraint = kwargs.get("constraint", {})
-        logger.info(f"[{self.name}] constraint config: {self.constraint}")
-        self.ab_top2_clusters = get_antibody_clusters()
-        self.constraint_generator = ConstraintFeatureGenerator(
-            self.constraint, self.ab_top2_clusters
-        )
+        if self.constraint.get("enable", False):
+            logger.info(f"[{self.name}] constraint config: {self.constraint}")
+            # Do not rely on new files for users who do not use constraint feature
+            self.ab_top2_clusters = get_antibody_clusters()
+            self.constraint_generator = ConstraintFeatureGenerator(
+                self.constraint, self.ab_top2_clusters
+            )
 
         self.error_dir = kwargs.get("error_dir", None)
         if self.error_dir is not None:

@@ -35,7 +35,7 @@ default_test_configs = {
     "shuffle_sym_ids": GlobalConfigValue("test_shuffle_sym_ids"),
     "constraint": {
         "enable": False,
-        "fix_seed": False,  # True means use use the same contact in each seed
+        "fix_seed": False,  # True means use use the same contact in each evaluation.
     },
 }
 
@@ -62,6 +62,9 @@ default_weighted_pdb_configs = {
     "lig_atom_rename": GlobalConfigValue("train_lig_atom_rename"),
     "shuffle_mols": GlobalConfigValue("train_shuffle_mols"),
     "shuffle_sym_ids": GlobalConfigValue("train_shuffle_sym_ids"),
+    # If enabled, the training settings for different constraint types,
+    # providing the model a certain proportion of constraints
+    # that meet specific conditions.
     "constraint": {
         "enable": False,
         "fix_seed": False,
@@ -134,9 +137,7 @@ if (not os.path.exists(CCD_COMPONENTS_FILE_PATH)) or (
     CCD_COMPONENTS_RDKIT_MOL_FILE_PATH = os.path.join(
         DATA_ROOT_DIR, "components.v20240608.cif.rdkit_mol.pkl"
     )
-PDB_CLUSTER_FILE_PATH = os.path.join(
-    DATA_ROOT_DIR, "wwPDB/indices/clusters-by-entity-40.txt"
-)
+PDB_CLUSTER_FILE_PATH = os.path.join(DATA_ROOT_DIR, "clusters-by-entity-40.txt")
 
 
 # This is a patch in inference stage for users that do not have root permission.
