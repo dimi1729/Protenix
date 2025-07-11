@@ -23,10 +23,12 @@ from typing import Any, Mapping
 
 import torch
 import torch.distributed as dist
+from ml_collections.config_dict import ConfigDict
 
 from configs.configs_base import configs as configs_base
 from configs.configs_data import data_configs
 from configs.configs_inference import inference_configs
+from configs.configs_model_type import model_configs
 from protenix.config import parse_configs, parse_sys_args
 from protenix.data.infer_data_pipeline import get_inference_dataloader
 from protenix.model.protenix import Protenix
@@ -98,7 +100,9 @@ class InferenceRunner(object):
         self.model = Protenix(self.configs).to(self.device)
 
     def load_checkpoint(self) -> None:
-        checkpoint_path = self.configs.load_checkpoint_path
+        checkpoint_path = (
+            f"{self.configs.load_checkpoint_dir}/{self.configs.model_name}.pt"
+        )
         if not os.path.exists(checkpoint_path):
             raise Exception(f"Given checkpoint path not exist [{checkpoint_path}]")
         self.print(
@@ -162,9 +166,13 @@ class InferenceRunner(object):
         self.model.configs = new_configs
 
 
-def download_infercence_cache(configs: Any, model_version: str = "v0.5.0") -> None:
+def download_infercence_cache(configs: Any) -> None:
 
-    for cache_name in ("ccd_components_file", "ccd_components_rdkit_mol_file"):
+    for cache_name in (
+        "ccd_components_file",
+        "ccd_components_rdkit_mol_file",
+        "pdb_cluster_file",
+    ):
         cur_cache_fpath = configs["data"][cache_name]
         if not opexists(cur_cache_fpath):
             os.makedirs(os.path.dirname(cur_cache_fpath), exist_ok=True)
@@ -178,11 +186,11 @@ def download_infercence_cache(configs: Any, model_version: str = "v0.5.0") -> No
             )
             urllib.request.urlretrieve(tos_url, cur_cache_fpath)
 
-    checkpoint_path = configs.load_checkpoint_path
+    checkpoint_path = f"{configs.load_checkpoint_dir}/{configs.model_name}.pt"
 
     if not opexists(checkpoint_path):
         os.makedirs(os.path.dirname(checkpoint_path), exist_ok=True)
-        tos_url = URL[f"model_{model_version}"]
+        tos_url = URL[configs.model_name]
         logger.info(
             f"Downloading model checkpoint from\n {tos_url}... to {checkpoint_path}"
         )
@@ -297,7 +305,15 @@ def run() -> None:
         arg_str=parse_sys_args(),
         fill_required_with_null=True,
     )
-    download_infercence_cache(configs, model_version="v0.5.0")
+    model_name = configs.model_name
+    _, model_size, model_feature, model_version = model_name.split("_")
+    logger.info(
+        f"Inference by Protenix: model_size: {model_size}, with_feature: {model_feature.replace('-',', ')}, model_version: {model_version}"
+    )
+    model_specfics_configs = ConfigDict(model_configs[model_name])
+    # update model specific configs
+    configs.update(model_specfics_configs)
+    download_infercence_cache(configs)
     main(configs)
 
 

@@ -125,9 +125,10 @@ If you installed `Protenix` via `pip`, you can run the following command to perf
 
 ```bash
 # the default n_cycle/n_step/n_samples is 10/200/5 respectively, you can modify it by passing --cycle x1 --step x2 --sample x3
+# the default model_name is protenix_base_default_v0.5.0, you can modify it by passing --model_name xxxx
 
 # run with example.json, which contains precomputed msa dir.
-protenix predict --input examples/example.json --out_dir  ./output --seeds 101
+protenix predict --input examples/example.json --out_dir  ./output --seeds 101 --model_name "protenix_base_default_v0.5.0"
 
 # run with multiple json files, the default seed is 101.
 protenix predict --input ./jsons_dir/ --out_dir  ./output
