@@ -27,7 +27,8 @@ Currently, the model_name support the following models.
 | `protenix_base_default_v0.5.0`      |      ❌ / ✅ / ❌         |         368.09       |
 | `protenix_base_constraint_v0.5.0`   |      ❌ / ✅ / ✅         |         368.30       |
 | `protenix_mini_esm_v0.5.0`          |      ✅ / ✅ / ❌         |                      |
-| `protenix_tiny_esm_v0.5.0`          |      ✅ / ✅ / ❌         |                      |
+| `protenix_mini_default_v0.5.0`          |      ❌ / ✅ / ❌         |                      |
+| `protenix_tiny_detault_v0.5.0`          |      ❌ / ✅ / ❌         |                      |
 """
 model_configs = {
     "protenix_base_default_v0.5.0": {},  # the default model do not need to update the configs
@@ -99,6 +100,79 @@ model_configs = {
             "constraint_embedder.contact_atom_z_embedder",
         ],
     },
-    "protenix_mini_esm_v0.5.0": {},  # TODO: cy and yx for mini model release
-    "protenix_tiny_esm_v0.5.0": {},  # TODO: cy and yx
+    "protenix_mini_default_v0.5.0": {
+        "model": {
+            "msa_module": {
+                "n_blocks": 1,
+            },  
+            "pairformer": {
+                "n_blocks": 16, 
+            },  
+            "diffusion_module": {
+                "atom_encoder": {
+                    "n_blocks": 1,
+                },  
+                "transformer": {
+                    "n_blocks": 8,
+                },  
+                "atom_decoder": {
+                    "n_blocks": 1,
+                },  
+            }   
+        },  
+        "load_strict": False,
+    },  # TODO: cy and yx for mini model release
+    "protenix_tiny_default_v0.5.0": {
+        "model": {
+            "msa_module": {
+                "n_blocks": 1,
+            },  
+            "pairformer": {
+                "n_blocks": 8, 
+            },  
+            "diffusion_module": {
+                "atom_encoder": {
+                    "n_blocks": 1,
+                },  
+                "transformer": {
+                    "n_blocks": 8,
+                },  
+                "atom_decoder": {
+                    "n_blocks": 1,
+                },  
+            }   
+        },  
+        "load_strict": False,
+    },
+    "protenix_mini_esm_v0.5.0": {
+        "model": {
+            "msa_module": {
+                "n_blocks": 1,
+            },  
+            "pairformer": {
+                "n_blocks": 16, 
+            },  
+            "diffusion_module": {
+                "atom_encoder": {
+                    "n_blocks": 1,
+                },  
+                "transformer": {
+                    "n_blocks": 8,
+                },  
+                "atom_decoder": {
+                    "n_blocks": 1,
+                },  
+            }   
+        },  
+        "esm": {
+            "enable": True,
+            "model_name": "esm2-3b",
+        },
+        "data": {
+            "msa": {
+                "enable": False
+            }
+        },
+        "load_strict": False,
+    },  # TODO: cy and yx
 }

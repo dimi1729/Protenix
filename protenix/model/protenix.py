@@ -73,7 +73,8 @@ class Protenix(nn.Module):
         self.diffusion_batch_size = self.configs.diffusion_batch_size
 
         # Model
-        self.input_embedder = InputFeatureEmbedder(**configs.model.input_embedder)
+        esm_configs = configs.get("esm", {})  # This is used in InputFeatureEmbedder
+        self.input_embedder = InputFeatureEmbedder(**configs.model.input_embedder, esm_configs=esm_configs)
         self.relative_position_encoding = RelativePositionEncoding(
             **configs.model.relative_position_encoding
         )

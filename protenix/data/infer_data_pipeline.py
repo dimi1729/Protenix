@@ -17,11 +17,13 @@ import logging
 import time
 import traceback
 import warnings
+import os
 from typing import Any, Mapping
 
 import torch
 from biotite.structure import AtomArray
 from torch.utils.data import DataLoader, Dataset, DistributedSampler
+from protenix.data.esm_featurizer import ESMFeaturizer
 
 from protenix.data.data_pipeline import DataPipeline
 from protenix.data.json_to_feature import SampleDictToFeatures
@@ -34,6 +36,17 @@ logger = logging.getLogger(__name__)
 
 warnings.filterwarnings("ignore", module="biotite")
 
+def get_esm_featurizer(configs, error_dir=None):
+    esm_info = configs.get("esm", {})
+    if esm_info.get("enable", False):
+        return ESMFeaturizer(
+            embedding_dir=esm_info.embedding_dir,
+            sequence_fpath=esm_info.sequence_fpath,
+            embedding_dim=esm_info.embedding_dim,
+            error_dir=error_dir,
+        )
+    else:
+        return None
 
 def get_inference_dataloader(configs: Any) -> DataLoader:
     """
@@ -47,6 +60,7 @@ def get_inference_dataloader(configs: Any) -> DataLoader:
     """
     inference_dataset = InferenceDataset(
         input_json_path=configs.input_json_path,
+        configs=configs,
         dump_dir=configs.dump_dir,
         use_msa=configs.use_msa,
     )
@@ -72,6 +86,7 @@ class InferenceDataset(Dataset):
         input_json_path: str,
         dump_dir: str,
         use_msa: bool = True,
+        configs = None,
     ) -> None:
 
         self.input_json_path = input_json_path
@@ -79,6 +94,26 @@ class InferenceDataset(Dataset):
         self.use_msa = use_msa
         with open(self.input_json_path, "r") as f:
             self.inputs = json.load(f)
+
+        esm_info = configs.get("esm", {})
+        configs.esm.embedding_dir = (
+            f"./esm_embedding_from_json/{configs.esm.model_name}"
+        )
+        configs.esm.sequence_fpath = "./esm_embedding_from_json/sequences.csv"
+        if esm_info.get("enable", False):
+            if not os.path.exists(configs.esm.embedding_dir) or not os.path.exists(
+                configs.esm.sequence_fpath
+            ):
+                os.makedirs(configs.esm.embedding_dir, exist_ok=True)
+                os.makedirs(os.path.dirname(configs.esm.sequence_fpath), exist_ok=True)
+                ESMFeaturizer.precompute_esm_embedding(
+                    self.inputs,
+                    configs.esm.model_name,
+                    configs.esm.embedding_dir,
+                    configs.esm.sequence_fpath,
+                )
+
+        self.esm_featurizer = get_esm_featurizer(configs)
 
     def process_one(
         self,
@@ -120,6 +155,15 @@ class InferenceDataset(Dataset):
             if self.use_msa
             else {}
         )
+
+        # Esm features
+        if self.esm_featurizer is not None:
+            x_esm = self.esm_featurizer.inference_call(
+                token_array=token_array,
+                atom_array=atom_array,
+                bioassembly_dict=single_sample_dict,
+            )
+            features_dict["esm_token_embedding"] = x_esm
 
         # Make dummy features for not implemented features
         dummy_feats = ["template"]
