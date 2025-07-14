@@ -1,3 +1,17 @@
+# Copyright 2024 ByteDance and/or its affiliates.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import os
 import traceback
 
@@ -30,7 +44,9 @@ class ESMFeaturizer:
 
     def get_seq_to_filename(self, sequence_fpath: str) -> dict[str, str]:
         df = pd.read_csv(sequence_fpath)
-        df["filename"] = df["part_id"] + "/" + df["seq_label"] + ".pt"
+        df["filename"] = (
+            df["part_id"].astype(str) + "/" + df["seq_label"].astype(str) + ".pt"
+        )
         return df.set_index("seq")["filename"].to_dict()
 
     def load_esm_embedding(self, sequence: str):
@@ -50,7 +66,7 @@ class ESMFeaturizer:
             with open(fpath, "w") as f:
                 f.write(error_data["error"])
 
-    def __call__(self, token_array, atom_array, bioassembly_dict):
+    def __call__(self, token_array, atom_array, bioassembly_dict, inference_mode=False):
 
         # init as zeros
         N_token = len(token_array)
@@ -64,12 +80,26 @@ class ESMFeaturizer:
         is_protein = centre_atom_array.chain_mol_type == "protein"
         protein_entity_ids = set(centre_atom_array.label_entity_id[is_protein])
 
+        if inference_mode:
+            entity_id_to_sequence = (
+                {}
+            )  # Only contains protein entity, many-to-one mapping
+            for i, entity_info_wrapper in enumerate(bioassembly_dict["sequences"]):
+                entity_id = str(i + 1)
+                entity_type = list(entity_info_wrapper.keys())[0]
+                entity_info = entity_info_wrapper[entity_type]
+                if entity_type == "proteinChain":
+                    entity_id_to_sequence[entity_id] = entity_info["sequence"]
+
         # enumerate over the entities
         error_sequences = []
         for entity_id in protein_entity_ids:
             try:
                 # Get sequence
-                sequence = bioassembly_dict["sequences"][str(entity_id)]
+                if inference_mode:
+                    sequence = entity_id_to_sequence[entity_id]
+                else:
+                    sequence = bioassembly_dict["sequences"][str(entity_id)]
                 x_esm = self.load_esm_embedding(sequence)
                 # Get residue indices of the cropped tokens
                 entity_mask = centre_atom_array.label_entity_id == entity_id
@@ -90,13 +120,14 @@ class ESMFeaturizer:
                     f"[{bioassembly_dict['pdb_id']}] ESM error: {error_message}"
                 )
 
-        self.save_error(error_sequences, pdb_id=bioassembly_dict["pdb_id"])
+        id_key = "name" if inference_mode else "pdb_id"
+        self.save_error(error_sequences, pdb_id=bioassembly_dict[id_key])
 
         return x
 
     @staticmethod
     def precompute_esm_embedding(
-        inputs: list, model_name, embedding_dir, sequence_fpath
+        inputs: list, model_name, embedding_dir, sequence_fpath, checkpoint_dir
     ):
         print("Precompute ESM embeddings")
         # prepare seq_label
@@ -113,14 +144,16 @@ class ESMFeaturizer:
                             "seq": entity_info["sequence"],
                             "pdb_entity_id": pdb_entity_id,
                             "seq_label": pdb_entity_id,
-                            "part_id": pdb_entity_id[1:3],
+                            "part_id": pdb_entity_id,
                         }
                     )
-        df_seq = pd.DataFrame(all_seq_dict)
+        df_seq = pd.DataFrame(
+            all_seq_dict, columns=["seq", "pdb_entity_id", "seq_label", "part_id"]
+        )
         df_seq.to_csv(sequence_fpath)
         print(f"Save sequence file to {sequence_fpath}")
 
-        model, alphabet = load_esm_model(model_name)
+        model, alphabet = load_esm_model(model_name, local_esm_dir=checkpoint_dir)
         error_parts = []
         part_counts = dict(df_seq["part_id"].value_counts())
         for part_id, count in part_counts.items():
@@ -149,55 +182,3 @@ class ESMFeaturizer:
                 print(f"[{part_id}] {e}")
                 error_parts.append(part_id)
         print("Error parts: ", error_parts)
-
-    def inference_call(self, token_array, atom_array, bioassembly_dict):
-        # init as zeros
-        N_token = len(token_array)
-        x = torch.zeros([N_token, self.embedding_dim])
-
-        # get one atom per token
-        centre_atoms_indices = token_array.get_annotation("centre_atom_index")
-        centre_atom_array = atom_array[centre_atoms_indices]
-
-        # protein entities
-        is_protein = centre_atom_array.chain_mol_type == "protein"
-        protein_entity_ids = set(centre_atom_array.label_entity_id[is_protein])
-
-        # enumerate over the entities
-        error_sequences = []
-        entity_id_to_sequence = {}  # Only contains protein entity, many-to-one mapping
-
-        for i, entity_info_wrapper in enumerate(bioassembly_dict["sequences"]):
-            entity_id = str(i + 1)
-            entity_type = list(entity_info_wrapper.keys())[0]
-            entity_info = entity_info_wrapper[entity_type]
-
-            if entity_type == "proteinChain":
-                entity_id_to_sequence[entity_id] = entity_info["sequence"]
-        for entity_id in protein_entity_ids:
-            try:
-                # Get sequence
-                sequence = entity_id_to_sequence[entity_id]
-                x_esm = self.load_esm_embedding(sequence)
-                # Get residue indices of the cropped tokens
-                entity_mask = centre_atom_array.label_entity_id == entity_id
-                res_index = (
-                    centre_atom_array.res_id[entity_mask] - 1
-                )  # res_id starts with 1
-                # Get esm embeddding according to residue indices
-                x[entity_mask] = x_esm[res_index]
-            except Exception as e:
-                error_message = f"{e}:\n{traceback.format_exc()}"
-                error_sequences.append(
-                    {
-                        "entity_id": entity_id,
-                        "error": error_message,
-                    }
-                )
-                logger.warning(
-                    f"[{bioassembly_dict['name']}] ESM error: {error_message}"
-                )
-
-        self.save_error(error_sequences, pdb_id=bioassembly_dict["name"])
-
-        return x

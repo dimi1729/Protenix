@@ -1,5 +1,16 @@
-# Adapt from Corso, Gabriele, et al. "Diffdock: Diffusion steps, twists, and turns for molecular docking."
-# URL: https://github.com/gcorso/DiffDock/blob/main/utils/inference_utils.py
+# Copyright 2024 ByteDance and/or its affiliates.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 import argparse
 import os
@@ -7,46 +18,22 @@ import os
 import pandas as pd
 import torch
 from esm import FastaBatchedDataset, pretrained
-# from esm.models.esmc import ESMC
-# from esm.tokenization import get_esmc_model_tokenizers
-# from huggingface_hub import snapshot_download
 from tqdm.auto import tqdm
 
 ESM_CONFIG = {
-    "esm2-650m": {
-        "type": "esm2",
-        "model_path": "esm2_t33_650M_UR50D.pt",
-        "emb_dim": 1280,
-        "n_layers": 33,
-        "emb_dir": "/mnt/bn/ai4sml-lq/dev/alphafold3-data/wwPDB/esm2",
-    },
     "esm2-3b": {
         "type": "esm2",
         "model_path": "esm2_t36_3B_UR50D.pt",
         "emb_dim": 2560,
         "n_layers": 36,
-        "emb_dir": "/mnt/bn/protenix/serverless/datasets_v2/wwPDB/esm_3B/",
     },
     "esm2-3b-ism": {
         "type": "esm2",
-        "esm_model_path": "esm2_t36_3B_UR50D.pt",
-        "model_path": "checkpoint.pth",
+        "model_path": "esm2_t36_3B_UR50D_ism.pt",
         "emb_dim": 2560,
         "n_layers": 36,
-        "emb_dir": "/mnt/bn/protenix/serverless/datasets_v2/wwPDB/esm_3B_ism_interface/",
-    },
+    },  # https://www.biorxiv.org/content/10.1101/2024.11.08.622579v2
 }
-
-
-def _load_ism_model(model_path, esm_model_path='/mnt/bn/ai4s-yg/common_data/Common_ckpts/esm_pretrained_ckpts/esm2_t36_3B_UR50D.pt'):
-    if os.path.exists(esm_model_path):
-        model, alphabet = pretrained.load_model_and_alphabet_local(esm_model_path)
-    else:
-        model, alphabet = pretrained.load_model_and_alphabet(
-            os.path.splitext(os.path.basename(esm_model_path))[0]
-        )
-    model.load_state_dict(torch.load(model_path, map_location='cpu'))
-    return model, alphabet
 
 
 def _load_esm2_model(model_path):
@@ -59,18 +46,18 @@ def _load_esm2_model(model_path):
     return model, alphabet
 
 
-def load_esm_model(model_name):
+def load_esm_model(model_name, local_esm_dir="release_data/checkpoint"):
+    local_model_path = os.path.join(local_esm_dir, ESM_CONFIG[model_name]["model_path"])
+    if os.path.exists(local_model_path):
+        print("Try to load ESM language model from ", local_model_path)
 
-    if model_name.endswith("ism"):
-         LOCAL_ESM_DIR = "/mnt/bn/protenix/serverless/bytevs/workflow/esm"
-    else:
-        LOCAL_ESM_DIR = "/mnt/bn/ai4s-yg/common_data/Common_ckpts/esm_pretrained_ckpts"
-    local_model_path = os.path.join(LOCAL_ESM_DIR, ESM_CONFIG[model_name]["model_path"])
-    print("Try to load ESM language model from ", local_model_path)
-
-    if model_name.endswith("ism"):
-        model, alphabet = _load_ism_model(model_path = local_model_path)
-    elif model_name.startswith("esm2"):
+    if "ism" in model_name and not os.path.exists(local_model_path):
+        raise RuntimeError(
+            f"esm2-3b-ism model: {local_model_path} does not exist \n"
+            + "this model can not be download from fair-esm, \n"
+            + "download it from xxxx"
+        )
+    if model_name.startswith("esm2"):
         model, alphabet = _load_esm2_model(local_model_path)
     model.eval()
     if torch.cuda.is_available():
@@ -108,6 +95,8 @@ def compute_ESM_embeddings(
     return embeddings
 
 
+# Adapt from Corso, Gabriele, et al. "Diffdock: Diffusion steps, twists, and turns for molecular docking."
+# URL: https://github.com/gcorso/DiffDock/blob/main/utils/inference_utils.py
 def compute_esm2_embeddings(
     model,
     alphabet,
@@ -146,8 +135,8 @@ def compute_esm2_embeddings(
 
 
 def pdb_sequences_iterator(
-    input_path="/mnt/bn/ai4sml-lq/dev/alphafold3-data/wwPDB/pdb/seqX/pdb_seq.csv",
-    save_path="/mnt/bn/ai4sml-lq/dev/alphafold3-data/wwPDB/pdb/seqX/pdb_labels_seqs.csv",
+    input_path="./scripts/msa/data/pdb_seqs/pdb_seq.csv",
+    save_path="./scripts/msa/data/pdb_seqs/pdb_labels_seqs.csv",
     start_id=0,
     end_id=-1,
 ):
@@ -193,7 +182,6 @@ def process_pdb_dataset(
     )
     error_parts = []
     for part_id, labels, sequences in seq_iterator:
-        # try:
         save_dir = os.path.join(root_save_dir, f"{part_id}")
 
         if not os.path.exists(save_dir):
@@ -217,23 +205,13 @@ def process_pdb_dataset(
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name", type=str, choices=list(ESM_CONFIG.keys()))
-    parser.add_argument("--dataset", type=str, choices=["wwpdb", "distillation"])
     parser.add_argument("--start_id", type=int, default=0)
     parser.add_argument("--end_id", type=int, default=-1)
     args = parser.parse_args()
 
-    if args.dataset == "wwpdb":
-        save_dir = ESM_CONFIG[args.model_name]["emb_dir"]
-        pdb_seq_path = (
-            "/mnt/bn/ai4sml-lq/dev/alphafold3-data/wwPDB/pdb/seqX/pdb_seq.csv"
-        )
-        pdb_seq_label_path = (
-            "/mnt/bn/ai4sml-lq/dev/alphafold3-data/wwPDB/pdb/seqX/pdb_labels_seqs.csv"
-        )
-    else:
-        save_dir = os.path.join(ESM_CONFIG[args.model_name]["emb_dir"], "distillation")
-        pdb_seq_path = "/mnt/bn/ai4sml-lq/dev/alphafold3-data/distillation_data/pdb_seq/combined_seq.csv"
-        pdb_seq_label_path = "/mnt/bn/ai4sml-lq/dev/alphafold3-data/distillation_data/pdb_seq/combined_seq_labels.csv"
+    save_dir = f"./esm_embeddings/{args.model_name}"
+    pdb_seq_path = "./scripts/msa/data/pdb_seqs/pdb_seq.csv"
+    pdb_seq_label_path = "./scripts/msa/data/pdb_seqs/pdb_labels_seqs.csv"
 
     if not os.path.exists(save_dir):
         print("Make dir: ", save_dir)

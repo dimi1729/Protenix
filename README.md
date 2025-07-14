@@ -131,13 +131,16 @@ If you installed `Protenix` via `pip`, you can run the following command to perf
 # run with example.json, which contains precomputed msa dir.
 protenix predict --input examples/example.json --out_dir  ./output --seeds 101 --model_name "protenix_base_default_v0.5.0"
 
+# run with example.json, we use only esm feature.
+protenix predict --input examples/example.json --out_dir  ./output --seeds 101 --model_name "protenix_mini_esm_v0.5.0" --use_msa false
+
 # run with multiple json files, the default seed is 101.
 protenix predict --input ./jsons_dir/ --out_dir  ./output
 
 # if the json do not contain precomputed msa dir,
-# add --use_msa_server to search msa and then predict.
+# add --use_msa (default: true) to search msa and then predict.
 # if mutiple seeds are provided, split them by comma.
-protenix predict --input examples/example_without_msa.json --out_dir ./output --seeds 101,102 --use_msa_server
+protenix predict --input examples/example_without_msa.json --out_dir ./output --seeds 101,102 --use_msa true
 ```
 
 ### Inference via Bash Script

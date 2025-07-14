@@ -14,18 +14,18 @@
 
 import json
 import logging
+import os
 import time
 import traceback
 import warnings
-import os
 from typing import Any, Mapping
 
 import torch
 from biotite.structure import AtomArray
 from torch.utils.data import DataLoader, Dataset, DistributedSampler
-from protenix.data.esm_featurizer import ESMFeaturizer
 
 from protenix.data.data_pipeline import DataPipeline
+from protenix.data.esm_featurizer import ESMFeaturizer
 from protenix.data.json_to_feature import SampleDictToFeatures
 from protenix.data.msa_featurizer import InferenceMSAFeaturizer
 from protenix.data.utils import data_type_transform, make_dummy_feature
@@ -36,17 +36,6 @@ logger = logging.getLogger(__name__)
 
 warnings.filterwarnings("ignore", module="biotite")
 
-def get_esm_featurizer(configs, error_dir=None):
-    esm_info = configs.get("esm", {})
-    if esm_info.get("enable", False):
-        return ESMFeaturizer(
-            embedding_dir=esm_info.embedding_dir,
-            sequence_fpath=esm_info.sequence_fpath,
-            embedding_dim=esm_info.embedding_dim,
-            error_dir=error_dir,
-        )
-    else:
-        return None
 
 def get_inference_dataloader(configs: Any) -> DataLoader:
     """
@@ -86,7 +75,7 @@ class InferenceDataset(Dataset):
         input_json_path: str,
         dump_dir: str,
         use_msa: bool = True,
-        configs = None,
+        configs=None,
     ) -> None:
 
         self.input_json_path = input_json_path
@@ -94,28 +83,29 @@ class InferenceDataset(Dataset):
         self.use_msa = use_msa
         with open(self.input_json_path, "r") as f:
             self.inputs = json.load(f)
-
+        json_task_name = os.path.basename(self.input_json_path).split(".")[0]
         esm_info = configs.get("esm", {})
-        configs.esm.embedding_dir = (
-            f"./esm_embedding_from_json/{configs.esm.model_name}"
+        configs.esm.embedding_dir = f"./esm_embeddings/{configs.esm.model_name}"
+        configs.esm.sequence_fpath = (
+            f"./esm_embeddings/{json_task_name}_prot_sequences.csv"
         )
-        configs.esm.sequence_fpath = "./esm_embedding_from_json/sequences.csv"
-        if esm_info.get("enable", False):
-            if not os.path.exists(configs.esm.embedding_dir) or not os.path.exists(
-                configs.esm.sequence_fpath
-            ):
-                os.makedirs(configs.esm.embedding_dir, exist_ok=True)
-                os.makedirs(os.path.dirname(configs.esm.sequence_fpath), exist_ok=True)
-                ESMFeaturizer.precompute_esm_embedding(
-                    self.inputs,
-                    configs.esm.model_name,
-                    configs.esm.embedding_dir,
-                    configs.esm.sequence_fpath,
-                )
-            self.use_msa = False
-        self.esm_featurizer = get_esm_featurizer(configs)
-            
-
+        self.esm_enable = esm_info.get("enable", False)
+        if self.esm_enable:
+            os.makedirs(configs.esm.embedding_dir, exist_ok=True)
+            os.makedirs(os.path.dirname(configs.esm.sequence_fpath), exist_ok=True)
+            ESMFeaturizer.precompute_esm_embedding(
+                self.inputs,
+                configs.esm.model_name,
+                configs.esm.embedding_dir,
+                configs.esm.sequence_fpath,
+                configs.checkpoint_dir,
+            )
+            self.esm_featurizer = ESMFeaturizer(
+                embedding_dir=esm_info.embedding_dir,
+                sequence_fpath=esm_info.sequence_fpath,
+                embedding_dim=esm_info.embedding_dim,
+                error_dir="./esm_embeddings/",
+            )
 
     def process_one(
         self,
@@ -159,11 +149,12 @@ class InferenceDataset(Dataset):
         )
 
         # Esm features
-        if self.esm_featurizer is not None:
-            x_esm = self.esm_featurizer.inference_call(
+        if self.esm_enable:
+            x_esm = self.esm_featurizer(
                 token_array=token_array,
                 atom_array=atom_array,
                 bioassembly_dict=single_sample_dict,
+                inference_mode=True,
             )
             features_dict["esm_token_embedding"] = x_esm
 

@@ -23,7 +23,7 @@ from sklearn.neighbors import KDTree
 
 from protenix.data.constants import STD_RESIDUES, STD_RESIDUES_WITH_GAP, get_all_elems
 from protenix.data.tokenizer import Token, TokenArray
-from protenix.data.utils import get_ligand_polymer_bond_mask, get_atom_level_token_mask
+from protenix.data.utils import get_atom_level_token_mask, get_ligand_polymer_bond_mask
 from protenix.utils.geometry import angle_3p, random_transform
 
 
@@ -209,7 +209,7 @@ class Featurizer(object):
             frame_atom_index = [-1, b_idx, -1]
             has_frame = 0
         else:
-            _dist, ind = kdtree.query([b_ref_pos.numpy()], k=3)
+            _dist, ind = kdtree.query([b_ref_pos], k=3)
             a_idx, c_idx = atom_ids[ind[0][1]], atom_ids[ind[0][2]]
             frame_atom_index = [a_idx, b_idx, c_idx]
 
