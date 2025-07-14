@@ -112,8 +112,10 @@ class InferenceDataset(Dataset):
                     configs.esm.embedding_dir,
                     configs.esm.sequence_fpath,
                 )
-
+            self.use_msa = False
         self.esm_featurizer = get_esm_featurizer(configs)
+            
+
 
     def process_one(
         self,

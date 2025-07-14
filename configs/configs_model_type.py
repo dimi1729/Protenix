@@ -168,11 +168,6 @@ model_configs = {
             "enable": True,
             "model_name": "esm2-3b",
         },
-        "data": {
-            "msa": {
-                "enable": False
-            }
-        },
         "load_strict": False,
     },  # TODO: cy and yx
 }
