@@ -55,7 +55,7 @@ def load_esm_model(model_name, local_esm_dir="release_data/checkpoint"):
         raise RuntimeError(
             f"esm2-3b-ism model: {local_model_path} does not exist \n"
             + "this model can not be download from fair-esm, \n"
-            + "download it from xxxx"
+            + "download it from https://af3-dev.tos-cn-beijing.volces.com/release_model/esm2_t36_3B_UR50D_ism.pt"
         )
     if model_name.startswith("esm2"):
         model, alphabet = _load_esm2_model(local_model_path)

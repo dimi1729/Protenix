@@ -303,12 +303,16 @@ def predict(
             step = 200
         elif model_name in [
             "protenix_mini_esm_v0.5.0",
+            "protenix_mini_ism_v0.5.0",
             "protenix_mini_default_v0.5.0",
             "protenix_tiny_default_v0.5.0",
         ]:
             cycle = 4
-            step = 2
-            if model_name in ["protenix_mini_esm_v0.5.0"]:
+            step = 5
+            if model_name in [
+                "protenix_mini_esm_v0.5.0",
+                "protenix_mini_ism_v0.5.0",
+            ]:
                 use_msa = False
         else:
             raise RuntimeError(

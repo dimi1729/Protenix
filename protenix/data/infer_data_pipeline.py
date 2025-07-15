@@ -98,7 +98,7 @@ class InferenceDataset(Dataset):
                 configs.esm.model_name,
                 configs.esm.embedding_dir,
                 configs.esm.sequence_fpath,
-                configs.checkpoint_dir,
+                configs.load_checkpoint_dir,
             )
             self.esm_featurizer = ESMFeaturizer(
                 embedding_dir=esm_info.embedding_dir,

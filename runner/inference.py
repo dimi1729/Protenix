@@ -239,7 +239,7 @@ def download_infercence_cache(configs: Any) -> None:
                 f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ckpt_path2}"
             )
             download_from_url(tos_url, esm_3b_ckpt_path2)
-    if "ism" in configs.model_name:  # TODO: not ready yet.
+    if "ism" in configs.model_name:
         esm_3b_ism_ckpt_path = f"{checkpoint_dir}/esm2_t36_3B_UR50D_ism.pt"
 
         if not opexists(esm_3b_ism_ckpt_path):
@@ -248,6 +248,14 @@ def download_infercence_cache(configs: Any) -> None:
                 f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ism_ckpt_path}"
             )
             download_from_url(tos_url, esm_3b_ism_ckpt_path)
+
+        esm_3b_ism_ckpt_path2 = f"{checkpoint_dir}/esm2_t36_3B_UR50D_ism-contact-regression.pt"  # the same as esm_3b_ckpt_path2
+        if not opexists(esm_3b_ism_ckpt_path2):
+            tos_url = URL["esm2_t36_3B_UR50D_ism-contact-regression"]
+            logger.info(
+                f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ism_ckpt_path2}"
+            )
+            download_from_url(tos_url, esm_3b_ism_ckpt_path2)
 
 
 def update_inference_configs(configs: Any, N_token: int):

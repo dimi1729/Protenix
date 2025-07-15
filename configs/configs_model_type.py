@@ -27,6 +27,7 @@ Currently, the model_name support the following models.
 | `protenix_base_default_v0.5.0`      |      ❌ / ✅ / ❌         |         368.09       |
 | `protenix_base_constraint_v0.5.0`   |      ❌ / ✅ / ✅         |         368.30       |
 | `protenix_mini_esm_v0.5.0`          |      ✅ / ✅ / ❌         |         135.22       |
+| `protenix_mini_ism_v0.5.0`          |      ✅ / ✅ / ❌         |         135.22       |
 | `protenix_mini_default_v0.5.0`      |      ❌ / ✅ / ❌         |         134.06       |
 | `protenix_tiny_detault_v0.5.0`      |      ❌ / ✅ / ❌         |         109.50       |
 """
@@ -114,7 +115,7 @@ model_configs = {
         "sample_diffusion": {
             "gamma0": 0,
             "step_scale_eta": 1.0,
-            "N_step": 2,
+            "N_step": 5,
         },  # the default setting for mini model
         "model": {
             "N_cycle": 4,
@@ -142,7 +143,7 @@ model_configs = {
         "sample_diffusion": {
             "gamma0": 0,
             "step_scale_eta": 1.0,
-            "N_step": 2,
+            "N_step": 5,
         },  # the default setting for tiny model
         "model": {
             "N_cycle": 4,
@@ -170,7 +171,7 @@ model_configs = {
         "sample_diffusion": {
             "gamma0": 0,
             "step_scale_eta": 1.0,
-            "N_step": 2,
+            "N_step": 5,
         },  # the default setting for mini model
         "model": {
             "N_cycle": 4,
@@ -195,6 +196,39 @@ model_configs = {
         "esm": {
             "enable": True,
             "model_name": "esm2-3b",
+        },
+        "load_strict": False,  # For inference, it should be True.
+        "use_msa": False,  # For efficiency, this model does not use MSA by default.
+    },
+    "protenix_mini_ism_v0.5.0": {
+        "sample_diffusion": {
+            "gamma0": 0,
+            "step_scale_eta": 1.0,
+            "N_step": 5,
+        },  # the default setting for mini model
+        "model": {
+            "N_cycle": 4,
+            "msa_module": {
+                "n_blocks": 1,
+            },
+            "pairformer": {
+                "n_blocks": 16,
+            },
+            "diffusion_module": {
+                "atom_encoder": {
+                    "n_blocks": 1,
+                },
+                "transformer": {
+                    "n_blocks": 8,
+                },
+                "atom_decoder": {
+                    "n_blocks": 1,
+                },
+            },
+        },
+        "esm": {
+            "enable": True,
+            "model_name": "esm2-3b-ism",
         },
         "load_strict": False,  # For inference, it should be True.
         "use_msa": False,  # For efficiency, this model does not use MSA by default.
