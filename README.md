@@ -38,7 +38,8 @@ Protenix is built for high-accuracy structure prediction. It serves as an initia
 - 2025-05-30: **Protenix-v0.5.0** is now available! You may try Protenix-v0.5.0 by accessing the [server](https://protenix-server.com), or upgrade to the latest version using pip.
 
 ### 🔥 Feature Update
-- 2025-01-16: The preview version of [constraint feature](./README.md#early-access-to-new-constraint-feature) is released to branch [`constraint_esm`](https://github.com/bytedance/Protenix/tree/constraint_esm).
+- 2025-07-xx: [***Constraint feature***](docs/infer_json_format.md#constraint) of Protenix is released! Added **atom-level contact** and **pocket** constraints, significantly improving performance in our evaluations.
+- 2025-01-16: The preview version of **constraint feature** is released to branch [`constraint_esm`](https://github.com/bytedance/Protenix/tree/constraint_esm).
 - 2025-01-16: The [training data pipeline](./docs/prepare_training_data.md) is released.
 - 2025-01-16: The [MSA pipeline](./docs/msa_pipeline.md) is released.
 - 2025-01-16: Use [local colabfold_search](./docs/colabfold_compatible_msa.md) to generate protenix-compatible MSA.
@@ -165,12 +166,11 @@ Refer to the [Training Documentation](docs/training.md) for setup and details.
 
 ## 📌 Constraint Feature
 
-Protenix now allows users to specify ***contacts***, enabling the model to leverage additional inter-chain information as constraint guidance! We benchmarked this feature on the PoseBusters dataset and a curated protein-antibody interface subset.  Results show that Protenix can generate significantly more accurate structures when guided by constraints. You can try it out via the [`constraint_esm`](https://github.com/bytedance/Protenix/tree/constraint_esm) branch.
+Protenix now allows users to specify ***contacts*** (support residue-level and atom-level contact) and ***pocket constraint***, enabling the model to leverage additional inter-chain information as constraint guidance! We benchmarked this feature on the PoseBusters dataset and a curated protein-antibody interface subset.  Results show that Protenix can generate significantly more accurate structures when guided by constraints. You can try it via our [page](docs/infer_json_format.md#constraint) for details about the input format.
 
 ![Constraint Metrics](assets/constraint_metrics.png)
 
-> **Tips:** Our online service already supports constraint inputs — no local setup required!
-However, for local command-line usage, be sure to check out the [`constraint_esm`](https://github.com/bytedance/Protenix/tree/constraint_esm) branch, as this feature is not yet included in the main branch.
+> **Tips:** Our online service currently supports ***contact*** constraint — no local setup required!
 
 
 ## Training and Inference Cost
