@@ -126,8 +126,9 @@ If you installed `Protenix` via `pip`, you can run the following command to perf
 
 
 ```bash
-# the default n_cycle/n_step/n_samples is 10/200/5 respectively, you can modify it by passing --cycle x1 --step x2 --sample x3
-# the default model_name is protenix_base_default_v0.5.0, you can modify it by passing --model_name xxxx
+# 1. The default model_name is protenix_base_default_v0.5.0, you can modify it by passing --model_name xxxx
+# 2. We provide recommended default configuration parameters for each model. To customize cycle/step/use_msa settings, you must set --use_default_params false
+# 3. You can modify cycle/step/use_msa by passing --cycle x1 --step x2 --use_msa false
 
 # run with example.json, which contains precomputed msa dir.
 protenix predict --input examples/example.json --out_dir  ./output --seeds 101 --model_name "protenix_base_default_v0.5.0"
@@ -153,6 +154,7 @@ bash inference_demo.sh
 ```
 
 The script accepts the following arguments:
+* `model_name`: Name of the model to use for inference.
 * `input_json_path`: Path to a JSON file that fully specifies the input structure.
 * `dump_dir`: Directory where inference results will be saved.
 * `dtype`: Data type used during inference. Supported options: `bf16` and `fp32`.
@@ -167,13 +169,16 @@ The script accepts the following arguments:
 
 Refer to the [Training Documentation](docs/training.md) for setup and details.
 
-## 📌 Constraint Feature
+## Model Features
+###  📌 Constraint
 
 Protenix now allows users to specify ***contacts*** (support residue-level and atom-level contact) and ***pocket constraint***, enabling the model to leverage additional inter-chain information as constraint guidance! We benchmarked this feature on the PoseBusters dataset and a curated protein-antibody interface subset.  Results show that Protenix can generate significantly more accurate structures when guided by constraints. You can try it via our [page](docs/infer_json_format.md#constraint) for details about the input format.
 
 ![Constraint Metrics](assets/constraint_metrics.png)
 
-> **Tips:** Our online service currently supports ***contact*** constraint — no local setup required!
+###  📌 Mini-Models
+We introduce Protenix-Mini, a lightweight variant of Protenix that employs a reduced number of blocks and a few ODE steps (e.g., one or two) to enable efficient prediction of complex biomolecular structures. Experimental results show that Protenix-Mini achieves a favorable balance between efficiency and accuracy, with only a marginal 1–5% reduction in evaluation metrics such as interface LDDT, complex LDDT, and ligand RMSD success rate. By addressing both sampling efficiency and architectural overhead, Protenix-Mini represents a step toward democratizing access to high-fidelity biomolecular structure prediction.
+![Mini/Tiny Metrics](assets/mini_performance.png)
 
 
 ## Training and Inference Cost
