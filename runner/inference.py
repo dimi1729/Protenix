@@ -11,9 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 import logging
 import os
+import time
 import traceback
 import urllib.request
 from contextlib import nullcontext
@@ -167,6 +167,33 @@ class InferenceRunner(object):
 
 
 def download_infercence_cache(configs: Any) -> None:
+    def progress_callback(block_num, block_size, total_size):
+        downloaded = block_num * block_size
+        percent = min(100, downloaded * 100 / total_size)
+        bar_length = 30
+        filled_length = int(bar_length * percent // 100)
+        bar = "=" * filled_length + "-" * (bar_length - filled_length)
+
+        status = f"\r[{bar}] {percent:.1f}%"
+        print(status, end="", flush=True)
+
+        if downloaded >= total_size:
+            print()
+
+    def download_from_url(tos_url, checkpoint_path, check_weight=True):
+        urllib.request.urlretrieve(
+            tos_url, checkpoint_path, reporthook=progress_callback
+        )
+        if check_weight:
+            try:
+                ckpt = torch.load(checkpoint_path)
+                del ckpt
+            except:
+                os.remove(checkpoint_path)
+                raise RuntimeError(
+                    "Download model checkpoint failed, please download by yourself with "
+                    f"wget {tos_url} -O {checkpoint_path}"
+                )
 
     for cache_name in (
         "ccd_components_file",
@@ -184,26 +211,51 @@ def download_infercence_cache(configs: Any) -> None:
             logger.info(
                 f"Downloading data cache from\n {tos_url}... to {cur_cache_fpath}"
             )
-            urllib.request.urlretrieve(tos_url, cur_cache_fpath)
+            download_from_url(tos_url, cur_cache_fpath, check_weight=False)
 
     checkpoint_path = f"{configs.load_checkpoint_dir}/{configs.model_name}.pt"
+    checkpoint_dir = configs.load_checkpoint_dir
 
     if not opexists(checkpoint_path):
-        os.makedirs(os.path.dirname(checkpoint_path), exist_ok=True)
+        os.makedirs(checkpoint_dir, exist_ok=True)
         tos_url = URL[configs.model_name]
         logger.info(
             f"Downloading model checkpoint from\n {tos_url}... to {checkpoint_path}"
         )
-        urllib.request.urlretrieve(tos_url, checkpoint_path)
-        try:
-            ckpt = torch.load(checkpoint_path)
-            del ckpt
-        except:
-            os.remove(checkpoint_path)
-            raise RuntimeError(
-                "Download model checkpoint failed, please download by yourself with "
-                f"wget {tos_url} -O {checkpoint_path}"
+        download_from_url(tos_url, checkpoint_path)
+
+    if "esm" in configs.model_name:  # currently esm only support 3b model
+        esm_3b_ckpt_path = f"{checkpoint_dir}/esm2_t36_3B_UR50D.pt"
+        if not opexists(esm_3b_ckpt_path):
+            tos_url = URL["esm2_t36_3B_UR50D"]
+            logger.info(
+                f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ckpt_path}"
             )
+            download_from_url(tos_url, esm_3b_ckpt_path)
+        esm_3b_ckpt_path2 = f"{checkpoint_dir}/esm2_t36_3B_UR50D-contact-regression.pt"
+        if not opexists(esm_3b_ckpt_path2):
+            tos_url = URL["esm2_t36_3B_UR50D-contact-regression"]
+            logger.info(
+                f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ckpt_path2}"
+            )
+            download_from_url(tos_url, esm_3b_ckpt_path2)
+    if "ism" in configs.model_name:
+        esm_3b_ism_ckpt_path = f"{checkpoint_dir}/esm2_t36_3B_UR50D_ism.pt"
+
+        if not opexists(esm_3b_ism_ckpt_path):
+            tos_url = URL["esm2_t36_3B_UR50D_ism"]
+            logger.info(
+                f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ism_ckpt_path}"
+            )
+            download_from_url(tos_url, esm_3b_ism_ckpt_path)
+
+        esm_3b_ism_ckpt_path2 = f"{checkpoint_dir}/esm2_t36_3B_UR50D_ism-contact-regression.pt"  # the same as esm_3b_ckpt_path2
+        if not opexists(esm_3b_ism_ckpt_path2):
+            tos_url = URL["esm2_t36_3B_UR50D_ism-contact-regression"]
+            logger.info(
+                f"Downloading model checkpoint from\n {tos_url}... to {esm_3b_ism_ckpt_path2}"
+            )
+            download_from_url(tos_url, esm_3b_ism_ckpt_path2)
 
 
 def update_inference_configs(configs: Any, N_token: int):

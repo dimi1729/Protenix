@@ -23,7 +23,7 @@ from sklearn.neighbors import KDTree
 
 from protenix.data.constants import STD_RESIDUES, STD_RESIDUES_WITH_GAP, get_all_elems
 from protenix.data.tokenizer import Token, TokenArray
-from protenix.data.utils import get_ligand_polymer_bond_mask, get_atom_level_token_mask
+from protenix.data.utils import get_atom_level_token_mask, get_ligand_polymer_bond_mask
 from protenix.utils.geometry import angle_3p, random_transform
 
 

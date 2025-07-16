@@ -63,6 +63,11 @@ data_configs = {
     "test_lig_atom_rename": False,
     "test_shuffle_mols": False,
     "test_shuffle_sym_ids": False,
+    "esm": {
+        "enable": False,
+        "model_name": "esm2-3b",
+        "embedding_dim": 2560,
+    },
 }
 optim_configs = {
     # Optim
