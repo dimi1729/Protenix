@@ -217,7 +217,7 @@ class ConstraintFeatureGenerator:
                 atom_to_token_idx_dict[atom_idx] = idx
 
         atom_contact_specifics = []
-        for pair in atom_contact_inputs:
+        for i, pair in enumerate(atom_contact_inputs):
             atom_mask1 = get_atom_mask_by_name(
                 atom_array=atom_array,
                 entity_id=pair["id1"][0],
