@@ -74,7 +74,7 @@ class A3MProcessor:
             msa_path.mkdir(exist_ok=True)
             msa_path = msa_path / "0"
             msa_path.mkdir(exist_ok=True)
-            with open(msa_path / "non_pairing.a3m", "w") as f:
+            with open(msa_path / "uniref30.a3m", "w") as f:
                 f.write(non_pairing)
 
             with open(msa_path / "pairing.a3m", "w") as f:
@@ -155,7 +155,7 @@ class A3MProcessor:
             chain_dir = out_dir / str(i)
             chain_dir.mkdir(exist_ok=True)
 
-            with open(chain_dir / "non_pairing.a3m", "w") as f:
+            with open(chain_dir / "uniref30.a3m", "w") as f:
                 query_seq = lines[1]
                 f.write(">query\n")
                 f.write(f"{query_seq}\n")

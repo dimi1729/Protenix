@@ -1389,7 +1389,7 @@ def search_msa_paired(
     search_msa(sequence, pairing_db_fpath, pairing_file)
     if not os.path.exists(pairing_file):
         return None, idx
-    non_pairing_file = os.path.join(tmp_dir, "non_pairing.a3m")
+    non_pairing_file = os.path.join(tmp_dir, "uniref30.a3m")
     search_msa(sequence, non_pairing_db_fpath, non_pairing_file)
     if not os.path.exists(non_pairing_file):
         return None, idx

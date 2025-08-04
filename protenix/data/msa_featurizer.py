@@ -962,7 +962,7 @@ class InferenceMSAFeaturizer(object):
             # No pre-computed MSA was provided, and the MSA search failed
             raw_msa_paths = []
         else:
-            raw_msa_paths = [opjoin(msa_dir, "non_pairing.a3m")]
+            raw_msa_paths = [opjoin(msa_dir, "uniref30.a3m")]
         pdb_name = description
 
         sequence_features = process_single_sequence(

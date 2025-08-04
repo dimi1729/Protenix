@@ -308,7 +308,7 @@ class RequestParser(object):
             with open(opjoin(seq_dir, "pairing.a3m"), "w") as f:
                 for line in uniref100_lines:
                     f.write(line)
-            with open(opjoin(seq_dir, "non_pairing.a3m"), "w") as f:
+            with open(opjoin(seq_dir, "uniref30.a3m"), "w") as f:
                 for line in other_lines:
                     f.write(line)
 
@@ -323,7 +323,7 @@ class RequestParser(object):
                 if msa_seq.rstrip("\n") == query_seq:
                     continue
                 other_lines.extend([head, msa_seq])
-            with open(opjoin(seq_dir, "non_pairing.a3m"), "w") as f:
+            with open(opjoin(seq_dir, "uniref30.a3m"), "w") as f:
                 for line in other_lines:
                     f.write(line)
 
