@@ -77,6 +77,9 @@ class DataDumper:
         dump_dir = self._get_dump_dir(dataset_name, pdb_id, seed)
         Path(dump_dir).mkdir(parents=True, exist_ok=True)
 
+        print("IN DUMPER")
+        print(pred_dict.keys())
+
         self.dump_predictions(
             pred_dict=pred_dict,
             dump_dir=dump_dir,
@@ -139,6 +142,7 @@ class DataDumper:
             b_factor=b_factor,
         )
         # Dump confidence
+        print("SAVE_CONFIDENCE")
         self._save_confidence(
             data=pred_dict,
             prediction_save_dir=prediction_save_dir,
@@ -204,6 +208,9 @@ class DataDumper:
         sorted_indices: None,
     ):
         N_sample = len(data["summary_confidence"])
+        # print(data["full_data"])
+        # print(type(data["full_data"]))
+        # exit(1)
         for idx in range(N_sample):
             if self.need_atom_confidence:
                 data["full_data"][idx] = get_clean_full_confidence(
@@ -216,10 +223,11 @@ class DataDumper:
                 prediction_save_dir,
                 f"{sample_name}_seed_{seed}_summary_confidence_sample_{rank}.json",
             )
+            data["summary_confidence"][idx]["contact_probs"] = data["full_data"][idx]["contact_probs"].tolist()
             save_json(data["summary_confidence"][idx], output_fpath, indent=4)
             if self.need_atom_confidence:
                 output_fpath = os.path.join(
                     prediction_save_dir,
                     f"{sample_name}_full_data_sample_{rank}.json",
                 )
-                save_json(data["full_data"][idx], output_fpath, indent=None)
+                save_json(data["full_data"][idx], output_fpath)

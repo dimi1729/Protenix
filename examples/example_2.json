@@ -1,0 +1,23 @@
+[
+  {
+    "sequences": [
+      {
+        "proteinChain": {
+          "sequence": "MGSSHHHHHHSSGLVPRGSHMSGKIQHKAVVPAPSRIPLTLSEIEDLRRKGFNQTEIAELYGVTRQAVSWHKKTYGGRLTTRQIVQQNWPWDTRKPHDKSKAFQRLRDHGEYMRVGSFRTMSEDKKKRLLSWWKMLRDNDLVLEFDPSIEPYEGMAGGGFRYVPRDISDDDLLIRVNEHTQLTAEGELLWSWPDDIEELLSEP",
+          "count": 1,
+          "msa": {
+            "precomputed_msa_dir": "./examples/7r6r/msa/1",
+            "pairing_db": "uniref100"
+          }
+        }
+      },
+      {
+        "ligand": {
+          "ligand": "CCD_CU",
+          "count": 1
+        }
+      }
+    ],
+    "name": "test_cu"
+  }
+]
