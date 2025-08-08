@@ -1,16 +1,32 @@
-# Copyright 2024 ByteDance and/or its affiliates.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+#!/bin/bash
+#SBATCH --job-name=test_protenix   # job name
+#SBATCH --time=1-00:00:00   	   # max job run time dd-hh:mm:ss
+#SBATCH --ntasks-per-node=1      # tasks (commands) per compute node
+#SBATCH --cpus-per-task=48          # CPUs (threads) per command
+#SBATCH --mem=90G                  # total memory per node
+#SBATCH --gres=gpu:a100           # request 1 A100 GPU per node
+#SBATCH --exclude=g053,g002,g084
+#SBATCH --output=/scratch/user/dimi/Protenix/outerror/out_.%j.%x	# save stdout to file
+#SBATCH --error=/scratch/user/dimi/Protenix/outerror/error_.%j.%x        # save stderr to file
+
+##OPTIONAL JOB SPECIFICATIONS
+#SBATCH --mail-type=FAIL              #Send email on all job events
+#SBATCH --mail-user=dimi@tamu.edu    #Send all emails to email_address
+
+module purge
+export SINGULARITYENV_TF_FORCE_UNIFIED_MEMORY=1
+export SINGULARITYENV_XLA_PYTHON_CLIENT_MEM_FRACTION=4.0
+
+module load GCCcore/11.3.0
+module load Python/3.10.4
+module load Anaconda3/2024.02-1
+module load WebProxy/0000
+
+source activate protenix
+echo activated protenix
+# export PYTHONPATH="/scratch/user/dimi/local/.local/lib/python3.10/site-packages:$PYTHONPATH"
+which python
+
 
 export LAYERNORM_TYPE=fast_layernorm
 export USE_DEEPSPEED_EVO_ATTENTION=true
