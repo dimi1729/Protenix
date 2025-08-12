@@ -2,11 +2,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MRALLFLALVGAAVAFPVDDDDKIVGGYTCQENSVPYQVSLNSGYHFCGGSLINDQWVVSAAHCYKSRIQVRLGEHNINVLEGNEQFVNAAKIIKHPNFDRKTLNNDIMLIKLSSPVKLNARVATVALPSSCAPAGTQCLISGWGNTLSSGVNEPDLLQCLDAPLLPQADCEASYPGKITDNMVCVGFLEGGKDSCQGDSGGPVVCNGELQGIVSWGYGCALPDNPGVYTKVCNYVDWIQDTIAAN",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P00763",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "AVAKLLAAADVTAALEGCKADDSFNHKVFFQKTGLAKKSNEELEAIFKILDQDKSGFIEDEELELFLQNFSAGARTLTKTETETFLKAGDSDGDGKIGVDEFQKLVKA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02623",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -20,11 +22,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MMPFGGIAARLQRDRLRAEGVGEHNNAVKYLNQDYEALKQECIESGTLFRDPQFPAGPTALGFKELGPYSSKTRGVEWKRPSELVDDPQFIVGGATRTDICQGALGDCWLLAAIGSLTLNEELLHRVVPHGQSFQEDYAGIFHFQIWQFGEWVDVVVDDLLPTKDGELLFVHSAECTEFWSALLEKAYAKLNGCYESLSGGSTTEGFEDFTGGVAEMYDLKRAPRNMGHIIRKALERGSLLGCSIDITSAFDMEAVTFKKLVKGHAYSVTAFKDVNYRGQQEQLIRIRNPWGQVEWTGAWSDGSSEWDNIDPSDREELQLKMEDGEFWMSFRDFMREFSRLEICNLTPDALTKDELSRWHTQVFEGTWRRGSTAGGCRNNPATFWINPQFKIKLLEEDDDPGDDEVACSFLVALMQKHRRRERRVGGDMHTIGFAVYEVPEEAQGSQNVHLKKDFFLRNQSRARSETFINLREVSNQIRLPPGEYIVVPSTFEPHKEADFILRVFTEKQSDTAELDEEISADLADEEEITEDDIEDGFKNMFQQLAGEDMEISVFELKTILNRVIARHKDLKTDGFSLDSCRNMVNLMDKDGSARLGLVEFQILWNKIRSWLTIFRQYDLDKSGTMSSYEMRMALESAGFKLNNKLHQVVVARYADAETGVDFDNFVCCLVKLETMFRFFHSMDRDGTGTAVMNLAEWLLLTMCG",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P00789",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAMTELLNAEDIKKAIGAFAAAESFDHKKFFQMVGLKKKSTEDVKKVFHILDKDKSGFIEEEELGFILKGFSPDARDLSVKETKTLMAAGDKDGDGKIGADEFSTLVSES",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02624",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -38,11 +42,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MKMSRLCLSVALLVLLGTLAASTPGCDTSNQAKAQRPDFCLEPPYTGPCKARIIRYFYNAKAGLCQTFVYGGCRAKRNNFKSAEDCMRTCGGAIGPWENL",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P00974",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSMTDLLSAEDIKKAIGAFTAADSFDHKKFFQMVGLKKKSADDVKKVFHILDKDKSGFIEEDELGSILKGFSSDARDLSAKETKTLMAAGDKDGDGKIGVEEFSTLVAES",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02625",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -56,11 +62,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MGSIGAASMEFCFDVFKELKVHHANENIFYCPIAIMSALAMVYLGAKDSTRTQINKVVRFDKLPGFGDSIEAQCGTSVNVHSSLRDILNQITKPNDVYSFSLASRLYAEERYPILPEYLQCVKELYRGGLEPINFQTAADQARELINSWVESQTNGIIRNVLQPSSVDSQTAMVLVNAIVFKGLWEKAFKDEDTQAMPFRVTEQESKPVQMMYQIGLFRVASMASEKMKILELPFASGTMSMLVLLPDEVSGLEQLESIINFEKLTEWTSSNVMEERKIKVYLPRMKMEEKYNLTSVLMAMGITDVFSSSANLSGISSAESLKISQAVHAAHAEINEAGREVVGSAEAGVDAASVSEEFRADHPFLFCIKHIATNAVLFFGRCVSP",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P01012",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "SMTDVIPEADINKAIHAFKAGEAFDFKKFVHLLGLNKRSPADVTKAFHILDKDRSGYIEEEELQLILKGFSKEGRELTDKETKDLLIKGDKDGDGKIGVDEFTSLVAES",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02626",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -74,11 +82,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MGPWGWKLRWTVALLLAAAGTAVGDRCERNEFQCQDGKCISYKWVCDGSAECQDGSDESQETCLSVTCKSGDFSCGGRVNRCIPQFWRCDGQVDCDNGSDEQGCPPKTCSQDEFRCHDGKCISRQFVCDSDRDCLDGSDEASCPVLTCGPASFQCNSSTCIPQLWACDNDPDCEDGSDEWPQRCRGLYVFQGDSSPCSAFEFHCLSGECIHSSWRCDGGPDCKDKSDEENCAVATCRPDEFQCSDGNCIHGSRQCDREYDCKDMSDEVGCVNVTLCEGPNKFKCHSGECITLDKVCNMARDCRDWSDEPIKECGTNECLDNNGGCSHVCNDLKIGYECLCPDGFQLVAQRRCEDIDECQDPDTCSQLCVNLEGGYKCQCEEGFQLDPHTKACKAVGSIAYLFFTNRHEVRKMTLDRSEYTSLIPNLRNVVALDTEVASNRIYWSDLSQRMICSTQLDRAHGVSSYDTVISRDIQAPDGLAVDWIHSNIYWTDSVLGTVSVADTKGVKRKTLFRENGSKPRAIVVDPVHGFMYWTDWGTPAKIKKGGLNGVDIYSLVTENIQWPNGITLDLLSGRLYWVDSKLHSISSIDVNGGNRKTILEDEKRLAHPFSLAVFEDKVFWTDIINEAIFSANRLTGSDVNLLAENLLSPEDMVLFHNLTQPRGVNWCERTTLSNGGCQYLCLPAPQINPHSPKFTCACPDGMLLARDMRSCLTEAEAAVATQETSTVRLKVSSTAVRTQHTTTRPVPDTSRLPGATPGLTTVEIVTMSHQALGDVAGRGNEKKPSSVRALSIVLPIVLLVFLCLGVFLLWKNWRLKNINSINFDNPVYQKTTEDEVHICHNQDGYSYPSRQMVSLEDDVA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P01130",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "PMTDLLAAGDISKAVSAFAAPESFNHKKFFELCGLKSKSKEIMQKVFHVLDQDQSGFIEKEELCLILKGFTPEGRSLSDKETTALLAAGDKDGDGKIGVDEFVTLVSES",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02627",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -92,11 +102,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MRLAGWGLRWAIALLIAVGEAAVEDNCGRNEFQCQDGKCISYKWVCDGTAECQDGSDESQETCKSVTCKMGDFSCGGRVNRCISGSWRCDGQVDCENGSDEEGCSPKTCSQDEFRCNDGKCIAPKFVCDLDLDCLDGSDEASCPMPTCGPANFQCNSSMCIPQLWACDGDPDCDDGSDEWPKHCGTPHPSGPLQDNNPCSALEFHCGSGECIHSSWHCDHDPDCKDKSDEENCAVATCRPDEFQCSDGTCIHGSRQCDREPDCKDLSDELGCVNVTLCEGPNKFKCQSGECISLDKVCNSVRDCRDWSDEPLKDCGTNECLDNKGGCSHICNDLKIGYECLCPEGFQLVGKHRCEDIDECQNPDTCSQLCVNLEGSYKCECEEGFRLEPLTKACKAVGTIAYLFFTNRHEVRKMTLDRSEYTSLIPNLKNVVALDTEVASNRIYWSDLSQRKIYSAQIDGAPGFSSYDTVIGEDLQAPDGLAVDWIHSNIYWTDSILGTVSVADTKGVKRKTLFQEEGSKPRAIVVDPVHGFMYWTDWGAPAEIKKGGLNGVDVYSLVTEDIQWPNGITLDLSGGRLYWVDSKLHSISSIDVNGGNRKTVLEDKKKLAHPFSLAIFEDKVFWTDVINEAIFSANRLTGSDISLMAENLLSPEDIVLFHNLTQPRGVNWCERTALRNGGCQYLCLPAPQINPRSPKFTCACPDGMLLAKDMRSCLTESESAVTTRGPSTVSSTAVGPKRTASPELTTAESVTMSQQGQGDIASQADTERPGSVGALYIVLPIALLILLAFGTFLLWKNWRLKSINSINFDNPVYQKTTEDEVHICRSQDGYTYPSRQMVSLEDDVA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P01131",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "AKDLLKADDIKKALDAVKAEGSFNHKKFFALVGLKAMSANDVKKVFKAIDADASGFIEEEELKFVLKSFAADGRDLTDAETKAFLKAADKDGDGKIGIDEFETLVHEA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02628",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -110,11 +122,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MPWGRRPTWLLLAFLLVFLKISILSVTAWQTGNCQPGPLERSERSGTCAGPAPFLVFSQGKSISRIDPDGTNHQQLVVDAGISADMDIHYKKERLYWVDVERQVLLRVFLNGTGLEKVCNVERKVSGLAIDWIDDEVLWVDQQNGVITVTDMTGKNSRVLLSSLKHPSNIAVDPIERLMFWSSEVTGSLHRAHLKGVDVKTLLETGGISVLTLDVLDKRLFWVQDSGEGSHAYIHSCDYEGGSVRLIRHQARHSLSSMAFFGDRIFYSVLKSKAIWIANKHTGKDTVRINLHPSFVTPGKLMVVHPRAQPRTEDAAKDPDPELLKQRGRPCRFGLCERDPKSHSSACAEGYTLSRDRKYCEDVNECATQNHGCTLGCENTPGSYHCTCPTGFVLLPDGKQCHELVSCPGNVSKCSHGCVLTSDGPRCICPAGSVLGRDGKTCTGCSSPDNGGCSQICLPLRPGSWECDCFPGYDLQSDRKSCAASGPQPLLLFANSQDIRHMHFDGTDYKVLLSRQMGMVFALDYDPVESKIYFAQTALKWIERANMDGSQRERLITEGVDTLEGLALDWIGRRIYWTDSGKSVVGGSDLSGKHHRIIIQERISRPRGIAVHPRARRLFWTDVGMSPRIESASLQGSDRVLIASSNLLEPSGITIDYLTDTLYWCDTKRSVIEMANLDGSKRRRLIQNDVGHPFSLAVFEDHLWVSDWAIPSVIRVNKRTGQNRVRLQGSMLKPSSLVVVHPLAKPGADPCLYRNGGCEHICQESLGTARCLCREGFVKAWDGKMCLPQDYPILSGENADLSKEVTSLSNSTQAEVPDDDGTESSTLVAEIMVSGMNYEDDCGPGGCGSHARCVSDGETAECQCLKGFARDGNLCSDIDECVLARSDCPSTSSRCINTEGGYVCRCSEGYEGDGISCFDIDECQRGAHNCGENAACTNTEGGYNCTCAGRPSSPGLSCPDSTAPSLLGEDGHHLDRNSYPGCPSSYDGYCLNGGVCMHIESLDSYTCNCVIGYSGDRCQTRDLRWWELRHAGYGQKHDIMVVAVCMVALVLLLVLGMWGTYYYRTRKQLSNPPKNPCDEPSGSVSSSGPNSSSGAAVASCPQPWFVVLEKHQDPKNGSLPADGTNGAVVDAGLSPSLQLGSVHLTSWRQKPHIDGMGTGQSCWIPPSSDRGPQEIEGNSHLPSYRPVGPEKLHSLQSANGSCHERAPDLPRQTEPVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P01132",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "TKKMSEILKAEDIDKALNTFKEAGSFDHHKFFNLVGLKGKPDDTLKEVFGILDQDKSGYIEEEELKFVLKGFAAGGRELTANETKALLKAGDQDGDDKIGVDEFTNLVKAA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02629",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -128,11 +142,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MLLTLIILLPVVSKFSFVSLSAPQHWSCPEGTLAGNGNSTCVGPAPFLIFSHGNSIFRIDTEGTNYEQLVVDAGVSVIMDFHYNEKRIYWVDLERQLLQRVFLNGSRQERVCNIEKNVSGMAINWINEEVIWSNQQEGIITVTDMKGNNSHILLSALKYPANVAVDPVERFIFWSSEVAGSLYRADLDGVGVKALLETSEKITAVSLDVLDKRLFWIQYNREGSNSLICSCDYDGGSVHISKHPTQHNLFAMSLFGDRIFYSTWKMKTIWIANKHTGKDMVRINLHSSFVPLGELKVVHPLAQPKAEDDTWEPEQKLCKLRKGNCSSTVCGQDLQSHLCMCAEGYALSRDRKYCEDVNECAFWNHGCTLGCKNTPGSYYCTCPVGFVLLPDGKRCHQLVSCPRNVSECSHDCVLTSEGPLCFCPEGSVLERDGKTCSGCSSPDNGGCSQLCVPLSPVSWECDCFPGYDLQLDEKSCAASGPQPFLLFANSQDIRHMHFDGTDYGTLLSQQMGMVYALDHDPVENKIYFAHTALKWIERANMDGSQRERLIEEGVDVPEGLAVDWIGRRFYWTDRGKSLIGRSDLNGKRSKIITKENISQPRGIAVHPMAKRLFWTDTGINPRIESSSLQGLGRLVIASSDLIWPSGITIDFLTDKLYWCDAKQSVIEMANLDGSKRRRLTQNDVGHPFAVAVFEDYVWFSDWAMPSVMRVNKRTGKDRVRLQGSMLKPSSLVVVHPLAKPGADPCLYQNGGCEHICKKRLGTAWCSCREGFMKASDGKTCLALDGHQLLAGGEVDLKNQVTPLDILSKTRVSEDNITESQHMLVAEIMVSDQDDCAPVGCSMYARCISEGEDATCQCLKGFAGDGKLCSDIDECEMGVPVCPPASSKCINTEGGYVCRCSEGYQGDGIHCLDIDECQLGEHSCGENASCTNTEGGYTCMCAGRLSEPGLICPDSTPPPHLREDDHHYSVRNSDSECPLSHDGYCLHDGVCMYIEALDKYACNCVVGYIGERCQYRDLKWWELRHAGHGQQQKVIVVAVCVVVLVMLLLLSLWGAHYYRTQKLLSKNPKNPYEESSRDVRSRRPADTEDGMSSCPQPWFVVIKEHQDLKNGGQPVAGEDGQAADGSMQPTSWRQEPQLCGMGTEQGCWIPVSSDKGSCPQVMERSFHMPSYGTQTLEGGVEKPHSLLSANPLWQQRALDPPHQMELTQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P01133",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "SSKITSILNPADITKALEQCAAGFHHTAFFKASGLSKKSDAELAEIFNVLDGDQSGYIEVEELKNFLKCFSDGARVLNDKETSNFLAAGDSDGDHKIGVDEFKSMAKMT",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02630",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -146,11 +162,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MEQFPKETVVESSGPKVLETAEEIQERRQEVLTRYQSFKERVAERGQKLEDSYHLQVFKRDADDLGKWIMEKVNILTDKSYEDPTNIQGKYQKHQSLEAEVQTKSRLMSELEKTREERFTMGHSAHEETKAHIEELRHLWDLLLELTLEKGDQLLRALKFQQYVQECADILEWIGDKEAIATSVELGEDWERTEVLHKKFEDFQVELVAKEGRVVEVNQYANECAEENHPDLPLIQSKQNEVNAAWERLRGLALQRQKALSNAANLQRFKRDVTEAIQWIKEKEPVLTSEDYGKDLVASEGLFHSHKGLERNLAVMSDKVKELCAKAEKLTLSHPSDAPQIQEMKEDLVSSWEHIRALATSRYEKLQATYWYHRFSSDFDELSGWMNEKTAAINADELPTDVAGGEVLLDRHQQHKHEIDSYDDRFQSADETGQDLVNANHEASDEVREKMEILDNNWTALLELWDERHRQYEQCLDFHLFYRDSEQVDSWMSRQEAFLENEDLGNSLGSAEALLQKHEDFEEAFTAQEEKIITVDKTATKLIGDDHYDSENIKAIRDGLLARRDALREKAATRRRLLKESLLLQKLYEDSDDLKNWINKKKKLADDEDYKDIQNLKSRVQKQQVFEKELAVNKTQLENIQKTGQEMIEGGHYASDNVTTRLSEVASLWEELLEATKQKGTQLHEANQQLQFENNAEDLQRWLEDVEWQVTSEDYGKGLAEVQNRLRKHGLLESAVAARQDQVDILTDLAAYFEEIGHPDSKDIRARQESLVCRFEALKEPLATRKKKLLDLLHLQLICRDTEDEEAWIQETEPSATSTYLGKDLIASKKLLNRHRVILENIASHEPRIQEITERGNKMVEEGHFAAEDVASRVKSLNQNMESLRARAARRQNDLEANVQFQQYLADLHEAETWIREKEPIVDNTNYGADEEAAGALLKKHEAFLLDLNSFGDSMKALRNQANACQQQQAAPVEGVAGEQRVMALYDFQARSPREVTMKKGDVLTLLSSINKDWWKVEAADHQGIVPAVYVRRLAHDEFPMLPQRRREEPGNITQRQEQIENQYRSLLDRAEERRRRLLQRYNEFLLAYEAGDMLEWIQEKKAENTGVELDDVWELQKKFDEFQKDLNTNEPRLRDINKVADDLLFEGLLTPEGAQIRQELNSRWGSLQRLADEQRQLLGSAHAVEVFHREADDTKEQIEKKCQALSAADPGSDLFSVQALQRRHEGFERDLVPLGDKVTILGETAERLSESHPDATEDLQRQKMELNEAWEDLQGRTKDRKESLNEAQKFYLFLSKARDLQNWISSIGGMVSSQELAEDLTGIEILLERHQEHRADMEAEAPTFQALEDFSAELIDSGHHASPEIEKKLQAVKLERDDLEKAWEKRKKILDQCLELQMFQGNCDQVESWMVARENSLRSDDKSSLDSLEALMKKRDDLDKAITAQEGKITDLEHFAESLIADEHYAKEEIATRLQRVLDRWKALKAQLIDERTKLGDYANLKQFYRDLEELEEWISEMLPTACDESYKDATNIQRKYLKHQTFAHEVDGRSEQVHGVINLGNSLIECSACDGNEEAMKEQLEQLKEHWDHLLERTNDKGKKLNEASRQQRFNTSIRDFEFWLSEAETLLAMKDQARDLASAGNLLKKHQLLEREMLAREDALKDLNTLAEDLLSSGTFNVDQIVKKKDNVNKRFLNVQELAAAHHEKLKEAYALFQFFQDLDDEESWIEEKLIRVSSQDYGRDLQGVQNLLKKHKRLEGELVAHEPAIQNVLDMAEKLKDKAAVGQEEIQLRLAQFVEHWEKLKELAKARGLKLEESLEYLQFMQNAEEEEAWINEKNALAVRGDCGDTLAATQSLLMKHEALENDFAVHETRVQNVCAQGEDILNKVLQEESQNKEISSKIEALNEKTPSLAKAIAAWKLQLEDDYAFQEFNWKADVVEAWIADKETSLKTNGNGADLGDFLTLLAKQDTLDASLQSFQQERLPEITDLKDKLISAQHNQSKAIEERYAALLKRWEQLLEASAVHRQKLLEKQLPLQKAEDLFVEFAHKASALNNWCEKMEENLSEPVHCVSLNEIRQLQKDHEDFLASLARAQADFKCLLELDQQIKALGVPSSPYTWLTVEVLERTWKHLSDIIEEREQELQKEEARQVKNFEMCQEFEQNASTFLQWILETRAYFLDGSLLKETGTLESQLEANKRKQKEIQAMKRQLTKIVDLGDNLEDALILDIKYSTIGLAQQWDQLYQLGLRMQHNLEQQIQAKDIKGVSEETLKEFSTIYKHFDENLTGRLTHKEFRSCLRGLNYYLPMVEEDEHEPKFEKFLDAVDPGRKGYVSLEDYTAFLIDKESENIKSSDEIENAFQALAEGKSYITKEDMKQALTPEQVSFCATHMQQYMDPRGRSHLSGYDYVGFTNSYFGN",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02549",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSITDILSAEDIAAALQECQDPDTFEPQKFFQTSGLSKMSASQVKDIFRFIDNDQSGYLDGDELKYFLQKFQSDARELTESETKSLMDAADNDGDGKIGADEFQEMVHS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02631",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -164,11 +182,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MTDQQAEARSYLSEEMIAEFKAAFDMFDADGGGDISVKELGTVMRMLGQTPTKEELDAIIEEVDEDGSGTIDFEEFLVMMVRQMKEDAKGKSEEELAECFRIFDRNADGYIDPEELAEIFRASGEHVTDEEIESLMKDGDKNNDGRIDFDEFLKMMEGVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02585",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSAQKSPAELKSIFEKYAAKEGDPNQLSKEELKQLIQAEFPSLLKGPRTLDDLFQELDKNGDGEVSFEEFQVLVKKISQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02632",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -182,11 +202,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MTDQQAEARSYLSEEMIAEFKAAFDMFDADGGGDISVKELGTVMRMLGQTPTKEELDAIIEEVDEDGSGTIDFEEFLVMMVRQMKEDAKGKSEEELAECFRIFDRNADGYIDAEELAEIFRASGEHVTDEEIESLMKDGDKNNDGRIDFDEFLKMMEGVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02586",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSAKKSPEELKGIFEKYAAKEGDPNQLSKEELKLLLQTEFPSLLKGPSTLDELFEELDKNGDGEVSFEEFQVLVKKISQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02633",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -200,11 +222,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "TDQQAEARSYLSEEMIAEFKAAFDMFDADGGGDISVKELGTVMRMLGQTPTKEELDAIIEEVDEDGSGTIDFEEFLVMMVRQMKEDAKGKSEEELAECFRIFDRNMDGYIDAEELAEIFRASGEHVTDEEIESIMKDGDKNNDGRIDFDEFLKMMEGVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02587",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSAKKSPEEMKSIFQKYAAKEGDPNQLSKEELKLLIQSEFPSLLKASSTLDNLFKELDKNGDGEVSYEEFEVFFKKLSQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02634",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -218,11 +242,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MASMTDQQAEARAFLSEEMIAEFKAAFDMFDADGGGDISTKELGTVMRMLGQNPTKEELDAIIEEVDEDGSGTIDFEEFLVMMVRQMKEDAKGKSEEELANCFRIFDKNADGFIDIEELGEILRATGEHVTEEDIEDLMKDSDKNNDGRIDFDEFLKMMEGVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02588",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "AYSWDNRVKYIVRYMYDIDNDGFLDKNDFECLAVRVTLIEGRGEFSPEGYAKNKEIMANLWNEIAELADFNKDGEVTVDEFKQAVQKNCKGKAFANFPNAFKVFIGNQFKTIDVDGDGMVGVDEYRLDCITRSAFADVKEIDDAYDKLCTEEDKKAGGINLARYQELYAQFISNEDEKNNACYLFGPLKEVQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02635",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -236,11 +262,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AQPTDQQMDARSFLSEEMIAEFKAAFDMFDTDGGGDISTKELGTVMRMLGQTPTKEELDAIIEEVDEDGSGTIDFEEFLVMMVRQMKEDAQGKSEEELAECFRIFDKNADGYIDSEELGEILRSSGESITDEEIEELMKDGDKNNDGKIDFDEFLKMMEGVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02589",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "AYSWDNRVKYVVRYMYDIDDDGFLDKNDFECLAVRNTLIEGRGEFSAADYANNQKIMRNLWNEIAELADFNKDGEVTVDEFKMAVQKHCQGKKYSEFPGAFKVFIANQFKAIDVNGDGKVGLDEYRLDCITRSAFAEVKEIDDAYDKLTTEDDRKAGGLTLERYQDLYAQFISNPNESCSACFLFGPLKVVQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02636",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -254,11 +282,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MDDIYKAAVEQLTEEQKNEFKAAFDIFVLGAEDGCISTKELGKVMRMLGQNPTPEELQEMIDEVDEDGSGTVDFDEFLVMMVRCMKDDSKGKSEEELSDLFRMFDKNADGYIDLDELKIMLQATGETITEDDIEELMKDGDKNNDGRIDYDEFLEFMKGVE",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02591",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "TDYLVSKWKIWYKSLDVNHDGIISIENVEESRNKFTDLHKLVGDKSTGVKVDMQKWWDTYIFLTPGAEISETQFVENLGNSFKKDKAFLATMTACFNMIFDVIDTDKDRSIDLNEFIYAFAAFGHENESVVRTAFALLKPDDDNTVPLRTVVDAWISFVTCEDASKTDVIKSAFES",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02637",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -272,11 +302,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MTSKQYSVKLTSDFDNPRWIGRHKHMFNFLDVNHNGKISLDEMVYKASDIVINNLGATPEQAKRHKDAVEAFFGGAGMKYGVETDWPAYIEGWKKLATDELEKYAKNEPTLIRIWGDALFDIVDKDQNGAITLDEWKAYTKAAGIIQSSEDCEETFRVCDIDESGQLDVDEMTRQHLGFWYTMDPACEKLYGGAVP",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02592",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MGSELETAMETLINVFHAHSGKEGDKYKLSKKELKELLQTELSGFLDAQKDADAVDKVMKELDENGDGEVDFQEYVVLVAALTVACNNFFWENS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02639",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -290,11 +322,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLTMMAKKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02594",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MVELSKKVTGKLDKTTPGIQIWRIENMEMVPVPTKSYGNFYEGDCYVLLSTRKTGSGFSYNIHYWLGKNSSQDEQGAAAIYTTQMDEYLGSVAVQHREVQGHESETFRAYFKQGLIYKQGGVASGMKHVETNTYNVQRLLHVKGKKNVVAAEVEMSWKSFNLGDVFLLDLGQLIIQWNGPESNRAERLRAMTLAKDIRDRERAGRAKVGVVEGENEAASPELMQALTHVLGEKKNIKAATPDEQVHQALNSALKLYHVSDASGNLVIQEVAIRPLTQDMLQHEDCYILDQAGLKIFVWKGKNANKEEKQQAMSRALGFIKAKNYLASTSVETENDGSESAVFRQLFQKWTVPNQTSGLGKTHTVGKVAKVEQVKFDATTMHVKPEVAAQQKMVDDGSGEAEVWRVENQELVPVEKRWLGHFYGGDCYLVLYTYYVGPKVNRIIYIWQGRHASTDELAASAYQAVFLDQKYNNEPVQVRVTMGKEPAHLMAIFKGKMVVYENGSSRAGGTEPASSTRLFHVHGTNEYNTKAFEVPVRAASLNSNDVFVLKTPSSCYLWYGKGCSGDEREMGKMVADIISKTEKPVVAEGQEPPEFWVALGGKTSYANSKRLQEENPSVPPRLFECSNKTGRFLATEIVDFTQDDLDENDVYLLDTWDQIFFWIGKGANESEKEAAAETAQEYLRSHPGSRDLDTPIIVVKQGFEPPTFTGWFMAWDPLCWSDRKSYDELKAELGDNASIGQLVSGLTSKNEVFTATTTLVPTKLETFPLDVLVNTAAEDLPRGVDPSRKENHLSDEDFKAVFGMTRSAFANLPLWKQQNLKKEKGLF",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02640",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -308,11 +342,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGDGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGDGFISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVTMMTSK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02595",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MEKLLCFLVLTSLSHAFGQTDMSRKAFVFPKESDTSYVSLKAPLTKPLKAFTVCLHFYTELSSTRGYSIFSYATKRQDNEILIFWSKDIGYSFTVGGSEILFEVPEVTVAPVHICTSWESASGIVEFWVDGKPRVRKSLKKGYTVGAEASIILGQEQDSFGGNFEGSQSLVGDIGNVNMWDFVLSPDEINTIYLGGPFSPNVLNWRALKYEVQGEVFTKPQLWP",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02741",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -326,11 +362,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAERLSEEQIAEFKEAFSLFDRDGDGCITTMELGTVMRSLGQNPTEAELQDMVGEVDADGSGTIDFPEFLSLMARKMRDSDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIKEADCNNDGQVNYEEFVRMMTEK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02597",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MNKPLLWISVLTSLLEAFAHTDLSGKVFVFPRESVTDHVNLITPLEKPLQNFTLCFRAYSDLSRAYSLFSYNTQGRDNELLVYKERVGEYSLYIGRHKVTSKVIEKFPAPVHICVSWESSSGIAEFWINGTPLVKKGLRQGYFVEAQPKIVLGQEQDSYGGKFDRSQSFVGEIGDLYMWDSVLPPENILSAYQGTPLPANILDWQALNYEIRGYVIIKPLVWV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02743",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -344,11 +382,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLSLMARKMKDTDTEEELIEAFKVFDRDGNGLISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGHINYEEFVRMMMAK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02598",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MRALTLLALLALAALCIAGQAGAKPSGAESSKGAAFVSKQEGSEVVKRPRRYLYQWLGAPVPYPDPLEPRREVCELNPDCDELADHIGFQEAYRRFYGPV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02818",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -362,11 +402,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MASQESLTEEQIAEFKEAFSLFDKDGDGSITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGNIDFPEFLTMMARKMQDTDTEEEIREAFKVFDKDGNGYISAAELRHVMTSLGEKLTNEEVDEMIREADLDGDGQVNYDEFVKMMIVRN",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02599",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "YLYQWLGAPAPYPDPLEPKREVCELNPDCDELADHIGFQEAYRRFYGPV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02819",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -380,11 +422,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKDVKKPAAAAPAPAPAPAPAPAKPKEEKIDLSAIKIEFSKEQQEEFKEAFLLFDRTGECKITLSQVGDVLRALGTNPTNAEVKKVLGNPSNEEMNAKKIEFEQFLPMMQAISNNKDQGGYEDFVEGLRVFDKEGNGTVMGAELRHVLATLGEKMKEEEVEALLAGQEDSNGCINYEAFVKHIMSV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02600",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MRTPMLLALLALATLCLAGRADAKPGDAESGKGAAFVSKQEGSEVVKRLRRYLDHWLGAPAPYPDPLEPKREVCELNPDCDELADHIGFQEAYRRFYGPV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02820",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -398,11 +442,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKDVKKPAAAAAPAPAPAPAPAPAPAKPKEEKIDLSAIKIEFSKEQQDEFKEAFLLYDRTGDSKITLSQVGDVLRALGTNPTNAEVKKVLGNPSNEEMNAKKIEFEQFLPMLQAISNNKDQGTYEDFVEGLRVFDKEGNGTVMGAELRHVLATLGEKMKEEEVEALMAGQEDSNGCINYEAFVKHIMSI",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02602",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "YLAPGLGAPAPYPDPLEPKREICELNPDCDELADHIGFQDAYRRFYGTV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02821",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -416,11 +462,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKDVKKPAAAAAPAPAPAPAPAPAPAKPKEPAIDLKSIKIEFSKEQQDDFKEAFLLFDRTGDAKITLSQVGDIVRALGQNPTNAEINKILGNPSKEEMNAKKITFEEFLPMLQAAANNKDQGTFEDFVEGLRVFDKEGNGTVMGAELRHVLATLGEKMTEEEVEELMKGQEDSNGCINYEAFVKHIMSV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02604",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKAAALLLLAALLTFSLCRSAPDGSDARSAKAFISHRQRAEMVRRQKRHYAQDSGVAGAPPNPLEAQREVCELSPDCDELADQIGFQEAYRRFYGPV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02822",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -434,11 +482,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSFSPDEINDFKEAFLLFDRTGDAKITLSQVGDIVRALGQNPTNAEINKILGNPSKEEMNAKKITFEEFLPMLQAAANNKDQGTFEDFVEGLRVFDKEGNGTVMGAELRHVLATLGEKMTEEEVEELMKGQEDSNGCINYEAFVKHIMSV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02605",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ATRAGDLTPLQLESLREVCELNVSCDEMADTAGIVAAYIAYYGPIQF",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P02823",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -452,11 +502,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MPPKKPEPKKAPEPKKEEPKPAPKPAEPEPKKEVEFNPASIKVEFTPDQIEEFKEAFSLFDRTPKSEMKITYAQCGDVLRALGQNPTQAEVMKVLGRPKQEEMNSKMIDFETFLPMLQHISKTKDTGTYEDFVEGLRVFDKEGNGTVMGAELRHVLRTLGERLTEEEVDKLMAGQEDANGCINYEAFVKHIMAN",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02606",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKLLVLAVLLTVAAADSGISPRAVWQFRKMIKCVIPGSDPFLEYNNYGCYCGLGGSGTPVDELDKCCQTHDNCYDQAKKLDSCKFLLDNPYTHTYSYSCSGSAITCSSKNKECEAFICNCDRNAAICFSKAPYNKAHKNLDTKKYCQS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04054",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -470,11 +522,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKAKRRAAAEGGSSNVFSMFDQTQIQEFKEAFTVIDQNRDGIIDKEDLRDTFAAMGRLNVKNEELDAMMKEASGPINFTVFLTMFGEKLKGADPEDVITGAFKVLDPEGKGTIKKQFLEELLTTQCDRFSQEEIKNMWAAFPPDVGGNVDYKNICYVITHGDAKDQE",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02608",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKLLLLAALLTAGVTAHSISTRAVWQFRNMIKCTIPGSDPLREYNNYGCYCGLGGSGTPVDDLDRCCQTHDHCYNQAKKLESCKFLIDNPYTNTYSYKCSGNVITCSDKNNDCESFICNCDRQAAICFSKVPYNKEYKDLDTKKHC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04055",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -488,11 +542,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKAKRRAAEGSSNVFSMFDQTQIQEFKEAFTVIDQNRDGIIDKDDLRETFAAMGRLNVKNEELDAMIKEASGPINFTVFLTMFGEKLKGADPEDVIMGAFKVLDPDGKGSIKKSFLEELLTTQCDRFTPEEIKNMWAAFPPDVAGNVDYKNICYVITHGEDKEGE",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02609",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "NLIQFGNMIQCANKGSRPSLDYADYGCYCGWGGSGTPVDELDRCCQVHDNCYEQAGKKGCFPKLTLYSWKCTGNVPTCNSKPGCKSFVCACDAAAAKCFAKAPYKKENYNIDTKKRCK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04056",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -506,11 +562,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKAKKRIEGANSNVFSMFEQAQIQEFKEAFTIMDQNRDGFIDKADLRDTFAALGRLNVKNEEIDEMIKEAPGPINFTVFLTMFGEKLKGADPEETILNAFKVFDPEGKGLKSAYIKEMLMTQEGRFSQEEIDQMFAAFPPDVSGNLDYKNLVHVITHGEEKD",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02610",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "NILQFRKMIQCANKGSRAAWHYLDYGCYCGPGGRGTPVDELDRCCKIHDDCYIEAGKDGCYPKLTWYSWDCTGDAPTCNPKSKCKDFVCACDAAAAKCFAKAPYNKANWNIDTKTRCK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04057",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -524,11 +582,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKAKKKVEGGSNVFSMFEQTQIQEFKEAFTIMDQNRDGFIDKADLRDTFAALGRLNVKNEELEDMVKEAPGPINFTVFLTMFGEKLKGTDPEETILNAFKIFDPEGKGHIKADYIKEMLMTQEGRFSQEEINQMFAAFPPDVSGNLDYKNLCYVITHGEEKD",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02611",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MANKHLSLSLFLVLLGLSASLASGQVLFQGFNWESWKHNGGWYNFLMGKVDDIAAAGITHVWLPPASQSVAEQGYMPGRLYDLDASKYGNKAQLKSLIGALHGKGVKAIADIVINHRTAEHKDGRGIYCIFEGGTPDARLDWGPHMICRDDRPYADGTGNPDTGADFGAAPDIDHLNLRVQKELVEWLNWLKADIGFDGWRFDFAKGYSADVAKIYIDRSEPSFAVAEIWTSLAYGGDGKPNLNQDQHRQELVNWVDKVGGKGPATTFDFTTKGILNVAVEGELWRLRGTDGKAPGMIGWWPAKAVTFVDNHDTGSTQHMWPFPSDRVMQGYAYILTHPGTPCIFYDHFFDWGLKEEIDRLVSVRTRHGIHNESKLQIIEADADLYLAEIDGKVIVKLGPRYDVGNLIPGGFKVAAHGNDYAVWEKI",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04063",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -542,11 +602,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSSKRAKAKTTKKRPQRATSNVFAMFDQSQIQEFKEAFNMIDQNRDGFIDKEDLHDMLASMGKNPTDEYLEGMMSEAPGPINFTMFLTMFGEKLNGTDPEDVIRNAFACFDEEASGFIHEDHLRELLTTMGDRFTDEEVDEMYREAPIDKKGNFNYVEFTRILKHGAKDKDD",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02612",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MWQLTSLLLFVATWGISGTPAPLDSVFSSSERAHQVLRIRKRANSFLEELRHSSLERECIEEICDFEEAKEIFQNVDDTLAFWSKHVDGDQCLVLPLEHPCASLCCGHGTCIDGIGSFSCDCRSGWEGRFCQREVSFLNCSLDNGGCTHYCLEEVGWRRCSCAPGYKLGDDLLQCHPAVKFPCGRPWKRMEKKRSHLKRDTEDQEDQVDPRLIDGKMTRRGDSPWQVVLLDSKKKLACGAVLIHPSWVLTAAHCMDESKKLLVRLGEYDLRRWEKWELDLDIKEVFVHPNYSKSTTDNDIALLHLAQPATLSQTIVPICLPDSGLAERELNQAGQETLVTGWGYHSSREKEAKRNRTFVLNFIKIPVVPHNECSEVMSNMVSENMLCAGILGDRQDACEGDSGGPMVASFHGTWFLVGLVSWGEGCGLLHNYGVYTKVSRYLDWIHGHIRDKEAPQKSWAP",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04070",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -560,11 +622,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "ADKAASGVLTKLPQKQIQEMKEAFSMIDVDRDGFVSKDDIKAISEQLGRTPDDKELTAMLKEAPGPLNFTMFLSDKLSGTDSEETIRNAFAMFDEQENKKLNIEYIKDLLEDMGNNFNKDEMRMTFKEAPVEGGKFDYVKFTAMIKGSGEDEA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02613",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAMVSEFLKQAWFIENEEQEYVQTVKSSKGGPGSAVSPYPTFNPSSDVAALHKAIMVKGVDEATIIDILTKRNNAQRQQIKAAYLQETGKPLDETLKKALTGHLEEVVLALLKTPAQFDADELRAAMKGLGTDEDTLIEILASRTNKEIRDINRVYREELKRDLAKDITSDTSGDFRNALLSLAKGDRSEDFGVNEDLADSDARALYEAGERRKGTDVNVFNTILTTRSYPQLRRVFQKYTKYSKHDMNKVLDLELKGDIEKCLTAIVKCATSKPAFFAEKLHQAMKGVGTRHKALIRIMVSRSEIDMNDIKAFYQKMYGISLCQAILDETKGDYEKILVALCGGN",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04083",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -578,11 +642,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AMTDILSAKDIEAALTSCQAADSFNYKSFFSKVGLKGKSTDQVKKIFGILDQDKSGFIEEDELQLFLQNFSSTARALTAAETKAFMAAGDTDGDGKIGVDEFQALVKA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02614",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "NLFQFGDMILQKTGKEAVHSYAIYGCYCGWGGQGRAQDATDRCCFAQDCCYGRVNDCNPKTATYTYSFENGDIVCGDNDLCLRAVCECDRAAAICLGENVNTYDKNYEYYSISHCTEESEQC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04084",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -596,11 +662,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AFAGILSDADIAAGLQSCQAADSFSCKTFFAKSGLHSKSKDQLTKVFGVIDRDKSGYIEEDELKKFLQNFDGKARDLTDKETAEFLKEGDTDGDGKIGVEEFVVLVTKG",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02615",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAAQLLFTDEEVTEFKRRFKNKDTDKSKSITAEELGEFFKSTGKSYTDKQIDKMISDVDTDESGTIDFSEMLMGIAEQMVKWTWKEEHYTKAFDDMDKDGNGSLSPQELREALSASKPPMKRKKIKAIIQKADANKDGKIDREEFMKLIKSC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04109",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -614,11 +682,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AITDILSAKDIEAALSSVKAAESFNYKTFFTKCGLAGKPTDQVKKVFDILDQDKSGYIEEDELQLFLKNFCSSARSLSNAETKAFLFAGDSDGDGKIGVDEFQALVRS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02616",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAVQLLFTEEEKALFKSSFKSEDTDGDGKITSEELRAAFKSIEIDLTQEKIDEMMGMVDKDGSKDMDFSEFLMRKAEQWRGREVQLTKAFVDLDKDHNGSLSPQELRTAMSACTDPPMTEKEIDAIIEKADCNGDGKICLEEFMKLIHSS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04110",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -632,11 +702,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SITDIVSEKDIDAALESVKAAGSFNYKIFFQKVGLAGKSAADAKKVFEILDRDKSGFIEQDELGLFLQNFRASARVLSDAETSAFLKAGDSDGDGKIGVEEFQALVKA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02617",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAVQLFFTEEQRKVFKSSFKSIDADGDGKITPEELKAAFKSIEIELTQEKIDEMMSMVDKDGSRPVDFSEILMKKAEQMRGKGAQYFKAFDALDTDKSGSLSPEELRTALSACTDPPMTKEEIDAIIKKADGNNDGEIRRAEFVRMIQSSY",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04111",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -650,11 +722,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AFAGVLNDADIAAALEACKAADSFNHKAFFAKVGLTSKSADDVKKAFAIIDQDKSGFIEEDELKLFLQNFKADARALTDGETKTFLKAGDSDGDGKIGVDEFTALVKA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02618",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ADKAASGVLTKLPQKQIQEMKEAFTMIDQNRDGFIDINDLKEMFSSLGRTPDDKELTAMLKEAPGPLNFTMFLSIFSDKLSGTDTEETLRNAFAMFDELDTKKLNIEYIKDLLENMGDNFTKDEMRMTFKEAPVTGGKFDYVKFTAMIKGSGEEEA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04112",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -668,11 +742,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SFAGLKDADVAAALAACSAADSFKHKEFFAKVGLASKSLDDVKKAFYVIDQDKSGFIEEDELKLFLQNFSPSARALTDAETKAFLADGDKDGDGMIGVDEFAAMIKA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02619",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ADKERAQRATSNVFARLPQKLMQEMKEAFTMIDQNRDGFIDINDLKEMFSSLGRTPDDKELTAMLKEAPGPLNFTMFLSIFSDKLSGTDTEETLRNAFAMFDELDTKKLNIEYIKDLLENMGDNFTKDEMRMTFKEAPVTGGKFDYVKFTAMIKGSGEEEA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04113",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -686,11 +762,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AFAGILADADITAALAACKAEGSFKHGEFFTKIGLKGKSAADIKKVFGIIDQDKSDFVEEDELKLFLQNFSAGARALTDAETATFLKAGDSDGDGKIGVEEFAAMVKG",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02620",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MPSQMEHAMETMMFTFHKFAGDKGYLTKEDLRVLMEKEFPGFLENQKDPLAVDKIMKDLDQCRDGKVGFQSFFSLIAGLTIACNDYFVVHMKQKGK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04163",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -704,11 +782,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AFAGILADADCAAAVKACEAADSFSYKAFFAKCGLSGKSADDIKKAFVFIDQDKSGFIEEDELKLFLQVFKAGARALTDAETKAFLKAGDSDGDGAIGVEEWVALVKA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02621",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MEAAHSKSTEECLAYFGVSETTGLTPDQVKRHLEKYGHNELPAEEGKSLWELVIEQFEDLLVRILLLAACISFVLAWFEEGEETITAFVEPFVILLILIANAIVGVWQERNAENAIEALKEYEPEMGKVYRADRKSVQRIKARDIVPGDIVEVAVGDKVPADIRILSIKSTTLRVDQSILTGESVSVIKHTEPVPDPRAVNQDKKNMLFSGTNIAAGKALGIVATTGVSTEIGKIRDQMAATEQDKTPLQQKLDEFGEQLSKVISLICVAVWLINIGHFNDPVHGGSWIRGAIYYFKIAVALAVAAIPEGLPAVITTCLALGTRRMAKKNAIVRSLPSVETLGCTSVICSDKTGTLTTNQMSVCKMFIIDKVDGDFCSLNEFSITGSTYAPEGEVLKNDKPIRSGQFDGLVELATICALCNDSSLDFNETKGVYEKVGEATETALTTLVEKMNVFNTEVRNLSKVERANACNSVIRQLMKKEFTLEFSRDRKSMSVYCSPAKSSRAAVGNKMFVKGAPEGVIDRCNYVRVGTTRVPMTGPVKEKILSVIKEWGTGRDTLRCLALATRDTPPKREEMVLDDSSRFMEYETDLTFVGVVGMLDPPRKEVMGSIQLCRDAGIRVIMITGDNKGTAIAICRRIGIFGENEEVADRAYTGREFDDLPLAEQREACRRACCFARVEPSHKSKIVEYLQSYDEITAMTGDGVNDAPALKKAEIGIAMGSGTAVAKTASEMVLADDNFSTIVAAVEEGRAIYNNMKQFIRYLISSNVGEVVCIFLTAALGLPEALIPVQLLWVNLVTDGLPATALGFNPPDLDIMDRPPRSPKEPLISGWLFFRYMAIGGYVGAATVGAAAWWFMYAEDGPGVTYHQLTHFMQCTEDHPHFEGLDCEIFEAPEPMTMALSVLVTIEMCNALNSLSENQSLMRMPPWVNIWLLGSICLSMSLHFLILYVDPLPMIFKLKALDLTQWLMVLKISLPVIGLDEILKFIARNYLEDPEDERRK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04191",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -722,11 +802,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AFKGILSNADIKAAEAACFKEGSFDEDGFYAKVGLDAFSADELKKLFKIADEDKEGFIEEDELKLFLIAFAADLRALTDAETKAFLKAGDSDGDGKIGVDEFGALVDKWGAKG",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02622",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSTVHEILCKLSLEGDHSTPPSAYGSVKAYTNFDAERDALNIETAIKTKGVDEVTIVNILTNRSNEQRQDIAFAYQRRTKKELASALKSALSGHLETVILGLLKTPAQYDASELKASMKGLGTDEDSLIEIICSRTNQELQEINRVYKEMYKTDLEKDIVSDTSGDFRKLMVALAKGRRAEDGSVIDYELIDQDARDLYDAGVKRKGTDVPKWISIMTERSVCHLQKVFERYKSYSPYDMLESIKKEVKGDLENAFLNLVQCIQNKPLYFADRLYDSMKGKGTRDKVLIRIMVSRSEVDMLKIRSEFKKKYGKSLYYYIQQDTKGDYQKALLYLCGGDD",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04272",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -740,11 +822,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AVAKLLAAADVTAALEGCKADDSFNHKVFFQKTGLAKKSNEELEAIFKILDQDKSGFIEDEELELFLQNFSAGARTLTKTETETFLKAGDSDGDGKIGVDEFQKLVKA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02623",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MREIVHLQAGQCGNQIGAKFWEVISDEHGIDPTGTYHGDSDLQLERINVYYNEATGGNYVPRAVLVDLEPGTMDSVRSGPFGQIFRPDNFVFGQSGAGNNWAKGHYTEGAELVDAVLDVVRKEAESCDCLQGFQLTHSLGGGTGSGMGTLLISKIREEFPDRIMNTFSVVPSPKVSDTVVEPYNATLSVHQLVENTDETYCIDNEALYDICFRTLKLTTPTYGDLNHLVSATMSGVTTCLRFPGQLNADLRKLAVNMVPFPRLHFFMPGFAPLTSRGSQQYRALTVPELTQQMFDAKNMMAACDPRHGRYLTVAAVFRGRMSMKEVDEQMLSVQSKNSSYFVEWIPNNVKTAVCDIPPRGLKMAATFIGNSTAIQELFKRISEQFTAMFRRKAFLHWYTGEGMDEMEFTEAESNMNDLVSEYQQYQDATAEEGEFEEEAEEEVA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04350",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -758,11 +842,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAMTELLNAEDIKKAIGAFAAAESFDHKKFFQMVGLKKKSTEDVKKVFHILDKDKSGFIEEEELGFILKGFSPDARDLSVKETKTLMAAGDKDGDGKIGADEFSTLVSES",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02624",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAANTEQLTEEQIAEFKEAFALFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMISEVDADGNGTIDFPEFLMLMARKMKETDHEDELREAFKVFDKDGNGFISAAELRHVMTNLGEKLSEEEVDEMIREADVDGDGQVNYEEFVRMMTSGATDDKDKKGHK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04352",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -776,11 +862,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSMTDLLSAEDIKKAIGAFTAADSFDHKKFFQMVGLKKKSADDVKKVFHILDKDKSGFIEEDELGSILKGFSSDARDLSAKETKTLMAAGDKDGDGKIGVEEFSTLVAES",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02625",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MTAETHLQGVEISAAQFFEIWHHYDSDGNGYMDGKELQNFIQELQQARKKAGLDLTPEMKAFVDQYGKATDGKIGIVELAQVLPTEENFLLFFRCQQLKSSEDFMQTWRKYDSDHSGFIDSEELKSFLKDLLQKANKQIEDSKLTEYTEIMLRMFDANNDGKLELTELARLLPVQENFLIKFQGVKMCAKEFNKAFEMYDQDGNGYIDENELDALLKDLCEKNKKELDINNLATYKKSIMALSDGGKLYRAELALILCAEEN",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04354",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -794,11 +882,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SMTDVIPEADINKAIHAFKAGEAFDFKKFVHLLGLNKRSPADVTKAFHILDKDRSGYIEEEELQLILKGFSKEGRELTDKETKDLLIKGDKDGDGKIGVDEFTSLVAES",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02626",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "SVLELGKMILQETGKNAITSYGSYGCNCGWGHRGQPKDATDRCCFVHKCCYKKLTDCNHKTDRYSYSWKNKAIICEEKNPCLKEMCECDKAVAICLRENLDTYNKKYKAYFKLKCKKPDTC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04361",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -812,11 +902,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "PMTDLLAAGDISKAVSAFAAPESFNHKKFFELCGLKSKSKEIMQKVFHVLDQDQSGFIEKEELCLILKGFTPEGRSLSDKETTALLAAGDKDGDGKIGVDEFVTLVSES",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02627",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ALWQFRSMIKCTIPGSDPLLDFNNYGCYCGLGGSGTPVDELDRCCETHDNCYRDAKNLDSCKFLVDNPYTNSYSYSCSNTEITCNSKNNACEAFICNCDRNAAICFSKAPYNKEHKNLDTKKYC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04416",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -830,11 +922,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AKDLLKADDIKKALDAVKAEGSFNHKKFFALVGLKAMSANDVKKVFKAIDADASGFIEEEELKFVLKSFAADGRDLTDAETKAFLKAADKDGDGKIGIDEFETLVHEA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02628",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "HLLQFRKMIKKMTGKEPVISYAFYGCYCGSGGRGKPKDATDRCCFVHDCCYEKVTGCKPKWDDYTYSWKNGDIVCGGDDPCKKEICECDRAAAICFRDNLKTYKKRYMAYPDILCSSKSEKC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04417",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -848,11 +942,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "TKKMSEILKAEDIDKALNTFKEAGSFDHHKFFNLVGLKGKPDDTLKEVFGILDQDKSGYIEEEELKFVLKGFAAGGRELTANETKALLKAGDQDGDDKIGVDEFTNLVKAA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02629",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MADQLTDEQIAEFKEAFSLFDKDGDGCITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLNLMARKMKDTDSEEELKEAFRVFDKDQDGFISAAELRHVMTNLGEKLTDEEVDEMIREADVDGDGQINYEEFVKVMMAK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04464",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -866,11 +962,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SSKITSILNPADITKALEQCAAGFHHTAFFKASGLSKKSDAELAEIFNVLDGDQSGYIEVEELKNFLKCFSDGARVLNDKETSNFLAAGDSDGDHKIGVDEFKSMAKMT",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02630",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAPKKAKRRAAAEGSSNVFSMFDQTQIQEFKEAFTVIDQNRDGIIDKEDLRDTFAAMGRLNVKNEELDAMMKEASGPINFTVFLTMFGEKLKGADPEDVITGAFKVLDPEGKGTIKKQFLEELLTTQCDRFSQEEIKNMWAAFPPDVGGNVDYKNICYVITHGDAKDQE",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04466",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -884,11 +982,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSITDILSAEDIAAALQECQDPDTFEPQKFFQTSGLSKMSASQVKDIFRFIDNDQSGYLDGDELKYFLQKFQSDARELTESETKSLMDAADNDGDGKIGADEFQEMVHS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02631",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "GLNDFQKQKIKFTFDFFLDYNKDGSIQWEDFEEMIKRYKEVNKGSLSDADYKSMQASLEDEWRDLKGRADINKDDVVSWEEYLAMWEKTIATCKSVADLPAWCQNRIPFLFKGMDVSGDGIVDLEEFQNYCKNFQLQCADVPAVYNVITDGGKVTFDLNRYKELYYRLLTSPAADAGNTLMGQKP",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04569",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -902,11 +1002,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSAQKSPAELKSIFEKYAAKEGDPNQLSKEELKQLIQAEFPSLLKGPRTLDDLFQELDKNGDGEVSFEEFQVLVKKISQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02632",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "GLNDFQKQKIKFTFDFFLDMNHDGSIQDNDFEDMMTRYKEVNKGSLSDADYKSMQASLEDEWRDLKGRADINKDDVVSWEEYLAMWEKTIATCKSVADLPAWCQNRIPFLFKGMDVSGDGIVDLEEFQNYCKNFQLQCADVPAVYNVITDGGKVTFDLNRYKELYYRLLTSPAADAGNTLMGQKP",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04570",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -920,11 +1022,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSAKKSPEELKGIFEKYAAKEGDPNQLSKEELKLLLQTEFPSLLKGPSTLDELFEELDKNGDGEVSFEEFQVLVKKISQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02633",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "SDLWVQKMKTYFNRIDFDKDGAITRMDFESMAERFAKESEMKAEHAKVLMDSLTGVWDNFLTAVAGGKGIDETTFINSMKEMVKNPEAKSVVEGPLPLFFRAVDTNEDNNISRDEYGIFFGMLGLDKTMAPASFDAIDTNNDGLLSLEEFVIAGSDFFMNDGDSTNKVFWGPLV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04571",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -938,11 +1042,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSAKKSPEEMKSIFQKYAAKEGDPNQLSKEELKLLIQSEFPSLLKASSTLDNLFKELDKNGDGEVSYEEFEVFFKKLSQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02634",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "SDLWVQKMKTYFNRIDFDKDGAITRKDFESMATRFAKESEMKPEHAKVLMDSLTGVWDKFLANVAGGKGIDQATFISSMKEKVKDPNAKAVVEGPLPLFFRAVDTNEDNMISRDEYGIFFNMLGLNPDMAPASFDAIDTNNDGLLSQEEFVTAGSDFFINDQDSPNKVFWGPLV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04572",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -956,11 +1062,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AYSWDNRVKYIVRYMYDIDNDGFLDKNDFECLAVRVTLIEGRGEFSPEGYAKNKEIMANLWNEIAELADFNKDGEVTVDEFKQAVQKNCKGKAFANFPNAFKVFIGNQFKTIDVDGDGMVGVDEYRLDCITRSAFADVKEIDDAYDKLCTEEDKKAGGINLARYQELYAQFISNEDEKNNACYLFGPLKEVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02635",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAAPKARALGPEEKDECMKIFDIFDRNAENIAPVSDTMDMLTKLGQTYTKRETEAIMKEARGPKGDKKNIGPEEWLTLCSKWVRQDDEEEILRAFKVFDANGDGVIDFDEFKFIMQKVGEEPLTDAEVEEAMKEADEDGNGVIDIPEFMDLIKKSKNALKES",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04573",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -974,11 +1082,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "AYSWDNRVKYVVRYMYDIDDDGFLDKNDFECLAVRNTLIEGRGEFSAADYANNQKIMRNLWNEIAELADFNKDGEVTVDEFKMAVQKHCQGKKYSEFPGAFKVFIANQFKAIDVNGDGKVGLDEYRLDCITRSAFAEVKEIDDAYDKLTTEDDRKAGGLTLERYQDLYAQFISNPNESCSACFLFGPLKVVQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02636",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MFLVNSFLKGGGGGGGGGGGLGGGLGNVLGGLISGAGGGGGGGGGGGGGGGGGGTAMRILGGVISAISEAAAQYNPEPPPPRTHYSNIEANESEEVRQFRRLFAQLAGDDMEVSATELMNILNKVVTRHPDLKTDGFGIDTCRSMVAVMDSDTTGKLGFEEFKYLWNNIKKWQAIYKQFDVDRSGTIGSSELPGAFEAAGFHLNEHLYSMIIRRYSDEGGNMDFDNFISCLVRLDAMFRAFKSLDKDGTGQIQVNIQEWLQLTMYS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04574",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -992,11 +1102,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "TDYLVSKWKIWYKSLDVNHDGIISIENVEESRNKFTDLHKLVGDKSTGVKVDMQKWWDTYIFLTPGAEISETQFVENLGNSFKKDKAFLATMTACFNMIFDVIDTDKDRSIDLNEFIYAFAAFGHENESVVRTAFALLKPDDDNTVPLRTVVDAWISFVTCEDASKTDVIKSAFES",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02637",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAIPSNLMQFSEDIIKQLTPEEIDEFREAFMMFDKDGNGTISTKELGIAMRSLGQNPTEQEILEMINEVDIDGNGQIEFPEFCVMMKRMMKETDSEMIREAFRVFDKDGNGVITAQEFRYFMVHMGMQFSEEEVDEMIKEVDVDGDGEIDYEEFVKMMSNQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04630",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1010,11 +1122,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MGSELETAMETLINVFHAHSGKEGDKYKLSKKELKELLQTELSGFLDAQKDADAVDKVMKELDENGDGEVDFQEYVVLVAALTVACNNFFWENS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02639",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MFLVNSFLKGGGGGGGGGGGLGGGLGNVLGGLISGAGGGGGGGGGGGGGGGGGGGGTAMRILGGVISAISEAAAQYNPEPPPPRTHYSNIEANESEEVRQFRRLFAQLAGDDMEVSATELMNILNKVVTRHPDLKTDGFGIDTCRSMVAVMDSDTTGKLGFEEFKYLWNNIKRWQAIYKQFDTDRSGTICSSELPGAFEAAGFHLNEHLYNMIIRRYSDESGNMDFDNFISCLVRLDAMFRAFKSLDKDGTGQIQVNIQEWLQLTMYS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04632",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1028,11 +1142,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MVELSKKVTGKLDKTTPGIQIWRIENMEMVPVPTKSYGNFYEGDCYVLLSTRKTGSGFSYNIHYWLGKNSSQDEQGAAAIYTTQMDEYLGSVAVQHREVQGHESETFRAYFKQGLIYKQGGVASGMKHVETNTYNVQRLLHVKGKKNVVAAEVEMSWKSFNLGDVFLLDLGQLIIQWNGPESNRAERLRAMTLAKDIRDRERAGRAKVGVVEGENEAASPELMQALTHVLGEKKNIKAATPDEQVHQALNSALKLYHVSDASGNLVIQEVAIRPLTQDMLQHEDCYILDQAGLKIFVWKGKNANKEEKQQAMSRALGFIKAKNYLASTSVETENDGSESAVFRQLFQKWTVPNQTSGLGKTHTVGKVAKVEQVKFDATTMHVKPEVAAQQKMVDDGSGEAEVWRVENQELVPVEKRWLGHFYGGDCYLVLYTYYVGPKVNRIIYIWQGRHASTDELAASAYQAVFLDQKYNNEPVQVRVTMGKEPAHLMAIFKGKMVVYENGSSRAGGTEPASSTRLFHVHGTNEYNTKAFEVPVRAASLNSNDVFVLKTPSSCYLWYGKGCSGDEREMGKMVADIISKTEKPVVAEGQEPPEFWVALGGKTSYANSKRLQEENPSVPPRLFECSNKTGRFLATEIVDFTQDDLDENDVYLLDTWDQIFFWIGKGANESEKEAAAETAQEYLRSHPGSRDLDTPIIVVKQGFEPPTFTGWFMAWDPLCWSDRKSYDELKAELGDNASIGQLVSGLTSKNEVFTATTTLVPTKLETFPLDVLVNTAAEDLPRGVDPSRKENHLSDEDFKAVFGMTRSAFANLPLWKQQNLKKEKGLF",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02640",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKETKHQHTFSIRKSAYGAASVMVASCIFVIGGGVAEANDSTTQTTTPLEVAQTSQQETHTHQTPVTSLHTATPEHVDDSKEATPLPEKAESPKTEVTVQPSSHTQEVPALHKKTQQQPAYKDKTVPESTIASKSVESNKATENEMSPVEHHASNVEKREDRLETNETTPPSVDREFSHKIINNTHVNPKTDGQTNVNVDTKTIDTVSPKDDRIDTAQPKQVDVPKENTTAQNKFTSQASDKKPTVKAAPEAVQNPENPKNKDPFVFVHGFTGFVGEVAAKGENHWGGTKANLRNHLRKAGYETYEASVSALASNHERAVELYYYLKGGRVDYGAAHSEKYGHERYGKTYEGVLKDWKPGHPVHFIGHSMGGQTIRLLEHYLRFGDKAEIAYQQQHGGIISELFKGGQDNMVTSITTIATPHNGTHASDDIGNTPTIRNILYSFAQMSSHLGTIDFGMDHWGFKRKDGESLTDYNKRIAESKIWDSEDTGLYDLTREGAEKINQKTELNPNIYYKTYTGVATHETQLGKHIADLGMEFTKILTGNYIGSVDDILWRPNDGLVSEISSQHPSDEKNISVDENSELHKGTWQVMPTMKGWDHSDFIGNDALDTKHSAIELTNFYHSISDYLMRIEKAESTKNA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04635",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1046,11 +1162,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MEKLLCFLVLTSLSHAFGQTDMSRKAFVFPKESDTSYVSLKAPLTKPLKAFTVCLHFYTELSSTRGYSIFSYATKRQDNEILIFWSKDIGYSFTVGGSEILFEVPEVTVAPVHICTSWESASGIVEFWVDGKPRVRKSLKKGYTVGAEASIILGQEQDSFGGNFEGSQSLVGDIGNVNMWDFVLSPDEINTIYLGGPFSPNVLNWRALKYEVQGEVFTKPQLWP",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02741",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MRTLSLLTLLALTAFCLSDLAGAKPSDSESDKAFMSKQEGSKVVNRLRRYLNNGLGAPAPYPDPLEPHREVCELNPNCDELADHIGFQDAYKRIYGTTV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04640",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1064,11 +1182,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MNKPLLWISVLTSLLEAFAHTDLSGKVFVFPRESVTDHVNLITPLEKPLQNFTLCFRAYSDLSRAYSLFSYNTQGRDNELLVYKERVGEYSLYIGRHKVTSKVIEKFPAPVHICVSWESSSGIAEFWINGTPLVKKGLRQGYFVEAQPKIVLGQEQDSYGGKFDRSQSFVGEIGDLYMWDSVLPPENILSAYQGTPLPANILDWQALNYEIRGYVIIKPLVWV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02743",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKFFLLLFTIGFCWAQYSPNTQQGRTSIVHLFEWRWVDIALECERYLAPKGFGGVQVSPPNENVAIYNPFRPWWERYQPVSYKLCTRSGNEDEFRNMVTRCNNVGVRIYVDAVINHMCGNAVSAGTSSTCGSYFNPGSRDFPAVPYSGWDFNDGKCKTGSGDIENYNDATQVRDCRLTGLLDLALEKDYVRSKIAEYMNHLIDIGVAGFRLDASKHMWPGDIKAILDKLHNLNSNWFPAGSKPFIYQEVIDLGGEPIKSSDYFGNGRVTEFKYGAKLGTVIRKWNGEKMSYLKNWGEGWGFVPSDRALVFVDNHDNQRGHGAGGASILTFWDARLYKMAVGFMLAHPYGFTRVMSSYRWPRQFQNGNDVNDWVGPPNNNGVIKEVTINPDTTCGNDWVCEHRWRQIRNMVIFRNVVDGQPFTNWYDNGSNQVAFGRGNRGFIVFNNDDWSFSLTLQTGLPAGTYCDVISGDKINGNCTGIKIYVSDDGKAHFSISNSAEDPFIAIHAESKL",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04746",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1082,11 +1202,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MRALTLLALLALAALCIAGQAGAKPSGAESSKGAAFVSKQEGSEVVKRPRRYLYQWLGAPVPYPDPLEPRREVCELNPDCDELADHIGFQEAYRRFYGPV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02818",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ILNVAVEGALWRLRGTDGKAPSMIGWWPAKAVTFVDNHDTGSTQHMWPFPSDRVMQGYAYILTHPRTPCIFYDHFFDWGPKEEIDRLVSVRTRHGIHNESKLQIIEADADLYLAEIDGKVIVKLGPRYDVGNLIPGGFEGAAHGNDYAVWEKI",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04748",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1100,11 +1222,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "YLYQWLGAPAPYPDPLEPKREVCELNPDCDELADHIGFQEAYRRFYGPV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02819",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "KAPGMIGWWPAKAVTFVNNHDTGSTQHMWPFPSDRVMQGYAYILTHQGTPCIFYDHFFDWGPKEEIDRLVSVSTRHGIHSESKLQIIEADADLCLAEIDGKVIVKLGPRYDVGNLIPGGFEVAAHGNDYAVWEKI",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04749",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1118,11 +1242,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MRTPMLLALLALATLCLAGRADAKPGDAESGKGAAFVSKQEGSEVVKRLRRYLDHWLGAPAPYPDPLEPKREVCELNPDCDELADHIGFQEAYRRFYGPV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02820",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MANKHMSLSLFIVLLGLSCSLASGQVLFQGFNWESWKHNGGWYNFLMGKVDDIAAAGVTHVWLPPASQSVAEQGYMPGRLYDLDASKYGNKAQLKSLIGALHGKAVKAIADIVINHRTAERKDGRGIYCIFEGGTPDARLDWGPHMICRDDRPYPDGTGNRPTRTRADFGAAPDIDHLNPRVQKELVEWLNWLRTDDGFDGWRFDFAKGYSADVAKIYVDRSEPSFAVAEIWTSLAYGGDGKPNLNQDPHRQELVNWVNKVGGSGPATTFDFTTKGILNVAVEGELWRLRGTDGKAPGMIGWWPAKAVTFVDNHDTGSTQHMWPFPSDRVMQGYAYILTHPGNPCIFYDHFFDWGLKEEIDRLVSIRTRQGIHSESKLQIMEADADLYLAEIEGKVIVKLGPRYDVGHLIPEGFKVVAHGNDYAVWEKV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P04750",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1136,11 +1262,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "YLAPGLGAPAPYPDPLEPKREICELNPDCDELADHIGFQDAYRRFYGTV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02821",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAYPGHPGAGGGYYPGGYGGAPGGPSFPGQTQDPLYGYFASVAGQDGQIDADELQRCLTQSGIAGGYKPFNLETCRLMVSMLDRDMSGTMGFNEFKELWAVLNGWRQHFISFDSDRSGTVDPQELQKALTTMGFRLNPQTVNSIAKRYSTSGKITFDDYIACCVKLRALTDSFRRRDSAQQGMVNFSYDDFIQCVMTV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05044",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1154,11 +1282,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MKAAALLLLAALLTFSLCRSAPDGSDARSAKAFISHRQRAEMVRRQKRHYAQDSGVAGAPPNPLEAQREVCELSPDCDELADQIGFQEAYRRFYGPV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02822",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MRSAAVLALLLCAGQVIALPVNSPMNKGDTEVMKCIVEVISDTLSKPSPMPVSKECFETLRGDERILSILRHQNLLKELQDLALQGAKERTHQQKKHSSYEDELSEVLEKPNDQAEPKEVTEEVSSKDAAEKRDDFKEVEKSDEDSDGDRPQASPGLGPGPKVEEDNQAPGEEEEAPSNAHPLASLPSPKYPGPQAKEDSEGPSQGPASREKGLSAEQGRQTEREEEEEKWEEAEAREKAVPEEESPPTAAFKPPPSLGNKETQRAAPGWPEDGAGKMGAEEAKPPEGKGEWAHSRQEEEEMARAPQVLFRGGKSGEPEQEEQLSKEWEDAKRWSKMDQLAKELTAEKRLEGEEEEEEDPDRSMRLSFRARGYGFRGPGLQLRRGWRPNSREDSVEAGLPLQVRGYPEEKKEEEGSANRRPEDQELESLSAIEAELEKVAHQLEELRRG",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05059",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1172,11 +1302,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "ATRAGDLTPLQLESLREVCELNVSCDEMADTAGIVAAYIAYYGPIQF",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P02823",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MDHHYDPQQTNDYMQPEEDWDRDLLLDPAWEKQQRKTFTAWCNSHLRKAGTQIENIEEDFRDGLKLMLLLEVISGERLAKPERGKMRVHKISNVNKALDFIASKGVKLVSIGAEEIVDGNVKMTLGMIWTIILRFAIQDISVEETSAKEGLLLWCQRKTAPYKNVNIQNFHISWKDGLGFCALIHRHRPELIDYGKLRKDDPLTNLNTAFDVAEKYLDIPKMLDAEDIVGTARPDEKAIMTYVSSFYHAFSGAQKAETAANRICKVLAVNQENEQLMEDYEKLASDLLEWIRRTIPWLENRAPENTMQAMQQKLEDFRDYRRLHKPPKVQEKCQLEINFNTLQTKLRLSNRPAFMPSEGKMVSDINNAWGGLEQAEKGYEEWLLNEIRRLERLDHLAEKFRQKASIHESWTDGKEAMLQQKDYETATLSEIKALLKKHEAFESDLAAHQDRVEQIAAIAQELNELDYYDSPSVNARCQKICDQWDNLGALTQKRREALERTEKLLETIDQLYLEYAKRAAPFNNWMEGAMEDLQDTFIVHTIEEIQGLTTAHEQFKATLPDADKERQAILGIHNEVSKIVQTYHVNMAGTNPYTTITPQEINGKWEHVRQLVPRRDQALMEEHARQQQNERLRKQFGAQANVIGPWIQTKMEEIGRISIEMHGTLEDQLNHLRQYEKSIVNYKPKIDQLEGDHQQIQEALIFDNKHTNYTMEHIRVGWEQLLTTIARTINEVENQILTRDAKGISQEQMNEFRASFNHFDRDHSGTLGPEEFKACLISLGYDIGNDAQGEAEFARIMSIVDPNRMGVVTFQAFIDFMSRETADTDTADQVMASFKILAGDKNYITVDELRRELPPDQAEYCIARMAPYNGRDAVPGALDYMSFSTALYGESDL",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05094",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1190,11 +1322,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MKLLVLAVLLTVAAADSGISPRAVWQFRKMIKCVIPGSDPFLEYNNYGCYCGLGGSGTPVDELDKCCQTHDNCYDQAKKLDSCKFLLDNPYTHTYSYSCSGSAITCSSKNKECEAFICNCDRNAAICFSKAPYNKAHKNLDTKKYCQS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04054",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSEEPTPVSGNDKQLLNKAWEITQKKTFTAWCNSHLRKLGSSIEQIDTDFTDGIKLAQLLEVISNDPVFKVNKTPKLRIHNIQNVGLCLKHIESHGVKLVGIGAEELVDKNLKMTLGMIWTIILRFAIQDISIEELSAKEALLLWCQRKTEGYDRVKVGNFHTSFQDGLAFCALIHKHRPDLINFDSLNKDDKAGNLQLAFDIAEKELDIPKMLDVSDMLDVVRPDERSVMTYVAQYYHHFSASRKAETAGKQVGKVLDTFMLLEQTKSDYLKRANELVQWINDKQASLESRDFGDSIESVQSFMNAHKEYKKTEKPPKGQEVSELEAIYNSLQTKLRLIKREPFVAPAGLTPNEIDSTWSALEKAEQEHAEALRIELKRQKKIAVLLQKYNRILKKLENWATTKSVYLGSNETGDSITAVQAKLKNLEAFDGECQSLEGQSNSDLLSILAQLTELNYNGVPELTERKDTFFAQQWTGVKSSAETYKNTLLAELERLQKIEDSLVEFAKRAAQLNVWIEAADDHVFDPINVDSVQGVQEIQEKFDAFLHDQSQQFAELEALAALTQQLRELGRSENDYSVISYDELSAKWNNLLAGIEERKVQLANELTTQTNNDVLCQSFSVKANEISDYVRVTLDAISQNTSSDPQEQLNNIRAIITAHAEKKPELDELYTIASQLEEAQVVDNKHTQHSLESIKLKWDKLNTLAKKNEQVVEGEILAKQLTGVTAEELSEFKACFSHFDKDNDNKLNRLEFSSCLKSIGDELTEEQLNQVISKIDTDGNGTISFEEFIDYMVSSRKGTDSVESTKAAFKVMAEDKDFITEAQIRAAISDSKQIDYLLASMPAVEGGFDYNSFAEKLYQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05095",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1208,11 +1342,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MKLLLLAALLTAGVTAHSISTRAVWQFRNMIKCTIPGSDPLREYNNYGCYCGLGGSGTPVDDLDRCCQTHDHCYNQAKKLESCKFLIDNPYTNTYSYKCSGNVITCSDKNNDCESFICNCDRQAAICFSKVPYNKEYKDLDTKKHC",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04055",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MDGIFCALPLSLLLLLQSCGVWGAPPQPRGTLCRTKPTDLVFIIDSSRSVRPQEFEKVKVFLSRVIEGLDVGPNSTRVGVINYASAVKNEFSLKTHQTKAELLQAVQRIEPLSTGTMTGLAIQFAISRAFSDTEGARLRSPNINKVAIVVTDGRPQDGVQDVSARARQAGIEIFAIGVGRVDMHTLRQIASEPLDDHVDYVESYSVIEKLTHKFQEAFCVVSDLCATGDHDCEQICISTPGSYKCACKEGFTLNNDGKTCSACSGGSGSALDLVFLIDGSKSVRPENFELVKKFINQIVESLEVSEKQAQVGLVQYSSSVRQEFPLGQFKNKKDIKAAVKKMAYMEKGTMTGQALKYLVDSSFSIANGARPGVPKVGIVFTDGRSQDYITDAAKKAKDLGFRMFAVGVGNAVEDELREIASEPVAEHYFYTADFRTISNIGKKLQMKICVEEDPCECKSIVKFQTKVEELINTLQQKLEAVAKRIEALENKII",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05099",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1226,11 +1362,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "NLIQFGNMIQCANKGSRPSLDYADYGCYCGWGGSGTPVDELDRCCQVHDNCYEQAGKKGCFPKLTLYSWKCTGNVPTCNSKPGCKSFVCACDAAAAKCFAKAPYKKENYNIDTKKRCK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04056",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MISPFLVLAIGTCLTNSLVPEKEKDPKYWRDQAQETLKYALELQKLNTNVAKNVIMFLGDGMGVSTVTAARILKGQLHHNPGEETRLEMDKFPFVALSKTYNTNAQVPDSAGTATAYLCGVKANEGTVGVSAATERSRCNTTQGNEVTSILRWAKDAGKSVGIVTTTRVNHATPSAAYAHSADRDWYSDNEMPPEALSQGCKDIAYQLMHNIRDIDVIMGGGRKYMYPKNKTDVEYESDEKARGTRLDGLDLVDTWKSFKPRYKHSHFIWNRTELLTLDPHNVDYLLGLFEPGDMQYELNRNNVTDPSLSEMVVVAIQILRKNPKGFFLLVEGGRIDHGHHEGKAKQALHEAVEMDRAIGQAGSLTSSEDTLTVVTADHSHVFTFGGYTPRGNSIFGLAPMLSDTDKKPFTAILYGNGPGYKVVGGERENVSMVDYAHNNYQAQSAVPLRHETHGGEDVAVFSKGPMAHLLHGVHEQNYVPHVMAYAACIGANLGHCAPASSAGSLAAGPLLLALALYPLSVLF",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05186",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1244,11 +1382,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "NILQFRKMIQCANKGSRAAWHYLDYGCYCGPGGRGTPVDELDRCCKIHDDCYIEAGKDGCYPKLTWYSWDCTGDAPTCNPKSKCKDFVCACDAAAAKCFAKAPYNKANWNIDTKTRCK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04057",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "EFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDSNGYISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEF",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05419",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1262,11 +1402,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MANKHLSLSLFLVLLGLSASLASGQVLFQGFNWESWKHNGGWYNFLMGKVDDIAAAGITHVWLPPASQSVAEQGYMPGRLYDLDASKYGNKAQLKSLIGALHGKGVKAIADIVINHRTAEHKDGRGIYCIFEGGTPDARLDWGPHMICRDDRPYADGTGNPDTGADFGAAPDIDHLNLRVQKELVEWLNWLKADIGFDGWRFDFAKGYSADVAKIYIDRSEPSFAVAEIWTSLAYGGDGKPNLNQDQHRQELVNWVDKVGGKGPATTFDFTTKGILNVAVEGELWRLRGTDGKAPGMIGWWPAKAVTFVDNHDTGSTQHMWPFPSDRVMQGYAYILTHPGTPCIFYDHFFDWGLKEEIDRLVSVRTRHGIHNESKLQIIEADADLYLAEIDGKVIVKLGPRYDVGNLIPGGFKVAAHGNDYAVWEKI",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04063",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSYKAKTVVSARRDQKKGRVGLTEEQKQEIREAFDLFDTDGSGTIDAKELKVAMRALGFEPKKEEIKKMISEIDKDGSGTIDFEEFLTMMTAKMGERDSREEILKAFRLFDDDNSGTITIKDLRRVAKELGENLTEEELQEMIAEADRNDDNEIDEDEFIRIMKKTSLF",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05434",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1280,11 +1422,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MWQLTSLLLFVATWGISGTPAPLDSVFSSSERAHQVLRIRKRANSFLEELRHSSLERECIEEICDFEEAKEIFQNVDDTLAFWSKHVDGDQCLVLPLEHPCASLCCGHGTCIDGIGSFSCDCRSGWEGRFCQREVSFLNCSLDNGGCTHYCLEEVGWRRCSCAPGYKLGDDLLQCHPAVKFPCGRPWKRMEKKRSHLKRDTEDQEDQVDPRLIDGKMTRRGDSPWQVVLLDSKKKLACGAVLIHPSWVLTAAHCMDESKKLLVRLGEYDLRRWEKWELDLDIKEVFVHPNYSKSTTDNDIALLHLAQPATLSQTIVPICLPDSGLAERELNQAGQETLVTGWGYHSSREKEAKRNRTFVLNFIKIPVVPHNECSEVMSNMVSENMLCAGILGDRQDACEGDSGGPMVASFHGTWFLVGLVSWGEGCGLLHNYGVYTKVSRYLDWIHGHIRDKEAPQKSWAP",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04070",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MELWGAYLLLCLFSLLTQVTTEPPTQKPKKIVNAKKDVVNTKMFEELKSRLDTLAQEVALLKEQQALQTVCLKGTKVHMKCFLAFTQTKTFHEASEDCISRGGTLGTPQTGSENDALYEYLRQSVGNEAEIWLGLNDMAAEGTWVDMTGARIAYKNWETEITAQPDGGKTENCAVLSGAANGKWFDKRCRDQLPYICQFGIV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05452",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1298,11 +1442,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAMVSEFLKQAWFIENEEQEYVQTVKSSKGGPGSAVSPYPTFNPSSDVAALHKAIMVKGVDEATIIDILTKRNNAQRQQIKAAYLQETGKPLDETLKKALTGHLEEVVLALLKTPAQFDADELRAAMKGLGTDEDTLIEILASRTNKEIRDINRVYREELKRDLAKDITSDTSGDFRNALLSLAKGDRSEDFGVNEDLADSDARALYEAGERRKGTDVNVFNTILTTRSYPQLRRVFQKYTKYSKHDMNKVLDLELKGDIEKCLTAIVKCATSKPAFFAEKLHQAMKGVGTRHKALIRIMVSRSEIDMNDIKAFYQKMYGISLCQAILDETKGDYEKILVALCGGN",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04083",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKVLILACLVALALARETIESLSSSEESITEYKQKVEKVKHEDQQQGEDEHQDKIYPSFQPQPLIYPFVEPIPYGFLPQNILPLAQPAVVLPVPQPEIMEVPKAKDTVYTKGRVMPVLKSPTIPFFDPQIPKLTDLENLHLPLPLLQPLMQQVPQPIPQTLALPPQPLWSVPQPKVLPIPQQVVPYPQRAVPVQALLLNQELLLNPTHQIYPVTQPLAPVHNPISV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05814",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1316,11 +1462,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "NLFQFGDMILQKTGKEAVHSYAIYGCYCGWGGQGRAQDATDRCCFAQDCCYGRVNDCNPKTATYTYSFENGDIVCGDNDLCLRAVCECDRAAAICLGENVNTYDKNYEYYSISHCTEESEQC",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04084",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "EFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLTMMARKMKETDSEEEIREAFRVFDKDGNGFISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVAMMTSK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05932",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1334,11 +1482,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAAQLLFTDEEVTEFKRRFKNKDTDKSKSITAEELGEFFKSTGKSYTDKQIDKMISDVDTDESGTIDFSEMLMGIAEQMVKWTWKEEHYTKAFDDMDKDGNGSLSPQELREALSASKPPMKRKKIKAIIQKADANKDGKIDREEFMKLIKSC",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04109",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MTTRNLTDEQIAEFREAFSLFDRDQDGNITSNELGVVMRSLGQSPTAAELQDMINEVDADGNGTIDFTEFLTMMARKMKDTDNEEEVREAFKVFDKDGNGYITVEELTHVLTSLGERLSQEEVADMIREADTDGDGVINYEEFSRVISSK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05933",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1352,11 +1502,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAVQLLFTEEEKALFKSSFKSEDTDGDGKITSEELRAAFKSIEIDLTQEKIDEMMGMVDKDGSKDMDFSEFLMRKAEQWRGREVQLTKAFVDLDKDHNGSLSPQELRTAMSACTDPPMTEKEIDAIIEKADCNGDGKICLEEFMKLIHSS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04110",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "LTMMARKMKETDSEEEIREAFRVFDKDGNGFISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVAMMTSK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05934",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1370,11 +1522,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAVQLFFTEEQRKVFKSSFKSIDADGDGKITPEELKAAFKSIEIELTQEKIDEMMSMVDKDGSRPVDFSEILMKKAEQMRGKGAQYFKAFDALDTDKSGSLSPEELRTALSACTDPPMTKEEIDAIIKKADGNNDGEIRRAEFVRMIQSSY",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04111",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "KKMKDTDSEEEIREAFRVFDKDGNGFI",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05935",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1388,11 +1542,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "ADKAASGVLTKLPQKQIQEMKEAFTMIDQNRDGFIDINDLKEMFSSLGRTPDDKELTAMLKEAPGPLNFTMFLSIFSDKLSGTDTEETLRNAFAMFDELDTKKLNIEYIKDLLENMGDNFTKDEMRMTFKEAPVTGGKFDYVKFTAMIKGSGEEEA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04112",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MDDIYKAAVEQLTEEQKNEFKAAFDIFVLGAEDGCISTKELGKVMRMLGQNPTPEELQEMIDEVDEDGSGTVDFDQFLVMMVRCMKDDSKGKTEEELSDLFRMFDKNADGYIDLEELKIMLQATGETITEDDIEELMKDGNKNNDGRIDYDEFLQFMKGVE",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05936",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1406,11 +1562,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "ADKERAQRATSNVFARLPQKLMQEMKEAFTMIDQNRDGFIDINDLKEMFSSLGRTPDDKELTAMLKEAPGPLNFTMFLSIFSDKLSGTDTEETLRNAFAMFDELDTKKLNIEYIKDLLENMGDNFTKDEMRMTFKEAPVTGGKFDYVKFTAMIKGSGEEEA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04113",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "PEVTASERAYHLRKMKTRMKRVDVTGDGFISREDYELIAVRIAKIAKLSAEKAEETRQEFLRVADQLGLAPGVRISVEEAAVNATDSLLKMKAEEKAMAVIQSLIMYDCIDTDKDGYVSLPEFKAFLQAVGPDITDDKAITCFNTLDFNKNGQISRDEFLVTVNDFLFGLEETALANAFYGDLL",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05938",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1424,11 +1582,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MPSQMEHAMETMMFTFHKFAGDKGYLTKEDLRVLMEKEFPGFLENQKDPLAVDKIMKDLDQCRDGKVGFQSFFSLIAGLTIACNDYFVVHMKQKGK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04163",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "AFGLKEADITAALEACKAADSFNHKAFFAKVGMSAKSAGDVKKAFEIIDEDKSGFIEEEELKLFLQNFKAGARALTDAETKIFLKAGDADGDGKIGIDEFAALVKA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05939",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1442,11 +1602,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MEAAHSKSTEECLAYFGVSETTGLTPDQVKRHLEKYGHNELPAEEGKSLWELVIEQFEDLLVRILLLAACISFVLAWFEEGEETITAFVEPFVILLILIANAIVGVWQERNAENAIEALKEYEPEMGKVYRADRKSVQRIKARDIVPGDIVEVAVGDKVPADIRILSIKSTTLRVDQSILTGESVSVIKHTEPVPDPRAVNQDKKNMLFSGTNIAAGKALGIVATTGVSTEIGKIRDQMAATEQDKTPLQQKLDEFGEQLSKVISLICVAVWLINIGHFNDPVHGGSWIRGAIYYFKIAVALAVAAIPEGLPAVITTCLALGTRRMAKKNAIVRSLPSVETLGCTSVICSDKTGTLTTNQMSVCKMFIIDKVDGDFCSLNEFSITGSTYAPEGEVLKNDKPIRSGQFDGLVELATICALCNDSSLDFNETKGVYEKVGEATETALTTLVEKMNVFNTEVRNLSKVERANACNSVIRQLMKKEFTLEFSRDRKSMSVYCSPAKSSRAAVGNKMFVKGAPEGVIDRCNYVRVGTTRVPMTGPVKEKILSVIKEWGTGRDTLRCLALATRDTPPKREEMVLDDSSRFMEYETDLTFVGVVGMLDPPRKEVMGSIQLCRDAGIRVIMITGDNKGTAIAICRRIGIFGENEEVADRAYTGREFDDLPLAEQREACRRACCFARVEPSHKSKIVEYLQSYDEITAMTGDGVNDAPALKKAEIGIAMGSGTAVAKTASEMVLADDNFSTIVAAVEEGRAIYNNMKQFIRYLISSNVGEVVCIFLTAALGLPEALIPVQLLWVNLVTDGLPATALGFNPPDLDIMDRPPRSPKEPLISGWLFFRYMAIGGYVGAATVGAAAWWFMYAEDGPGVTYHQLTHFMQCTEDHPHFEGLDCEIFEAPEPMTMALSVLVTIEMCNALNSLSENQSLMRMPPWVNIWLLGSICLSMSLHFLILYVDPLPMIFKLKALDLTQWLMVLKISLPVIGLDEILKFIARNYLEDPEDERRK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04191",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAFGGILSEADISAALQNCQAADSFNFKTFFAQSGLSSKSADDVKNVFAILDQDRSGFIEEEELKLFLQNFSASARALTDAETKAFLAAGDSDGDGKIGVEEFQSLVKP",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05940",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1460,11 +1622,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MSTVHEILCKLSLEGDHSTPPSAYGSVKAYTNFDAERDALNIETAIKTKGVDEVTIVNILTNRSNEQRQDIAFAYQRRTKKELASALKSALSGHLETVILGLLKTPAQYDASELKASMKGLGTDEDSLIEIICSRTNQELQEINRVYKEMYKTDLEKDIVSDTSGDFRKLMVALAKGRRAEDGSVIDYELIDQDARDLYDAGVKRKGTDVPKWISIMTERSVCHLQKVFERYKSYSPYDMLESIKKEVKGDLENAFLNLVQCIQNKPLYFADRLYDSMKGKGTRDKVLIRIMVSRSEVDMLKIRSEFKKKYGKSLYYYIQQDTKGDYQKALLYLCGGDD",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04272",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "SFAGILSDADIDAALAACQAAESFKHKEFFAKVGLSAKTPDVIKKAFYVIDQDKSGFIEEDELKLFLQNFASSARALTDKETETFLKAGDSDGDGKIGIDEFADLVKEA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05941",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1478,11 +1642,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MREIVHLQAGQCGNQIGAKFWEVISDEHGIDPTGTYHGDSDLQLERINVYYNEATGGNYVPRAVLVDLEPGTMDSVRSGPFGQIFRPDNFVFGQSGAGNNWAKGHYTEGAELVDAVLDVVRKEAESCDCLQGFQLTHSLGGGTGSGMGTLLISKIREEFPDRIMNTFSVVPSPKVSDTVVEPYNATLSVHQLVENTDETYCIDNEALYDICFRTLKLTTPTYGDLNHLVSATMSGVTTCLRFPGQLNADLRKLAVNMVPFPRLHFFMPGFAPLTSRGSQQYRALTVPELTQQMFDAKNMMAACDPRHGRYLTVAAVFRGRMSMKEVDEQMLSVQSKNSSYFVEWIPNNVKTAVCDIPPRGLKMAATFIGNSTAIQELFKRISEQFTAMFRRKAFLHWYTGEGMDEMEFTEAESNMNDLVSEYQQYQDATAEEGEFEEEAEEEVA",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04350",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MARPLEEALDVIVSTFHKYSGNEGDKFKLNKTELKELLTRELPSFLGRRTDEAAFQKLMNNLDSNRDNEVDFQEYCVFLSCIAMMCNEFFEGCPDKEPRKK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05942",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1496,11 +1662,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAANTEQLTEEQIAEFKEAFALFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMISEVDADGNGTIDFPEFLMLMARKMKETDHEDELREAFKVFDKDGNGFISAAELRHVMTNLGEKLSEEEVDEMIREADVDGDGQVNYEEFVRMMTSGATDDKDKKGHK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04352",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MPSQMEHAMETMMLTFHRFAGEKNYLTKEDLRVLMEREFPGFLENQKDPLAVDKIMKDLDQCRDGKVGFQSFLSLVAGLIIACNDYFVVHMKQKK",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05943",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1514,11 +1682,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MTAETHLQGVEISAAQFFEIWHHYDSDGNGYMDGKELQNFIQELQQARKKAGLDLTPEMKAFVDQYGKATDGKIGIVELAQVLPTEENFLLFFRCQQLKSSEDFMQTWRKYDSDHSGFIDSEELKSFLKDLLQKANKQIEDSKLTEYTEIMLRMFDANNDGKLELTELARLLPVQENFLIKFQGVKMCAKEFNKAFEMYDQDGNGYIDENELDALLKDLCEKNKKELDINNLATYKKSIMALSDGGKLYRAELALILCAEEN",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04354",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ADKAASGVLTKLPQKQIQEMKEAFSMIDVDRDGFVNKDDLKAISEQLGRTPDDKELTAMLKEAPGPLNFTMFLSIFSDKLSGTDTEETLRNAFAMFDELDTKKLNIEYIKDLLENMGDNFTKDEMRMTFKEAPVTGGKFDYVKFTAMIKGSGEEEA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05944",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1532,11 +1702,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SVLELGKMILQETGKNAITSYGSYGCNCGWGHRGQPKDATDRCCFVHKCCYKKLTDCNHKTDRYSYSWKNKAIICEEKNPCLKEMCECDKAVAICLRENLDTYNKKYKAYFKLKCKKPDTC",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04361",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "AYSWDNRVKYVVRYMYDIDNNGFLDKNDFECLALRNTLIEGRGEFNEAAYANNQKIMSNLWNEIAELADFNKDGEVTIDEFKKAVQNVCVGKAFATFPAAFKVFIANQFKTVDVNGDGLVGVDEYRLDCISRSAFANIKEIDDAYNKLATDADKKAGGISLARYQELYAQFISNPDESANAVYLFGPLKEVQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05946",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1550,11 +1722,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "ALWQFRSMIKCTIPGSDPLLDFNNYGCYCGLGGSGTPVDELDRCCETHDNCYRDAKNLDSCKFLVDNPYTNSYSYSCSNTEITCNSKNNACEAFICNCDRNAAICFSKAPYNKEHKNLDTKKYC",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04416",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "ADKAASGVLTKLPQKQIQEMKEAFSMLDVDRDGFVNKDDLKAISEQLGRTPDDKELTAMLKEAPGPLNFTMFLSIFSDKLSGTDSEETIRNAFAMFDELETKKLNIEYIKDLLENMGDNFTKDEMRMTFKEAPVTGGKFDYVKFTAMIKGSGEDDA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05963",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1568,11 +1742,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "HLLQFRKMIKKMTGKEPVISYAFYGCYCGSGGRGKPKDATDRCCFVHDCCYEKVTGCKPKWDDYTYSWKNGDIVCGGDDPCKKEICECDRAAAICFRDNLKTYKKRYMAYPDILCSSKSEKC",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04417",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAPKKDVKKPVAAAAAAPAPAPAPAPAPAPAKPKEEKIDLSAIKIEFSKEQQDEFKEAFLLFDRTGDSKITLSQVGDVLRALGTNPTNAEVRKVLGNPSNEELNAKKIEFEQFLPMMQAISNNKDQATYEDFVEGLRVFDKEGNGTVMGAELRHVLATLGEKMKEEEVEALMAGQEDSNGCINYEAFVKHIMSI",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05976",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1586,11 +1762,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MADQLTDEQIAEFKEAFSLFDKDGDGCITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLNLMARKMKDTDSEEELKEAFRVFDKDQDGFISAAELRHVMTNLGEKLTDEEVDEMIREADVDGDGQINYEEFVKVMMAK",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04464",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAPKKDVKKPAAAPAPAPAPAPAPAKPKEEKIDLSAIKIEFSKEQQEDFKEAFLLFDRTGECKITLSQVGDVLRALGTNPTNAEVKKVLGNPSNEEMNAKKIEFEQFLPMMQAISNNKDQGGYEDFVEGLRVFDKEGNGTVMGAELRHVLATLGEKMKEEEVEALLAGQEDSNGCINYEAFVKHIMSV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P05977",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1604,11 +1782,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAPKKAKRRAAAEGSSNVFSMFDQTQIQEFKEAFTVIDQNRDGIIDKEDLRDTFAAMGRLNVKNEELDAMMKEASGPINFTVFLTMFGEKLKGADPEDVITGAFKVLDPEGKGTIKKQFLEELLTTQCDRFSQEEIKNMWAAFPPDVGGNVDYKNICYVITHGDAKDQE",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04466",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MIKKASLLTACSVTAFSAWAQDTSPDTLVVTANRFEQPRSTVLAPTTVVTRQDIDRWQSTSVNDVLRRLPGVDITQNGGSGQLSSIFIRGTNASHVLVLIDGVRLNLAGVSGSADLSQFPIALVQRVEYIRGPRSAVYGSDAIGGVVNIITTRDEPGTEISAGWGSNSYQNYDVSTQQQLGDKTRVTLLGDYAHTHGYDVVAYGNTGTQAQTDNDGFLSKTLYGALEHNFTDAWSGFVRGYGYDNRTNYDAYYSPGSPLLDTRKLYSQSWDAGLRYNGELIKSQLITSYSHSKDYNYDPHYGRYDSSATLDEMKQYTVQWANNVIVGHGSIGAGVDWQKQTTTPGTGYVEDGYDQRNTGIYLTGLQQVGDFTFEGAARSDDNSQFGRHGTWQTSAGWEFIEGYRFIASYGTSYKAPNLGQLYGFYGNPNLDPEKSKQWEGAFEGLTAGVNWRISGYRNDVSDLIDYDDHTLKYYNEGKARIKGVEATANFDTGPLTHTVSYDYVDARNAITDTPLLRRAKQQVKYQLDWQLYDFDWGITYQYLGTRYDKDYSSYPYQTVKMGGVSLWDLAVAYPVTSHLTVRGKIANLFDKDYETVYGYQTAGREYTLSGSYTF",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06129",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1622,11 +1802,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "GLNDFQKQKIKFTFDFFLDYNKDGSIQWEDFEEMIKRYKEVNKGSLSDADYKSMQASLEDEWRDLKGRADINKDDVVSWEEYLAMWEKTIATCKSVADLPAWCQNRIPFLFKGMDVSGDGIVDLEEFQNYCKNFQLQCADVPAVYNVITDGGKVTFDLNRYKELYYRLLTSPAADAGNTLMGQKP",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04569",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKQQKRLYARLLTLLFALIFLLPHSAAAAANLNGTLMQYFEWYMPNDGQHWKRLQNDSAYLAEHGITAVWIPPAYKGTSQADVGYGAYDLYDLGEFHQKGTVRTKYGTKGELQSAIKSLHSRDINVYGDVVINHKGGADATEDVTAVEVDPADRNRVISGEHRIKAWTHFHFPGRGSTYSDFKWHWYHFDGTDWDESRKLNRIYKFQGKAWDWEVSNENGNYDYLMYADIDYDHPDVAAEIKRWGTWYANELQLDGFRLDAVKHIKFSFLRDWVNHVREKTGKEMFTVAEYWQNDLGALENYLNKTNFNHSVFDVPLHYQFHAASTQGGGYDMRKLLNSTVVSKHPLKAVTFVDNHDTQPGQSLESTVQTWFKPLAYAFILTRESGYPQVFYGDMYGTKGDSQREIPALKHKIEPILKARKQYAYGAQHDYFDHHDIVGWTREGDSSVANSGLAALITDGPGGAKRMYVGRQNAGETWHDITGNRSEPVVINSEGWGEFHVNGGSVSIYVQR",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06278",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1640,11 +1822,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "GLNDFQKQKIKFTFDFFLDMNHDGSIQDNDFEDMMTRYKEVNKGSLSDADYKSMQASLEDEWRDLKGRADINKDDVVSWEEYLAMWEKTIATCKSVADLPAWCQNRIPFLFKGMDVSGDGIVDLEEFQNYCKNFQLQCADVPAVYNVITDGGKVTFDLNRYKELYYRLLTSPAADAGNTLMGQKP",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04570",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MLTFHRIIRKGWMFLLAFLLTALLFCPTGQPAKAAAPFNGTMMQYFEWYLPDDGTLWTKVANEANNLSSLGITALWLPPAYKGTSRSDVGYGVYDLYDLGEFNQKGAVRTKYGTKAQYLQAIQAAHAAGMQVYADVVFDHKGGADGTEWVDAVEVNPSDRNQEISGTYQIQAWTKFDFPGRGNTYSSFKWRWYHFDGVDWDESRKLSRIYKFRGIGKAWDWEVDTENGNYDYLMYADLDMDHPEVVTELKSWGKWYVNTTNIDGFRLDAVKHIKFSFFPDWLSDVRSQTGKPLFTVGEYWSYDINKLHNYIMKTNGTMSLFDAPLHNKFYTASKSGGTFDMRTLMTNTLMKDQPTLAVTFVDNHDTEPGQALQSWVDPWFKPLAYAFILTRQEGYPCVFYGDYYGIPQYNIPSLKSKIDPLLIARRDYAYGTQHDYLDHSDIIGWTREGVTEKPGSGLAALITDGPGGSKWMYVGKQHAGKVFYDLTGNRSDTVTINSDGWGEFKVNGGSVSVWVPRKTTVSTIAWSITTRPWTDEFVRWTEPRLVAWP",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06279",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1658,11 +1842,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SDLWVQKMKTYFNRIDFDKDGAITRMDFESMAERFAKESEMKAEHAKVLMDSLTGVWDNFLTAVAGGKGIDETTFINSMKEMVKNPEAKSVVEGPLPLFFRAVDTNEDNNISRDEYGIFFGMLGLDKTMAPASFDAIDTNNDGLLSLEEFVIAGSDFFMNDGDSTNKVFWGPLV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04571",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MAPHRPAPALLCALSLALCALSLPVRAATASRGASQAGAPQGRVPEARPNSMVVEHPEFLKAGKEPGLQIWRVEKFDLVPVPTNLYGDFFTGDAYVILKTVQLRNGNLQYDLHYWLGNECSQDESGAAAIFTVQLDDYLNGRAVQHREVQGFESATFLGYFKSGLKYKKGGVASGFKHVVPNEVVVQRLFQVKGRRVVRATEVPVSWESFNNGDCFILDLGNNIHQWCGSNSNRYERLKATQVSKGIRDNERSGRARVHVSEEGTEPEAMLQVLGPKPALPAGTEDTAKEDAANRKLAKLYKVSNGAGTMSVSLVADENPFAQGALKSEDCFILDHGKDGKIFVWKGKQANTEERKAALKTASDFITKMDYPKQTQVSVLPEGGETPLFKQFFKNWRDPDQTDGLGLSYLSSHIANVERVPFDAATLHTSTAMAAQHGMDDDGTGQKQIWRIEGSNKVPVDPATYGQFYGGDSYIILYNYRHGGRQGQIIYNWQGAQSTQDEVAASAILTAQLDEELGGTPVQSRVVQGKEPAHLMSLFGGKPMIIYKGGTSREGGQTAPASTRLFQVRANSAGATRAVEVLPKAGALNSNDAFVLKTPSAAYLWVGTGASEAEKTGAQELLRVLRAQPVQVAEGSEPDGFWEALGGKAAYRTSPRLKDKKMDAHPPRLFACSNKIGRFVIEEVPGELMQEDLATDDVMLLDTWDQVFVWVGKDSQEEEKTEALTSAKRYIETDPANRDRRTPITVVKQGFEPPSFVGWFLGWDDDYWSVDPLDRAMAELAA",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06396",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1676,11 +1862,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "SDLWVQKMKTYFNRIDFDKDGAITRKDFESMATRFAKESEMKPEHAKVLMDSLTGVWDKFLANVAGGKGIDQATFISSMKEKVKDPNAKAVVEGPLPLFFRAVDTNEDNMISRDEYGIFFNMLGLNPDMAPASFDAIDTNNDGLLSQEEFVTAGSDFFINDQDSPNKVFWGPLV",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04572",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MTTAIASDRLKKRFDRWDFDGNGALERADFEKEAQHIAEAFGKDAGAAEVQTLKNAFGGLFDYLAKEAGVGSDGSLTEEQFIRVTENLIFEQGEASFNRVLGPVVKGTWGMCDKNADGQINADEFAAWLTALGMSKAEAAEAFNQVDTNGNGELSLDELLTAVRDFHFGRLDVELLG",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06495",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1694,11 +1882,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAAPKARALGPEEKDECMKIFDIFDRNAENIAPVSDTMDMLTKLGQTYTKRETEAIMKEARGPKGDKKNIGPEEWLTLCSKWVRQDDEEEILRAFKVFDANGDGVIDFDEFKFIMQKVGEEPLTDAEVEEAMKEADEDGNGVIDIPEFMDLIKKSKNALKES",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04573",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MEKIKVCVADDNRELVSLLSEYIEGQEDMEVIGVAYNGQECLSLFKEKDPDVLVLDIIMPHLDGLAVLERLRESDLKKQPNVIMLTAFGQEDVTKKAVDLGASYFILKPFDMENLVGHIRQVSGNASSVTHRAPSSQSSIIRSSQPEPKKKNLDASITSIIHEIGVPAHIKGYLYLREAISMVYNDIELLGSITKVLYPDIAKKFNTTASRVERAIRHAIEVAWSRGNIDSISSLFGYTVSMTKAKPTNSEFIAMVADKLRLEHKAS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06534",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1712,11 +1902,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MFLVNSFLKGGGGGGGGGGGLGGGLGNVLGGLISGAGGGGGGGGGGGGGGGGGGTAMRILGGVISAISEAAAQYNPEPPPPRTHYSNIEANESEEVRQFRRLFAQLAGDDMEVSATELMNILNKVVTRHPDLKTDGFGIDTCRSMVAVMDSDTTGKLGFEEFKYLWNNIKKWQAIYKQFDVDRSGTIGSSELPGAFEAAGFHLNEHLYSMIIRRYSDEGGNMDFDNFISCLVRLDAMFRAFKSLDKDGTGQIQVNIQEWLQLTMYS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04574",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "RGARGETEGRWSREAPGAWACGVERGGCQHECKGSAGASNCLCPADAALQADGRSCGLPAEHPCHQLCEHFCHLHGLGNYTCICEAGYQLAADQHRCEDVDDCAQLPSPCPQRCVNTEGGFQCHCDTGYELVDGECVDPVDPCFDNNCEYQCQPVGRSEHKCICAEGFAPVPGAPHKCQMFCNQTSCPADCDPHYPTICRCPEGYIIDEGSTCTDINECDTNICPGQCHNLPGTYECICGPDSALSGQIGIDCDPTQVNEERGTPEDYGGSGEPPVSPTPGATARPSPAPAGPLHSGVLVGISIASLSLVVALLALLCHLRKKQGASRGELEYKCGVPAKELMLQQVKTERTPQKL",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06579",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1730,11 +1922,13 @@
     {
         "sequences": [
             {
-                "proteinChain": "MAIPSNLMQFSEDIIKQLTPEEIDEFREAFMMFDKDGNGTISTKELGIAMRSLGQNPTEQEILEMINEVDIDGNGQIEFPEFCVMMKRMMKETDSEMIREAFRVFDKDGNGVITAQEFRYFMVHMGMQFSEEEVDEMIKEVDVDGDGEIDYEEFVKMMSNQ",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04630",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MKFLVLAALLTVAAAEGGISPRAVWQFRNMIKCTIPESDPLKDYNDYGCYCGLGGSGTPVDELDKCCQTHDHCYSEAKKLDSCKFLLDNPYTKIYSYSCSGSEITCSSKNKDCQAFICNCDRSAAICFSKAPYNKEHKNLDTKKYC",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06596",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {
@@ -1748,11 +1942,53 @@
     {
         "sequences": [
             {
-                "proteinChain": "MFLVNSFLKGGGGGGGGGGGLGGGLGNVLGGLISGAGGGGGGGGGGGGGGGGGGGGTAMRILGGVISAISEAAAQYNPEPPPPRTHYSNIEANESEEVRQFRRLFAQLAGDDMEVSATELMNILNKVVTRHPDLKTDGFGIDTCRSMVAVMDSDTTGKLGFEEFKYLWNNIKRWQAIYKQFDTDRSGTICSSELPGAFEAAGFHLNEHLYNMIIRRYSDESGNMDFDNFISCLVRLDAMFRAFKSLDKDGTGQIQVNIQEWLQLTMYS",
-                "count": 1,
-                "msa": {
-                    "precomputed_msa_dir": "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals/P04632",
-                    "pairing_db": "uniref100"
+                "proteinChain": {
+                    "sequence": "MSKNRSSLQSGPLNSELLEEQKQEIYEAFSLFDMNNDGFLDYHELKVAMKALGFELPKREILDLIDEYDSEGRHLMKYDDFYIVMGEKILKRDPLDEIKRAFQLFDDDHTGKISIKNLRRVAKELGETLTDEELRAMIEEFDLDGDGEINENEFIAICTDS",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06704",
+                        "pairing_db": "uniref100"
+                    }
+                }
+            },
+            {
+                "ligand": {
+                    "ligand": "CCD_CA",
+                    "count": 1
+                }
+            }
+        ]
+    },
+    {
+        "sequences": [
+            {
+                "proteinChain": {
+                    "sequence": "VEHLTEDEKSQFRAAFDIFVADAKDGTISSKELGKVMKMLGQNPTEKDLQEMIEEVDIDGSGTIDFEEFCLMMYRQMQAQEEAKIPEREEKELSEAFRLFDLDGDGIGDELKAALDGTGENVETWEVDEMMADGDKNHDSQIDYEEWVTMMKFVQ",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06706",
+                        "pairing_db": "uniref100"
+                    }
+                }
+            },
+            {
+                "ligand": {
+                    "ligand": "CCD_CA",
+                    "count": 1
+                }
+            }
+        ]
+    },
+    {
+        "sequences": [
+            {
+                "proteinChain": {
+                    "sequence": "MDSLDEEQVSALQKAFDSFDTDSKGFITPETVGIILRMMGVKISERHLQQVISETDEDGSGEIEFEEFAELAAKFLSEEDEEALKKELKEAFRIYDRGGDGYITTQVLREILKELDNRLTEDNLDEIIEEIDEDGSGTIDFMEFMKMMTG",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals/P06707",
+                        "pairing_db": "uniref100"
+                    }
                 }
             },
             {

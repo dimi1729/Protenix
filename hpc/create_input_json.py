@@ -7,11 +7,11 @@ from typing import List, Tuple
 import biotite.sequence.io.fasta as fasta
 
 
-INPUT_JSON_BASE_PATH = "/home/abhinav22/Documents/data/holofold_data/unique_uniprot_results"
+INPUT_JSON_BASE_PATH = "/home/abhinav22/Documents/data/holofold_data_hprc/unique_uniprot_results_final"
 OUTPUT_JSON_BASE_PATH = "/home/abhinav22/Documents/dimi-protenix/Protenix/run_files"
 
 FASTA_BASE_PATH = "/home/abhinav22/Documents/data/holofold_data/fastas/all_uniprot_metals"
-MSA_BASE_PATH = "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals"
+MSA_HPRC_PATH = "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals"
 
 @dataclass
 class InputDict:
@@ -23,11 +23,13 @@ class InputDict:
         return {
             "sequences": [
                 {
-                    "proteinChain": self.sequence,
-                    "count": 1,
-                    "msa": {
-                        "precomputed_msa_dir": self.msa_path,
-                        "pairing_db": "uniref100"
+                    "proteinChain": {
+                        "sequence": self.sequence,
+                        "count": 1,
+                        "msa": {
+                            "precomputed_msa_dir": self.msa_path,
+                            "pairing_db": "uniref100"
+                        }
                     }
                 },
                 {
@@ -44,7 +46,11 @@ def create_json_outputs(ligand, proteins_per_batch: int = 100) -> Tuple[List[Lis
     """Returns tuple of json data in batches and a list of the proteins skipped"""
 
     with open(os.path.join(INPUT_JSON_BASE_PATH, f"{ligand}.json"), "r") as f:
-        proteins = json.load(f)
+        proteins: List[str] = json.load(f)
+
+    if len(proteins) == 0:
+        raise ValueError(f"No proteins found for ligand {ligand}")
+    assert type(proteins) == list, f"Expected list, got {type(proteins)} for {ligand}"
 
     skipped_proteins = []
     final_list: List[List[dict]] = []
@@ -63,7 +69,7 @@ def create_json_outputs(ligand, proteins_per_batch: int = 100) -> Tuple[List[Lis
             fasta_file = fasta.FastaFile.read(fasta_path)
             sequence = str(list(fasta_file.values())[0])
 
-            msa_path = os.path.join(MSA_BASE_PATH, f"{protein}")
+            msa_path = os.path.join(MSA_HPRC_PATH, f"{protein}")
             if not os.path.exists(msa_path):
                 warnings.warn(f"MSA file not found: {msa_path}")
                 skipped_proteins.append(protein)
@@ -77,7 +83,7 @@ def create_json_outputs(ligand, proteins_per_batch: int = 100) -> Tuple[List[Lis
 
 if __name__ == "__main__":
 
-    ligands = ["ca", "co", "k", "mg", "mn", "ni", "zn"]
+    ligands = ["ca", "co", "cu", "fe", "k", "mg", "mn", "zn"]
     for ligand in ligands:
         output_file_contents, errors = create_json_outputs(ligand, 100)
 
