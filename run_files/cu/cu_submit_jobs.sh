@@ -1,0 +1,17 @@
+sbatch cu_2.sh
+sbatch cu_4.sh
+sbatch cu_16.sh
+sbatch cu_9.sh
+sbatch cu_0.sh
+sbatch cu_6.sh
+sbatch cu_14.sh
+sbatch cu_11.sh
+sbatch cu_3.sh
+sbatch cu_8.sh
+sbatch cu_12.sh
+sbatch cu_10.sh
+sbatch cu_5.sh
+sbatch cu_13.sh
+sbatch cu_1.sh
+sbatch cu_7.sh
+sbatch cu_15.sh
