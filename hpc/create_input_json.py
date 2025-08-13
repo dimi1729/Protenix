@@ -18,6 +18,7 @@ class InputDict:
     sequence: str
     msa_path: str
     ligand: str
+    name: str
 
     def to_dict(self) -> dict:
         return {
@@ -38,7 +39,8 @@ class InputDict:
                         "count": 1
                     }
                 }
-            ]
+            ],
+            "name": self.name
         }
 
 
@@ -75,7 +77,9 @@ def create_json_outputs(ligand, proteins_per_batch: int = 100) -> Tuple[List[Lis
                 skipped_proteins.append(protein)
                 continue
 
-            batch.append(InputDict(sequence, msa_path, ligand).to_dict())
+            name = f"{protein}_{ligand}"
+
+            batch.append(InputDict(sequence, msa_path, ligand, name).to_dict())
 
         final_list.append(batch)
     return final_list, skipped_proteins
