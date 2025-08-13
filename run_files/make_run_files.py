@@ -39,5 +39,5 @@ def make_ligand_run_files(ligand: str) -> None:
     print(f"Created submit jobs file: {submit_jobs_file}")
 
 if __name__ == "__main__":
-    for ligand in ["ca", "co", "k", "mg", "mn", "zn"]:
+    for ligand in ["ca", "co", "k", "mg", "mn", "zn", "cu", "fe"]:
         make_ligand_run_files(ligand)

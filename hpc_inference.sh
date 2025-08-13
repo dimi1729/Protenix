@@ -22,15 +22,22 @@ module load Python/3.10.4
 module load Anaconda3/2024.02-1
 module load WebProxy/0000
 
+export CC=$(which gcc)
+export CXX=$(which g++)
+export NVCC_CCBIN=$(which g++)
+
 source activate protenix
 echo activated protenix
 # export PYTHONPATH="/scratch/user/dimi/local/.local/lib/python3.10/site-packages:$PYTHONPATH"
 which python
 
-
-export LAYERNORM_TYPE=fast_layernorm
-export USE_DEEPSPEED_EVO_ATTENTION=true
+export LAYERNORM_TYPE=openfold
+export USE_DEEPSPEED_EVO_ATTENTION=false
 export CUTLASS_PATH=/scratch/user/dimi/cutlass
+export TORCH_CUDA_ARCH_LIST="7.0;8.0;8.6"
+
+# python -c "from protenix.model.layer_norm.layer_norm import FusedLayerNorm"
+# echo finished building fused layer norm
 
 N_sample=5
 N_step=200
