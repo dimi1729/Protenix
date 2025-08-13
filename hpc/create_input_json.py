@@ -8,10 +8,11 @@ import biotite.sequence.io.fasta as fasta
 
 
 INPUT_JSON_BASE_PATH = "/home/abhinav22/Documents/data/holofold_data_hprc/unique_uniprot_results_final"
-OUTPUT_JSON_BASE_PATH = "/home/abhinav22/Documents/dimi-protenix/Protenix/run_files"
+OUTPUT_JSON_BASE_PATH = "/home/abhinav22/Documents/dimi-protenix/Protenix/input_jsons"
 
 FASTA_BASE_PATH = "/home/abhinav22/Documents/data/holofold_data/fastas/all_uniprot_metals"
 MSA_HPRC_PATH = "/scratch/user/dimi/holofold_data/msas/all_uniprot_metals"
+MSA_LOCAL_PATH = "/home/abhinav22/Documents/data/holofold_data/msas/all_uniprot_metals"
 
 @dataclass
 class InputDict:
@@ -72,8 +73,8 @@ def create_json_outputs(ligand, proteins_per_batch: int = 100) -> Tuple[List[Lis
             sequence = str(list(fasta_file.values())[0])
 
             msa_path = os.path.join(MSA_HPRC_PATH, f"{protein}")
-            if not os.path.exists(msa_path):
-                warnings.warn(f"MSA file not found: {msa_path}")
+            if not os.path.exists(os.path.join(MSA_LOCAL_PATH, f"{protein}")) and not os.path.exists(msa_path):
+                warnings.warn(f"MSA file not found at either {MSA_LOCAL_PATH} or {msa_path}")
                 skipped_proteins.append(protein)
                 continue
 
